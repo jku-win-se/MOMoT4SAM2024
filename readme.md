@@ -11,8 +11,6 @@ This repository contains all the supporting artifacts according to the approach'
 
 ![image](https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/44401109-f97d-4137-b2fa-511b285d0970)
 
-
-
 ## License
 
-TO DO
+Eclipse Public License - v 2.0
