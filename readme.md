@@ -1,4 +1,4 @@
-# Automated decision-support for CPS architecture analysis definition]{Automation Support for System Simulation and Architecture Layout Design in Cyber-Physical Systems Engineering
+# Automation Support for System Simulation and Architecture Layout Design in Cyber-Physical Systems Engineering
 
 Simulations have long been part of hardware-centric system domains. As systems become more complex, so do simulation models, their configurations, and eventual analysis. 
 Similarly, architectural design is a common practice for complex industrial systems, which comprise many components that can be arranged in different layouts. This paper presents a model-driven approach to automate the simulation configuration and architectural layouting engineering activities by leveraging model-driven optimization techniques.
