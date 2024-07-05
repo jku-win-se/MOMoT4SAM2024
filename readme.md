@@ -11,6 +11,14 @@ This repository contains all the supporting artifacts according to the approach'
 
 ![image](https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/44401109-f97d-4137-b2fa-511b285d0970)
 
+### MOMoT
+
+- (Simulation) Configuration Module [Link] (todo)
+- (Architectural) Layouting Module [Link] (todo)
+
+### FMU Metamodel
+
+
 ### TinyCC ADL and RCP-based Model Editor
 TinyCC is a simple architectural description language (ADL) for system engineers. The TinyCC model consists of hierarchical sets of components and connectors. Components have input or output ports, determined by the value of the dir property (defined by the FlowDir enumeration). Connectors provide two or more connector ends, allowing the creation of a hierarchical network of components and connectors. Components, connectors, ends, and ports are all model elements that can be extended with user-defined properties. Each property can hold a type and a value.
 
