@@ -1,0 +1,14 @@
+package fmu.main;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Test123 {
+
+   public static void main(final String[] args) {
+      if (Files.isDirectory(Paths.get("scripts", "plotting"))) {
+         System.out.println("G")
+      }
+   }
+
+}

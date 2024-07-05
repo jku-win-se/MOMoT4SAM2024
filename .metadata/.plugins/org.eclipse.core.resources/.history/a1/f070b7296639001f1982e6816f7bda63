@@ -1,0 +1,97 @@
+package momot.^search
+
+import at.ac.tuwien.big.momot.^search.^fitness.dimension.TransformationLengthDimension
+import at.ac.tuwien.big.moea.^experiment.executor.listener.SeedRuntimePrintListener
+import fmuvb.FmuvbPackage
+import at.ac.tuwien.big.momot.problem.unit.parameter.random.RandomIntegerValue
+import fmuvb.demo.RandomDoubleValueFMU
+import fmuvb.VehicleBatteryFMU
+import java.util.List
+import at.ac.tuwien.big.momot.problem.unit.parameter.random.RandomListValue
+import fmuvb.demo.FitnessCalculator
+
+initialization = {
+	FmuvbPackage.eINSTANCE.eClass();
+	System.out.println("Search started.");
+	FitnessCalculator.init(2474); // FMU simulation time
+}
+
+search = {
+	model          = {
+		file       = "models/VehicleBatteryFMU.xmi"	
+	}
+	solutionLength  = 6	
+
+	transformations = {
+		modules = [ "transformations/vehicleBatteryFMU.henshin" ]
+		
+		parameterValues = {
+         "vehicleBatteryFMU::vbfmu::setInput::val"  : new RandomDoubleValueFMU()
+         "vehicleBatteryFMU::vbfmu::setInput::name"  : new RandomListValue(List.of("BatteryVoltage", "InternalRes", "MaxTorque"))
+      	}
+	}
+
+	fitness         = {
+		objectives = {
+			TotalTractiveEnergy : minimize {FitnessCalculator.getTotalTractiveEnergy(root as VehicleBatteryFMU)}
+			TotalBatteryLosses : minimize {FitnessCalculator.getTotalBatteryLosses(root as VehicleBatteryFMU)}
+						SoC : maximize {FitnessCalculator.getSoC(root as VehicleBatteryFMU)}
+			
+		}
+	}
+
+	algorithms      = {
+		//Random  : moea.createRandomSearch()
+		NSGAII  : moea.createNSGAII()
+		//NSGAIII : moea.createNSGAIII()
+	}
+}
+
+experiment = {
+	populationSize    = 20
+	maxEvaluations    = 300
+	nrRuns            = 1
+	progressListeners = [ new SeedRuntimePrintListener ]
+}
+
+analysis = {
+	indicators       = [ hypervolume generationalDistance ]
+	significance     = 0.01
+	show             = [ aggregateValues statisticalSignificance individualValues ]
+	outputFile       = "output/analysis/analysis.txt"
+	boxplotDirectory = "output/analysis/"
+	printOutput
+}
+
+results = {
+		postProcessors = {
+		System.out.println("test")
+	}
+
+	
+	adaptModels = {
+		System.out.println("test")	
+				System.out.println("test")	
+		
+	}
+	
+	
+	objectives = {
+		outputFile      = "output/objectives/objective_values.txt"
+		printOutput
+	}
+
+	solutions  = {
+		
+		outputFile      = "output/solutions/objective_values.txt"
+		outputDirectory = "output/solutions/"
+	}
+
+	models     = {
+		outputDirectory = "output/models/"
+	}
+}
+
+finalization = {
+	System.out.println("Search finished.");
+}

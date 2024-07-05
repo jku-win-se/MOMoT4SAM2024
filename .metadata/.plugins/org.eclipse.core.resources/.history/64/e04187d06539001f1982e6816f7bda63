@@ -1,0 +1,426 @@
+/**
+ */
+package tms.util;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
+
+import tms.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see tms.TmsPackage
+ * @generated
+ */
+public class TmsAdapterFactory extends AdapterFactoryImpl {
+   /**
+    * The cached model package.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected static TmsPackage modelPackage;
+
+   /**
+    * Creates an instance of the adapter factory.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public TmsAdapterFactory() {
+      if (modelPackage == null) {
+         modelPackage = TmsPackage.eINSTANCE;
+      }
+   }
+
+   /**
+    * Returns whether this factory is applicable for the type of the object.
+    * <!-- begin-user-doc -->
+    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+    * <!-- end-user-doc -->
+    * @return whether this factory is applicable for the type of the object.
+    * @generated
+    */
+   @Override
+   public boolean isFactoryForType(Object object) {
+      if (object == modelPackage) {
+         return true;
+      }
+      if (object instanceof EObject) {
+         return ((EObject)object).eClass().getEPackage() == modelPackage;
+      }
+      return false;
+   }
+
+   /**
+    * The switch that delegates to the <code>createXXX</code> methods.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected TmsSwitch<Adapter> modelSwitch =
+      new TmsSwitch<Adapter>() {
+         @Override
+         public Adapter caseArrangeableBlock(ArrangeableBlock object) {
+            return createArrangeableBlockAdapter();
+         }
+         @Override
+         public Adapter caseSensor(Sensor object) {
+            return createSensorAdapter();
+         }
+         @Override
+         public Adapter caseFan(Fan object) {
+            return createFanAdapter();
+         }
+         @Override
+         public Adapter caseValve(Valve object) {
+            return createValveAdapter();
+         }
+         @Override
+         public Adapter caseRadiator(Radiator object) {
+            return createRadiatorAdapter();
+         }
+         @Override
+         public Adapter casePump(Pump object) {
+            return createPumpAdapter();
+         }
+         @Override
+         public Adapter caseS1(S1 object) {
+            return createS1Adapter();
+         }
+         @Override
+         public Adapter caseS2(S2 object) {
+            return createS2Adapter();
+         }
+         @Override
+         public Adapter caseBatterySensor(BatterySensor object) {
+            return createBatterySensorAdapter();
+         }
+         @Override
+         public Adapter caseBattery(Battery object) {
+            return createBatteryAdapter();
+         }
+         @Override
+         public Adapter caseElectricMotorDrive(ElectricMotorDrive object) {
+            return createElectricMotorDriveAdapter();
+         }
+         @Override
+         public Adapter caseDCDC(DCDC object) {
+            return createDCDCAdapter();
+         }
+         @Override
+         public Adapter caseCoolantHeater(CoolantHeater object) {
+            return createCoolantHeaterAdapter();
+         }
+         @Override
+         public Adapter caseElectricMotor(ElectricMotor object) {
+            return createElectricMotorAdapter();
+         }
+         @Override
+         public Adapter caseLoadedComponent(LoadedComponent object) {
+            return createLoadedComponentAdapter();
+         }
+         @Override
+         public Adapter caseCharger(Charger object) {
+            return createChargerAdapter();
+         }
+         @Override
+         public Adapter caseFlow(Flow object) {
+            return createFlowAdapter();
+         }
+         @Override
+         public Adapter caseTMSModel(TMSModel object) {
+            return createTMSModelAdapter();
+         }
+         @Override
+         public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
+         }
+      };
+
+   /**
+    * Creates an adapter for the <code>target</code>.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param target the object to adapt.
+    * @return the adapter for the <code>target</code>.
+    * @generated
+    */
+   @Override
+   public Adapter createAdapter(Notifier target) {
+      return modelSwitch.doSwitch((EObject)target);
+   }
+
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.ArrangeableBlock <em>Arrangeable Block</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.ArrangeableBlock
+    * @generated
+    */
+   public Adapter createArrangeableBlockAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Sensor <em>Sensor</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Sensor
+    * @generated
+    */
+   public Adapter createSensorAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Fan <em>Fan</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Fan
+    * @generated
+    */
+   public Adapter createFanAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Valve <em>Valve</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Valve
+    * @generated
+    */
+   public Adapter createValveAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Radiator <em>Radiator</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Radiator
+    * @generated
+    */
+   public Adapter createRadiatorAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Pump <em>Pump</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Pump
+    * @generated
+    */
+   public Adapter createPumpAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.S1 <em>S1</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.S1
+    * @generated
+    */
+   public Adapter createS1Adapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.S2 <em>S2</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.S2
+    * @generated
+    */
+   public Adapter createS2Adapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.BatterySensor <em>Battery Sensor</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.BatterySensor
+    * @generated
+    */
+   public Adapter createBatterySensorAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Battery <em>Battery</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Battery
+    * @generated
+    */
+   public Adapter createBatteryAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.ElectricMotorDrive <em>Electric Motor Drive</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.ElectricMotorDrive
+    * @generated
+    */
+   public Adapter createElectricMotorDriveAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.DCDC <em>DCDC</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.DCDC
+    * @generated
+    */
+   public Adapter createDCDCAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.CoolantHeater <em>Coolant Heater</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.CoolantHeater
+    * @generated
+    */
+   public Adapter createCoolantHeaterAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.ElectricMotor <em>Electric Motor</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.ElectricMotor
+    * @generated
+    */
+   public Adapter createElectricMotorAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.LoadedComponent <em>Loaded Component</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.LoadedComponent
+    * @generated
+    */
+   public Adapter createLoadedComponentAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Charger <em>Charger</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Charger
+    * @generated
+    */
+   public Adapter createChargerAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.Flow <em>Flow</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.Flow
+    * @generated
+    */
+   public Adapter createFlowAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link tms.TMSModel <em>TMS Model</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @see tms.TMSModel
+    * @generated
+    */
+   public Adapter createTMSModelAdapter() {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for the default case.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null.
+    * <!-- end-user-doc -->
+    * @return the new adapter.
+    * @generated
+    */
+   public Adapter createEObjectAdapter() {
+      return null;
+   }
+
+} //TmsAdapterFactory

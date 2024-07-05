@@ -1,0 +1,37 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.ecore.EClass;
+
+import tms.ElectricMotorDrive;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Electric Motor Drive</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class ElectricMotorDriveImpl extends LoadedComponentImpl implements ElectricMotorDrive {
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected ElectricMotorDriveImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.ELECTRIC_MOTOR_DRIVE;
+   }
+
+} //ElectricMotorDriveImpl

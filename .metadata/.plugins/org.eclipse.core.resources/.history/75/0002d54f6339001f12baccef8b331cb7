@@ -1,0 +1,55 @@
+Number of variables: 10
+  Variable[0]: Assignment for unit 'changeComponent':
+- parameter 'fromId' => 'p1'
+- parameter 'toId' => 'p2'
+
+  Variable[1]: Assignment for unit 'changeComponent':
+- parameter 'fromId' => 'p2'
+- parameter 'toId' => 'p1'
+
+  Variable[2]: Assignment for unit 'connectComponent':
+- parameter 'toId' => 'c1'
+- parameter 'fromId' => 'p1'
+- parameter 'toType' => 'Charger'
+
+  Variable[3]: Assignment for unit 'connectComponent':
+- parameter 'toId' => 'md2'
+- parameter 'fromId' => 'c1'
+- parameter 'toType' => 'ElectricMotorDrive'
+
+  Variable[4]: Assignment for unit 'changeComponent':
+- parameter 'fromId' => 'md2'
+- parameter 'toId' => 'md1'
+
+  Variable[5]: Assignment for unit 'changeComponent':
+- parameter 'fromId' => 'c1'
+- parameter 'toId' => 'c2'
+
+  Variable[6]: Assignment for unit 'connectComponent':
+- parameter 'toId' => 'dc1'
+- parameter 'fromId' => 'p1'
+- parameter 'toType' => 'DCDC'
+
+  Variable[7]: Assignment for unit 'connectComponent':
+- parameter 'toId' => 'b2'
+- parameter 'fromId' => 'dc1'
+- parameter 'toType' => 'Battery'
+
+  Variable[8]: Assignment for unit 'connectComponent':
+- parameter 'toId' => 'm1'
+- parameter 'fromId' => 'md1'
+- parameter 'toType' => 'ElectricMotor'
+
+  Variable[9]: -Placeholder-
+
+Number of attributes: 3
+  AggregatedFitness: 3.0
+  rank: 0
+  crowdingDistance: Infinity
+Number of objectives: 4
+  FlowCountMax: -2.0
+  FlowCountMin: 2.0
+  SolutionLength: 9.0
+  DistinctComponents: -6.0
+Number of constraints: 1
+  allTypesUsed: 0.0

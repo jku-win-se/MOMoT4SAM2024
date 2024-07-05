@@ -1,0 +1,37 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.ecore.EClass;
+
+import tms.CoolantHeater;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Coolant Heater</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class CoolantHeaterImpl extends LoadedComponentImpl implements CoolantHeater {
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected CoolantHeaterImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.COOLANT_HEATER;
+   }
+
+} //CoolantHeaterImpl

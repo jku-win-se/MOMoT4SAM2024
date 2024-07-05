@@ -1,0 +1,140 @@
+package fmuvb.demo;
+
+import at.ac.tuwien.big.moea.search.fitness.dimension.IFitnessDimension.FunctionType;
+import at.ac.tuwien.big.moea.util.CastUtil;
+import at.ac.tuwien.big.moea.util.FileUtil;
+import at.ac.tuwien.big.momot.problem.solution.TransformationSolution;
+import at.ac.tuwien.big.momot.util.MomotUtil;
+
+import com.opencsv.CSVWriter;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.eclipse.emf.henshin.interpreter.EGraph;
+import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+import org.moeaframework.core.Solution;
+
+import fmuvb.Parameter;
+import tinycc.Model;
+
+public class ConfigurationPlotting {
+   protected static PrintStream getFilePrintStream(final File file) {
+      FileUtil.checkDirectory(file.getParentFile());
+      try {
+         return new PrintStream(new BufferedOutputStream(new FileOutputStream(file)), true, "UTF-8");
+      } catch(FileNotFoundException | UnsupportedEncodingException e) {
+         System.err.println(e.getMessage());
+         return null;
+      }
+   }
+
+   public static void plot(final String outFile, final Map<String, FunctionType> outputToType) {
+      final PrintStream writer = getFilePrintStream(new File(outFile));
+      final String[] header = new String[outputToType.size()];
+      String a = String.join(" ", outputToType.keySet().toArray(header)) + " Cost";
+      writer.println(a);
+      final int solutionNr = 0;
+      for(final Solution solution : p) {
+         double val = function.getObjective(function.getObjectiveName(0)).getFunctionType() == FunctionType.Maximum
+               ? solution.getObjective(0) * -1
+               : solution.getObjective(0);
+
+         writer.print(String.format(Locale.US, "%.7f", val));
+
+         for(int i = 1; i < solution.getNumberOfObjectives(); i++) {
+            writer.print(" ");
+
+            val = function.getObjective(function.getObjectiveName(i)).getFunctionType() == FunctionType.Maximum
+                  ? solution.getObjective(i) * -1
+                  : solution.getObjective(i);
+            writer.print(String.format(Locale.US, "%.7f", val));
+         }
+         writer.print(" ");
+
+         final TransformationSolution ts = CastUtil.asClass(solution, TransformationSolution.class);
+
+         final EGraph graph = ts.execute();
+         final fmuvb.VehicleBatteryFMU vb = (fmuvb.VehicleBatteryFMU) graph.getRoots().get(0);
+         final Map<String, Double> inputs = vb.getInputs().stream()
+               .collect(Collectors.toMap(Parameter::getName, Parameter::getValue));
+
+         final double batteryVoltage = inputs.get("BatteryVoltage");
+         final double internalRes = inputs.get("InternalRes");
+         final double maxTorque = inputs.get("MaxTorque");
+         final double auxload = FitnessCalculator.calcAuxload(batteryVoltage, maxTorque);
+         final double maxPower = FitnessCalculator.calcMaxPower(batteryVoltage, internalRes);
+
+         // Simulate again for plots
+         final fmu.VehicleBatteryFMU fmu = new fmu.VehicleBatteryFMU();
+
+         fmu.setup(auxload, batteryVoltage, internalRes, maxTorque, maxPower);
+         fmu.simulate(.1, 2474);
+         //
+         final List<Double> totalTractiveEnergy = fmu.get("TotalTractiveEnergy");
+         final List<Double> totalBatteryLosses = fmu.get("TotalBatteryLosses");
+         final List<Double> soC = fmu.get("SoC");
+
+         // Specify the file path
+         final String filePath = "output/simulations/tte_tbl_soc" + solutionNr + ".csv";
+
+         try(final CSVWriter writer2 = new CSVWriter(new FileWriter(filePath))) {
+            // Write the header
+
+            final List<String> header = vb.getOutputs().stream().map(o -> o.getName()).collect(Collectors.toList());
+            header.add(0, "t");
+            writer2.writeNext(header.toArray(new String[0]));
+
+            // Write the data
+            final int size = totalTractiveEnergy.size();
+            for(int i = 0; i < size; i++) {
+               final String[] row = { String.valueOf((i + 1) * .1),
+                     i < totalTractiveEnergy.size() ? totalTractiveEnergy.get(i).toString() : "",
+                     i < totalBatteryLosses.size() ? totalBatteryLosses.get(i).toString() : "",
+                     i < soC.size() ? soC.get(i).toString() : "" };
+               writer2.writeNext(row);
+            }
+
+            System.out.println("Data written to " + filePath);
+         } catch(final IOException e) {
+            e.printStackTrace();
+         }
+
+         writer.print(auxload * 2500 + batteryVoltage * 1000 + Math.pow(internalRes * 1000, 2) + Math.pow(maxTorque, 2)
+               + maxPower * 10);
+
+         writer.print(" ");
+
+         final String xLabel = String.format(Locale.US, "%.3f,%.3f,%.3f,%.3f,%.3f", batteryVoltage, internalRes,
+               maxTorque, auxload, maxPower);
+         writer.println(xLabel);
+
+         solutionNr++;
+      }
+
+      if(writer != null) {
+         writer.close();
+      }
+   }
+
+   public static void plotSimulationResult(final String modelsPath, final Map<String, FunctionType> outputToType) {
+      final HenshinResourceSet set = new HenshinResourceSet();
+      final File modelDir = new File(modelsPath);
+      for(final File modelFile : modelDir.listFiles()) {
+         final EGraph graph = MomotUtil.loadGraph(set, modelFile.getAbsolutePath());
+         final Model m = (Model) graph.getRoots().get(0);
+
+      }
+
+   }
+}

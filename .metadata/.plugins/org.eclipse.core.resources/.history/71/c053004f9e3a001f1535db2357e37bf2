@@ -1,0 +1,12 @@
+package fmu.main;
+
+import java.nio.file.Files;
+
+public class Testo {
+
+   public static void main(String[] args) {
+      if (Files.exists(Files.createTemp, null))
+
+   }
+
+}

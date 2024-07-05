@@ -1,0 +1,51 @@
+/**
+ */
+package fmuvb;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Vehicle Battery FMU</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link fmuvb.VehicleBatteryFMU#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link fmuvb.VehicleBatteryFMU#getOutputs <em>Outputs</em>}</li>
+ * </ul>
+ *
+ * @see fmuvb.FmuvbPackage#getVehicleBatteryFMU()
+ * @model
+ * @generated
+ */
+public interface VehicleBatteryFMU extends EObject {
+   /**
+    * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
+    * The list contents are of type {@link fmuvb.Parameter}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Inputs</em>' containment reference list.
+    * @see fmuvb.FmuvbPackage#getVehicleBatteryFMU_Inputs()
+    * @model containment="true"
+    * @generated
+    */
+   EList<Parameter> getInputs();
+
+   /**
+    * Returns the value of the '<em><b>Outputs</b></em>' containment reference list.
+    * The list contents are of type {@link fmuvb.Output}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Outputs</em>' containment reference list.
+    * @see fmuvb.FmuvbPackage#getVehicleBatteryFMU_Outputs()
+    * @model containment="true"
+    * @generated
+    */
+   EList<Output> getOutputs();
+
+} // VehicleBatteryFMU

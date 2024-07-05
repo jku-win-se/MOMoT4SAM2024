@@ -1,0 +1,34 @@
+package fmuvb.demo;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import no.ntnu.ihb.fmi4j.importer.fmi2.CoSimulationSlave;
+import no.ntnu.ihb.fmi4j.importer.fmi2.Fmu;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.ModelVariables;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.TypedScalarVariable;
+
+public class TestFMU {
+
+   public static void main(final String[] args) {
+      Fmu fmu;
+
+      try {
+         fmu = Fmu.from(new File("fmu/BEV_5in_9out.fmu"));
+       
+         final ModelVariables mv = fmu.getModelDescription().getModelVariables();
+         for(final TypedScalarVariable<?> v : mv.getVariables()) {
+            System.out.println(v.getName());
+         }
+      } catch(final FileNotFoundException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } catch(final IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+   }
+
+}

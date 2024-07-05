@@ -1,0 +1,17 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Charger</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see tms.TmsPackage#getCharger()
+ * @model
+ * @generated
+ */
+public interface Charger extends LoadedComponent {
+} // Charger

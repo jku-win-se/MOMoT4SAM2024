@@ -1,0 +1,17 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>DCDC</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see tms.TmsPackage#getDCDC()
+ * @model
+ * @generated
+ */
+public interface DCDC extends LoadedComponent {
+} // DCDC

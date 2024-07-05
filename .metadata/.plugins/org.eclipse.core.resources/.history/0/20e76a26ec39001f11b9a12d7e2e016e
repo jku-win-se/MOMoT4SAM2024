@@ -1,0 +1,9 @@
+package fmuvb.demo;
+
+import fmumodel.FMU;
+
+public class ConfigurationUtils {
+   public static double getFMUInputValue(final FMU fmu) {
+      return 0;
+     }
+}

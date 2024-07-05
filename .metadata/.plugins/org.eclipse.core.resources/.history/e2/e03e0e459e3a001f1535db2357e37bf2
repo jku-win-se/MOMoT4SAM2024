@@ -1,0 +1,11 @@
+package fmu.main;
+
+public class Test123 {
+
+   public static void main(final String[] args) {
+      if (Files.isDirectory(Paths.get("scripts", "plotting"))) {
+         System.out.println("")
+      }
+   }
+
+}

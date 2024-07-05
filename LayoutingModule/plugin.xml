@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated architecture -->
+      <package
+            uri="http://momot.big.tuwien.ac.at/examples/icmt/architecture/1.0"
+            class="icmt.tool.momot.demo.architecture.ArchitecturePackage"
+            genModel="backuped/architecture.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated container -->
+      <package
+            uri="http://momot.big.tuwien.ac.at/examples/icmt/container/1.0"
+            class="container.ContainerPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tms -->
+      <package
+            uri="http://momot.big.tuwien.ac.at/examples/tms/1.0"
+            class="tms.TmsPackage"
+            genModel="metamodel/tms.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fmumetamodel -->
+      <package
+            uri="http://www.eclipse.org/Papyrus/fmu/1.0.0"
+            class="fmumetamodel.FmumetamodelPackage"
+            genModel="metamodel/fmumetamodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fmumetamodel -->
+      <package
+            uri="platform:/plugin/org.eclipse.papyrus.moka.fmi/schema/fmi2ModelDescription.xsd"
+            class="modeldescription.ModeldescriptionPackage"
+            genModel="metamodel/fmumetamodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated fmumetamodel -->
+      <parser
+            type="modeldescription"
+            class="modeldescription.util.ModeldescriptionResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fmumetamodel -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="types.TypesPackage"
+            genModel="metamodel/fmumetamodel.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated FMUVehicleBattery -->
+      <package
+            uri="http://momot.sewin.jku.at/FMUVehicleBattery"
+            class="fmuvb.FmuvbPackage"
+            genModel="metamodel/FMUVehicleBattery.genmodel"/>
+   </extension>
+
+</plugin>

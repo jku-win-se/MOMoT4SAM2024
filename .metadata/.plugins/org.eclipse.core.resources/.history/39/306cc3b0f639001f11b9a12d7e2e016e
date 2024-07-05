@@ -1,0 +1,7 @@
+package fmuvb.demo;
+
+public class FMUUtils {
+   public static void initFMUModel(final String fmuPath) {
+
+   }
+}

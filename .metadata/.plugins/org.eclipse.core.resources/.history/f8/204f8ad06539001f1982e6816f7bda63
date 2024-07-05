@@ -1,0 +1,37 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.ecore.EClass;
+
+import tms.S2;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>S2</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class S2Impl extends SensorImpl implements S2 {
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected S2Impl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.S2;
+   }
+
+} //S2Impl

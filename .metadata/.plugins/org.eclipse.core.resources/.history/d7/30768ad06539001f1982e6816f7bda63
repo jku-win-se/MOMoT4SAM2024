@@ -1,0 +1,277 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import tms.Pump;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Pump</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.PumpImpl#getId <em>Id</em>}</li>
+ *   <li>{@link tms.impl.PumpImpl#getFlow <em>Flow</em>}</li>
+ *   <li>{@link tms.impl.PumpImpl#getPressure <em>Pressure</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class PumpImpl extends MinimalEObjectImpl.Container implements Pump {
+   /**
+    * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getId()
+    * @generated
+    * @ordered
+    */
+   protected static final String ID_EDEFAULT = null;
+
+   /**
+    * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getId()
+    * @generated
+    * @ordered
+    */
+   protected String id = ID_EDEFAULT;
+
+   /**
+    * The default value of the '{@link #getFlow() <em>Flow</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getFlow()
+    * @generated
+    * @ordered
+    */
+   protected static final double FLOW_EDEFAULT = 0.0;
+
+   /**
+    * The cached value of the '{@link #getFlow() <em>Flow</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getFlow()
+    * @generated
+    * @ordered
+    */
+   protected double flow = FLOW_EDEFAULT;
+
+   /**
+    * The default value of the '{@link #getPressure() <em>Pressure</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getPressure()
+    * @generated
+    * @ordered
+    */
+   protected static final double PRESSURE_EDEFAULT = 0.0;
+
+   /**
+    * The cached value of the '{@link #getPressure() <em>Pressure</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getPressure()
+    * @generated
+    * @ordered
+    */
+   protected double pressure = PRESSURE_EDEFAULT;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected PumpImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.PUMP;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public String getId() {
+      return id;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setId(String newId) {
+      String oldId = id;
+      id = newId;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.PUMP__ID, oldId, id));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public double getFlow() {
+      return flow;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setFlow(double newFlow) {
+      double oldFlow = flow;
+      flow = newFlow;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.PUMP__FLOW, oldFlow, flow));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public double getPressure() {
+      return pressure;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setPressure(double newPressure) {
+      double oldPressure = pressure;
+      pressure = newPressure;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.PUMP__PRESSURE, oldPressure, pressure));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.PUMP__ID:
+            return getId();
+         case TmsPackage.PUMP__FLOW:
+            return getFlow();
+         case TmsPackage.PUMP__PRESSURE:
+            return getPressure();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.PUMP__ID:
+            setId((String)newValue);
+            return;
+         case TmsPackage.PUMP__FLOW:
+            setFlow((Double)newValue);
+            return;
+         case TmsPackage.PUMP__PRESSURE:
+            setPressure((Double)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.PUMP__ID:
+            setId(ID_EDEFAULT);
+            return;
+         case TmsPackage.PUMP__FLOW:
+            setFlow(FLOW_EDEFAULT);
+            return;
+         case TmsPackage.PUMP__PRESSURE:
+            setPressure(PRESSURE_EDEFAULT);
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.PUMP__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+         case TmsPackage.PUMP__FLOW:
+            return flow != FLOW_EDEFAULT;
+         case TmsPackage.PUMP__PRESSURE:
+            return pressure != PRESSURE_EDEFAULT;
+      }
+      return super.eIsSet(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public String toString() {
+      if (eIsProxy()) return super.toString();
+
+      StringBuilder result = new StringBuilder(super.toString());
+      result.append(" (id: ");
+      result.append(id);
+      result.append(", flow: ");
+      result.append(flow);
+      result.append(", pressure: ");
+      result.append(pressure);
+      result.append(')');
+      return result.toString();
+   }
+
+} //PumpImpl

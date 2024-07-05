@@ -1,0 +1,86 @@
+package fmu;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import no.ntnu.ihb.fmi4j.importer.fmi2.CoSimulationSlave;
+import no.ntnu.ihb.fmi4j.importer.fmi2.Fmu;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.Causality;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.ModelVariables;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.TypedScalarVariable;
+
+public class FMUSurrogate {
+   private final Fmu fmu;
+   private final CoSimulationSlave slave;
+   private final Map<String, List<Double>> outputs;
+   private final Map<String, Long> outputToPortMap ;
+
+   public FMUSurrogate(final String fmuPath) throws FileNotFoundException, IOException {
+      this.outputs = new HashMap<>();
+      this.outputToPortMap = new HashMap<>();
+      fmu = Fmu.from(new File(fmuPath));
+      slave = fmu.asCoSimulationFmu().newInstance();
+      final ModelVariables mv = fmu.getModelDescription().getModelVariables();
+      for(final TypedScalarVariable<?> v : mv.getVariables()) {
+         if(v.getCausality() == Causality.OUTPUT) {
+            this.outputs.put(v.getName(), new ArrayList<>());
+            this.outputToPortMap.put(v.getName(), v.getValueReference());
+         }
+      }
+
+   }
+
+   public List<Double> get(final String outPort) {
+      return this.outputs.get(outPort);
+   }
+
+   public double getLast(final String outPort) {
+      return this.outputs.get(outPort).get(this.outputs.get(outPort).size() - 1);
+   }
+
+   public void reset() {
+      slave.reset();
+      this.outputs.replaceAll((k, v) -> new ArrayList<>());
+   }
+
+   public void setup(final List<Double> inputValues, final List<Integer> inputPorts) {
+      slave.simpleSetup();
+      slave.setupExperiment();
+      slave.enterInitializationMode();
+
+      final double[] values = inputValues.stream().mapToDouble(d -> d).toArray();
+      final long[] ports = inputPorts.stream().mapToLong(i -> i).toArray();
+      slave.writeReal(ports, values);
+      slave.getWrapper().writeReal(ports, values);
+      slave.exitInitializationMode();
+   }
+
+   public void simulate(final double stepSize, final double stopAt) {
+      double t = 0;
+      while(t <= stopAt) {
+         if(!slave.doStep(t, stepSize)) {
+            throw new RuntimeException("Simulation broke");
+         }
+         final double[] outs = new double[outputs.size()];
+         slave.readReal(new long[] { 6, 12, 13 }, outs);
+
+         this.outputs.get("SoC").add(outs[2]);
+         this.outputs.get("TotalTractiveEnergy").add(outs[0]);
+         this.outputs.get("TotalBatteryLosses").add(outs[1]);
+
+         t += stepSize;
+      }
+   }
+
+   public void terminate() {
+      this.outputs.clear();
+      slave.terminate();
+      slave.close();
+      fmu.close();
+   }
+}

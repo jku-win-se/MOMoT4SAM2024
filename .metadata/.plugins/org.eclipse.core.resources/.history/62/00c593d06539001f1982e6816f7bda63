@@ -1,0 +1,61 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Flow</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.Flow#getCovers <em>Covers</em>}</li>
+ *   <li>{@link tms.Flow#getId <em>Id</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getFlow()
+ * @model
+ * @generated
+ */
+public interface Flow extends EObject {
+   /**
+    * Returns the value of the '<em><b>Covers</b></em>' reference list.
+    * The list contents are of type {@link tms.ArrangeableBlock}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Covers</em>' reference list.
+    * @see tms.TmsPackage#getFlow_Covers()
+    * @model
+    * @generated
+    */
+   EList<ArrangeableBlock> getCovers();
+
+   /**
+    * Returns the value of the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Id</em>' attribute.
+    * @see #setId(String)
+    * @see tms.TmsPackage#getFlow_Id()
+    * @model id="true"
+    * @generated
+    */
+   String getId();
+
+   /**
+    * Sets the value of the '{@link tms.Flow#getId <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Id</em>' attribute.
+    * @see #getId()
+    * @generated
+    */
+   void setId(String value);
+
+} // Flow

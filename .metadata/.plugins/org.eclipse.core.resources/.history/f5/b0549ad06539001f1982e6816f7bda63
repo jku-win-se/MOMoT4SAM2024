@@ -1,0 +1,92 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Pump</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.Pump#getId <em>Id</em>}</li>
+ *   <li>{@link tms.Pump#getFlow <em>Flow</em>}</li>
+ *   <li>{@link tms.Pump#getPressure <em>Pressure</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getPump()
+ * @model
+ * @generated
+ */
+public interface Pump extends EObject {
+   /**
+    * Returns the value of the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Id</em>' attribute.
+    * @see #setId(String)
+    * @see tms.TmsPackage#getPump_Id()
+    * @model id="true"
+    * @generated
+    */
+   String getId();
+
+   /**
+    * Sets the value of the '{@link tms.Pump#getId <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Id</em>' attribute.
+    * @see #getId()
+    * @generated
+    */
+   void setId(String value);
+
+   /**
+    * Returns the value of the '<em><b>Flow</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Flow</em>' attribute.
+    * @see #setFlow(double)
+    * @see tms.TmsPackage#getPump_Flow()
+    * @model
+    * @generated
+    */
+   double getFlow();
+
+   /**
+    * Sets the value of the '{@link tms.Pump#getFlow <em>Flow</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Flow</em>' attribute.
+    * @see #getFlow()
+    * @generated
+    */
+   void setFlow(double value);
+
+   /**
+    * Returns the value of the '<em><b>Pressure</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Pressure</em>' attribute.
+    * @see #setPressure(double)
+    * @see tms.TmsPackage#getPump_Pressure()
+    * @model
+    * @generated
+    */
+   double getPressure();
+
+   /**
+    * Sets the value of the '{@link tms.Pump#getPressure <em>Pressure</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Pressure</em>' attribute.
+    * @see #getPressure()
+    * @generated
+    */
+   void setPressure(double value);
+
+} // Pump

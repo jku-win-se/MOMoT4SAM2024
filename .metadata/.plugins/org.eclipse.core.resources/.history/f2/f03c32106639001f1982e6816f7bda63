@@ -1,0 +1,72 @@
+package momot.^search
+
+import at.ac.tuwien.big.momot.^search.^fitness.dimension.TransformationLengthDimension
+import at.ac.tuwien.big.moea.^experiment.executor.listener.SeedRuntimePrintListener
+
+initialization = {
+	System.out.println("Search started.");
+}
+
+search = {
+	model          = {
+		file       = "models/Tiny_ex1.xmi"
+	}
+	solutionLength  = 10
+
+	transformations = {
+		modules = [ "transformations/tiny_tms.henshin" ]
+	}
+
+	fitness         = {
+		objectives = {
+			FirstObjective : minimize { 0.0 }
+			SolutionLength : minimize new TransformationLengthDimension
+		}
+	}
+
+	algorithms      = {
+		Random  : moea.createRandomSearch()
+		NSGAII  : moea.createNSGAII()
+		NSGAIII : moea.createNSGAIII()
+	}
+}
+
+experiment = {
+	populationSize    = 100
+	maxEvaluations    = 10000
+	nrRuns            = 30
+	progressListeners = [ new SeedRuntimePrintListener ]
+}
+
+analysis = {
+	indicators       = [ hypervolume generationalDistance ]
+	significance     = 0.01
+	show             = [ aggregateValues statisticalSignificance individualValues ]
+	outputFile       = "output/analysis/analysis.txt"
+	boxplotDirectory = "output/analysis/"
+	printOutput
+}
+
+results = {
+	
+	postProcessors = {
+		System.out.println("asdas")
+	}
+	objectives = {
+		outputFile      = "output/objectives/objective_values.txt"
+		printOutput
+	}
+
+	solutions  = {
+		outputFile      = "output/solutions/objective_values.txt"
+		outputDirectory = "output/solutions/"
+	}
+
+	models     = {
+		outputDirectory = "output/models/"
+	}
+}
+
+finalization = {
+	System.out.println("Search finished.");
+}

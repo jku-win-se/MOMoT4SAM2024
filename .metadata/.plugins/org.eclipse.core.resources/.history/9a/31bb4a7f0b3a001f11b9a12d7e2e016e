@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fmumodel:FMU xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fmumodel="www.jku.at/fmumodel">
+  <input name="AuxLoad" value="600.0"/>
+  <input name="BatteryVoltage" value="401.14071474514935"/>
+  <input name="InternalRes" value="0.1"/>
+  <input name="MaxTorque" value="745.5937430522093"/>
+  <input name="MaxPower"/>
+  <output name="TractiveForce"/>
+  <output name="TotalTractiveEnergy"/>
+  <output name="Velocity_mph_"/>
+  <output name="Position"/>
+  <output name="DrivelineLosses_kWh_"/>
+  <output name="MotorOut_W_"/>
+  <output name="MotorLosses_W_"/>
+  <output name="BatteryLosses_W_"/>
+  <output name="SoC"/>
+</fmumodel:FMU>

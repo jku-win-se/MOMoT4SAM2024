@@ -1,0 +1,156 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>TMS Model</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.TMSModel#getFan <em>Fan</em>}</li>
+ *   <li>{@link tms.TMSModel#getRadiator <em>Radiator</em>}</li>
+ *   <li>{@link tms.TMSModel#getValve <em>Valve</em>}</li>
+ *   <li>{@link tms.TMSModel#getPumps <em>Pumps</em>}</li>
+ *   <li>{@link tms.TMSModel#getArrangeableBlocks <em>Arrangeable Blocks</em>}</li>
+ *   <li>{@link tms.TMSModel#getFlows <em>Flows</em>}</li>
+ *   <li>{@link tms.TMSModel#getSelectedPump <em>Selected Pump</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getTMSModel()
+ * @model
+ * @generated
+ */
+public interface TMSModel extends EObject {
+   /**
+    * Returns the value of the '<em><b>Fan</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Fan</em>' containment reference.
+    * @see #setFan(Fan)
+    * @see tms.TmsPackage#getTMSModel_Fan()
+    * @model containment="true"
+    * @generated
+    */
+   Fan getFan();
+
+   /**
+    * Sets the value of the '{@link tms.TMSModel#getFan <em>Fan</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Fan</em>' containment reference.
+    * @see #getFan()
+    * @generated
+    */
+   void setFan(Fan value);
+
+   /**
+    * Returns the value of the '<em><b>Radiator</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Radiator</em>' containment reference.
+    * @see #setRadiator(Radiator)
+    * @see tms.TmsPackage#getTMSModel_Radiator()
+    * @model containment="true"
+    * @generated
+    */
+   Radiator getRadiator();
+
+   /**
+    * Sets the value of the '{@link tms.TMSModel#getRadiator <em>Radiator</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Radiator</em>' containment reference.
+    * @see #getRadiator()
+    * @generated
+    */
+   void setRadiator(Radiator value);
+
+   /**
+    * Returns the value of the '<em><b>Valve</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Valve</em>' containment reference.
+    * @see #setValve(Valve)
+    * @see tms.TmsPackage#getTMSModel_Valve()
+    * @model containment="true"
+    * @generated
+    */
+   Valve getValve();
+
+   /**
+    * Sets the value of the '{@link tms.TMSModel#getValve <em>Valve</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Valve</em>' containment reference.
+    * @see #getValve()
+    * @generated
+    */
+   void setValve(Valve value);
+
+   /**
+    * Returns the value of the '<em><b>Pumps</b></em>' containment reference list.
+    * The list contents are of type {@link tms.Pump}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Pumps</em>' containment reference list.
+    * @see tms.TmsPackage#getTMSModel_Pumps()
+    * @model containment="true"
+    * @generated
+    */
+   EList<Pump> getPumps();
+
+   /**
+    * Returns the value of the '<em><b>Arrangeable Blocks</b></em>' containment reference list.
+    * The list contents are of type {@link tms.ArrangeableBlock}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Arrangeable Blocks</em>' containment reference list.
+    * @see tms.TmsPackage#getTMSModel_ArrangeableBlocks()
+    * @model containment="true"
+    * @generated
+    */
+   EList<ArrangeableBlock> getArrangeableBlocks();
+
+   /**
+    * Returns the value of the '<em><b>Flows</b></em>' containment reference list.
+    * The list contents are of type {@link tms.Flow}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Flows</em>' containment reference list.
+    * @see tms.TmsPackage#getTMSModel_Flows()
+    * @model containment="true" upper="3"
+    * @generated
+    */
+   EList<Flow> getFlows();
+
+   /**
+    * Returns the value of the '<em><b>Selected Pump</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Selected Pump</em>' reference.
+    * @see #setSelectedPump(Pump)
+    * @see tms.TmsPackage#getTMSModel_SelectedPump()
+    * @model
+    * @generated
+    */
+   Pump getSelectedPump();
+
+   /**
+    * Sets the value of the '{@link tms.TMSModel#getSelectedPump <em>Selected Pump</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Selected Pump</em>' reference.
+    * @see #getSelectedPump()
+    * @generated
+    */
+   void setSelectedPump(Pump value);
+
+} // TMSModel

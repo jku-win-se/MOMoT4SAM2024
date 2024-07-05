@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="Constr"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="constr"/>
+			<item value="analysis resul"/>
+			<item value="plot"/>
+			<item value="getFilePrintStream"/>
+			<item value="outputToType"/>
+			<item value="writer2"/>
+			<item value="tte"/>
+			<item value="writer"/>
+			<item value="function"/>
+			<item value="tt"/>
+			<item value=" package fmuvb.demo;"/>
+			<item value="Analysis Results"/>
+			<item value="../metamodel/FMUModel.ecore"/>
+			<item value="auxload"/>
+			<item value=".simulat"/>
+		</list>
+		<list key="replacehistory">
+			<item value="www.jku.at/fmumodel"/>
+			<item value="FMU"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1362"/>
+		<item key="DIALOG_Y_ORIGIN" value="666"/>
+		<item key="DIALOG_WIDTH" value="511"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

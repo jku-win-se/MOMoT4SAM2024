@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_PXSGwACnEe-y7ZexWFm13g" name="tmsModule">
+  <imports href="www.jku.at/tinycc#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_nEqiEACnEe-y7ZexWFm13g" name="addComponent">
+    <parameters xmi:id="_fAPhEQJGEe-iQM41LkP_bA" name="to" kind="INOUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_fAPhEAJGEe-iQM41LkP_bA" name="from" kind="INOUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_nE818ACnEe-y7ZexWFm13g" name="Lhs">
+      <nodes xmi:id="_wvUCcACnEe-y7ZexWFm13g" outgoing="_iXyRUACpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_ro3kIDhtEe-cnMHgPk0ivw" value="to">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_g5KXMACpEe-y7ZexWFm13g" incoming="_iXyRUACpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Port"/>
+        <attributes xmi:id="_k--9EACpEe-y7ZexWFm13g" value="'IN'">
+          <type href="www.jku.at/tinycc#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_1_BPQACsEe-y7ZexWFm13g" outgoing="_GtD54ACtEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_ufGKYDhtEe-cnMHgPk0ivw" value="from">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_7AxR4ACsEe-y7ZexWFm13g" incoming="_GtD54ACtEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Port"/>
+        <attributes xmi:id="_8O1ngACsEe-y7ZexWFm13g" value="'OUT'">
+          <type href="www.jku.at/tinycc#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_MmYzIAG9Ee-1sPaWkgAI_g">
+        <type href="www.jku.at/tinycc#//Model"/>
+      </nodes>
+      <nodes xmi:id="_b8ahIAbPEe-Fn4q3pf2wvg">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_wnKqIDhtEe-cnMHgPk0ivw" value="'changeable'">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_iXyRUACpEe-y7ZexWFm13g" source="_wvUCcACnEe-y7ZexWFm13g" target="_g5KXMACpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_GtD54ACtEe-y7ZexWFm13g" source="_1_BPQACsEe-y7ZexWFm13g" target="_7AxR4ACsEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component/ports"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_nE818QCnEe-y7ZexWFm13g" name="Rhs">
+      <nodes xmi:id="_wvUpgACnEe-y7ZexWFm13g" incoming="_drR2sAbPEe-Fn4q3pf2wvg" outgoing="_iXyRUQCpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_ro4LMDhtEe-cnMHgPk0ivw" value="to">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_g5KXMQCpEe-y7ZexWFm13g" incoming="_iXyRUQCpEe-y7ZexWFm13g _Gr2-AADDEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Port"/>
+        <attributes xmi:id="_k-_kIACpEe-y7ZexWFm13g" value="'IN'">
+          <type href="www.jku.at/tinycc#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_hiaIgACpEe-y7ZexWFm13g" incoming="_FFAU8ADDEe-y7ZexWFm13g" outgoing="_CLnH8ACtEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_1_BPQQCsEe-y7ZexWFm13g" outgoing="_GtD54QCtEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_ufGKYThtEe-cnMHgPk0ivw" value="from">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_7Ax48ACsEe-y7ZexWFm13g" incoming="_CLnH8ACtEe-y7ZexWFm13g _GtD54QCtEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Port"/>
+        <attributes xmi:id="_8O1ngQCsEe-y7ZexWFm13g" value="'OUT'">
+          <type href="www.jku.at/tinycc#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_0gGYMADCEe-y7ZexWFm13g" name="" incoming="_M8FWUAG9Ee-1sPaWkgAI_g" outgoing="_FFAU8ADDEe-y7ZexWFm13g _FWiJ0ADDEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Connector"/>
+        <attributes xmi:id="_9P_y4DhtEe-cnMHgPk0ivw" value="from  + '#to#' + to">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_4kMfwADCEe-y7ZexWFm13g" incoming="_FWiJ0ADDEe-y7ZexWFm13g" outgoing="_Gr2-AADDEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_MmaBQAG9Ee-1sPaWkgAI_g" outgoing="_M8FWUAG9Ee-1sPaWkgAI_g">
+        <type href="www.jku.at/tinycc#//Model"/>
+      </nodes>
+      <nodes xmi:id="_b8ahIQbPEe-Fn4q3pf2wvg" outgoing="_drR2sAbPEe-Fn4q3pf2wvg">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_wnKqIThtEe-cnMHgPk0ivw" value="'changeable'">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_iXyRUQCpEe-y7ZexWFm13g" source="_wvUpgACnEe-y7ZexWFm13g" target="_g5KXMQCpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_CLnH8ACtEe-y7ZexWFm13g" source="_hiaIgACpEe-y7ZexWFm13g" target="_7Ax48ACsEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_GtD54QCtEe-y7ZexWFm13g" source="_1_BPQQCsEe-y7ZexWFm13g" target="_7Ax48ACsEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_FFAU8ADDEe-y7ZexWFm13g" source="_0gGYMADCEe-y7ZexWFm13g" target="_hiaIgACpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_FWiJ0ADDEe-y7ZexWFm13g" source="_0gGYMADCEe-y7ZexWFm13g" target="_4kMfwADCEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_Gr2-AADDEe-y7ZexWFm13g" source="_4kMfwADCEe-y7ZexWFm13g" target="_g5KXMQCpEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_M8FWUAG9Ee-1sPaWkgAI_g" source="_MmaBQAG9Ee-1sPaWkgAI_g" target="_0gGYMADCEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Model/connectors"/>
+      </edges>
+      <edges xmi:id="_drR2sAbPEe-Fn4q3pf2wvg" source="_b8ahIQbPEe-Fn4q3pf2wvg" target="_wvUpgACnEe-y7ZexWFm13g">
+        <type href="www.jku.at/tinycc#//Component/components"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_wvUpgQCnEe-y7ZexWFm13g" origin="_wvUCcACnEe-y7ZexWFm13g" image="_wvUpgACnEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_g5K-QACpEe-y7ZexWFm13g" origin="_g5KXMACpEe-y7ZexWFm13g" image="_g5KXMQCpEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_1_BPQgCsEe-y7ZexWFm13g" origin="_1_BPQACsEe-y7ZexWFm13g" image="_1_BPQQCsEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_7Ax48QCsEe-y7ZexWFm13g" origin="_7AxR4ACsEe-y7ZexWFm13g" image="_7Ax48ACsEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_MmaBQQG9Ee-1sPaWkgAI_g" origin="_MmYzIAG9Ee-1sPaWkgAI_g" image="_MmaBQAG9Ee-1sPaWkgAI_g"/>
+    <mappings xmi:id="_b8ahIgbPEe-Fn4q3pf2wvg" origin="_b8ahIAbPEe-Fn4q3pf2wvg" image="_b8ahIQbPEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_FPJnwAIpEe-eFscfcRltJw" name="getType">
+    <parameters xmi:id="_LerFEAIpEe-eFscfcRltJw" name="id" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_iAcB0AIpEe-eFscfcRltJw" name="type" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_FPMEAAIpEe-eFscfcRltJw" name="Lhs">
+      <nodes xmi:id="_MQ82kAIpEe-eFscfcRltJw" outgoing="_GtdvsDhqEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_B5GBwDhqEe-cnMHgPk0ivw" value="id">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_DWo90DhqEe-cnMHgPk0ivw" incoming="_GtdvsDhqEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Property"/>
+        <attributes xmi:id="_EKIQQDhqEe-cnMHgPk0ivw" value="'type'">
+          <type href="www.jku.at/tinycc#//Property/name"/>
+        </attributes>
+        <attributes xmi:id="_FA_m0DhqEe-cnMHgPk0ivw" value="type">
+          <type href="www.jku.at/tinycc#//Property/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_GtdvsDhqEe-cnMHgPk0ivw" source="_MQ82kAIpEe-eFscfcRltJw" target="_DWo90DhqEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Element/properties"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_t5W0gDh3Ee-cnMHgPk0ivw">
+        <conclusion xmi:id="_t5W0gTh3Ee-cnMHgPk0ivw">
+          <nodes xmi:id="_t5W0gjh3Ee-cnMHgPk0ivw" incoming="_Q1qWgAbMEe-Fn4q3pf2wvg" outgoing="_07765DiBEe-e2Ym_0pL-wg">
+            <type href="www.jku.at/tinycc#//Component"/>
+            <attributes xmi:id="_t5W0gzh3Ee-cnMHgPk0ivw" value="id">
+              <type href="www.jku.at/tinycc#//Element/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_P9gmgAbMEe-Fn4q3pf2wvg" outgoing="_Q1qWgAbMEe-Fn4q3pf2wvg">
+            <type href="www.jku.at/tinycc#//Component"/>
+            <attributes xmi:id="_8HOJwDhpEe-cnMHgPk0ivw" value="'library'">
+              <type href="www.jku.at/tinycc#//Element/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_07764DiBEe-e2Ym_0pL-wg" incoming="_07765DiBEe-e2Ym_0pL-wg">
+            <type href="www.jku.at/tinycc#//Property"/>
+            <attributes xmi:id="_07764TiBEe-e2Ym_0pL-wg" value="'type'">
+              <type href="www.jku.at/tinycc#//Property/name"/>
+            </attributes>
+            <attributes xmi:id="_07764jiBEe-e2Ym_0pL-wg" value="type">
+              <type href="www.jku.at/tinycc#//Property/value"/>
+            </attributes>
+          </nodes>
+          <edges xmi:id="_Q1qWgAbMEe-Fn4q3pf2wvg" source="_P9gmgAbMEe-Fn4q3pf2wvg" target="_t5W0gjh3Ee-cnMHgPk0ivw">
+            <type href="www.jku.at/tinycc#//Component/components"/>
+          </edges>
+          <edges xmi:id="_07765DiBEe-e2Ym_0pL-wg" source="_t5W0gjh3Ee-cnMHgPk0ivw" target="_07764DiBEe-e2Ym_0pL-wg">
+            <type href="www.jku.at/tinycc#//Element/properties"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_t5W0hDh3Ee-cnMHgPk0ivw" origin="_MQ82kAIpEe-eFscfcRltJw" image="_t5W0gjh3Ee-cnMHgPk0ivw"/>
+        <mappings xmi:id="_07764ziBEe-e2Ym_0pL-wg" origin="_DWo90DhqEe-cnMHgPk0ivw" image="_07764DiBEe-e2Ym_0pL-wg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_FPPuYAIpEe-eFscfcRltJw" name="Rhs">
+      <nodes xmi:id="_MQ82kQIpEe-eFscfcRltJw" outgoing="_077T1DiBEe-e2Ym_0pL-wg">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_B5GBwThqEe-cnMHgPk0ivw" value="id">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_077T0DiBEe-e2Ym_0pL-wg" incoming="_077T1DiBEe-e2Ym_0pL-wg">
+        <type href="www.jku.at/tinycc#//Property"/>
+        <attributes xmi:id="_077T0TiBEe-e2Ym_0pL-wg" value="'type'">
+          <type href="www.jku.at/tinycc#//Property/name"/>
+        </attributes>
+        <attributes xmi:id="_077T0jiBEe-e2Ym_0pL-wg" value="type">
+          <type href="www.jku.at/tinycc#//Property/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_077T1DiBEe-e2Ym_0pL-wg" source="_MQ82kQIpEe-eFscfcRltJw" target="_077T0DiBEe-e2Ym_0pL-wg">
+        <type href="www.jku.at/tinycc#//Element/properties"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MQ82kgIpEe-eFscfcRltJw" origin="_MQ82kAIpEe-eFscfcRltJw" image="_MQ82kQIpEe-eFscfcRltJw"/>
+    <mappings xmi:id="_077T0ziBEe-e2Ym_0pL-wg" origin="_DWo90DhqEe-cnMHgPk0ivw" image="_077T0DiBEe-e2Ym_0pL-wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_kgQTMAIpEe-eFscfcRltJw" name="checkTypeNotSelectedYet">
+    <parameters xmi:id="_B7VQ4Dh_Ee-e2Ym_0pL-wg" name="type" kind="INOUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_kgSvcAIpEe-eFscfcRltJw" name="Lhs">
+      <formula xsi:type="henshin:Not" xmi:id="_fTxpMDiNEe-e2Ym_0pL-wg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_fTxpMTiNEe-e2Ym_0pL-wg">
+          <conclusion xmi:id="_fTxpMjiNEe-e2Ym_0pL-wg">
+            <nodes xmi:id="_spRBsAIpEe-eFscfcRltJw" incoming="_qbRQIDiPEe-e2Ym_0pL-wg" outgoing="_q3D0QDiPEe-e2Ym_0pL-wg">
+              <type href="www.jku.at/tinycc#//Component"/>
+            </nodes>
+            <nodes xmi:id="_9tJioAbNEe-Fn4q3pf2wvg" outgoing="_qbRQIDiPEe-e2Ym_0pL-wg">
+              <type href="www.jku.at/tinycc#//Component"/>
+              <attributes xmi:id="_L5RtQDhqEe-cnMHgPk0ivw" value="'changeable'">
+                <type href="www.jku.at/tinycc#//Element/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_eoTDQDiNEe-e2Ym_0pL-wg" incoming="_q3D0QDiPEe-e2Ym_0pL-wg">
+              <type href="www.jku.at/tinycc#//Property"/>
+              <attributes xmi:id="_eoTDQTiNEe-e2Ym_0pL-wg" value="'type'">
+                <type href="www.jku.at/tinycc#//Property/name"/>
+              </attributes>
+              <attributes xmi:id="_eoTDQjiNEe-e2Ym_0pL-wg" value="type">
+                <type href="www.jku.at/tinycc#//Property/value"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_qbRQIDiPEe-e2Ym_0pL-wg" source="_9tJioAbNEe-Fn4q3pf2wvg" target="_spRBsAIpEe-eFscfcRltJw">
+              <type href="www.jku.at/tinycc#//Component/components"/>
+            </edges>
+            <edges xmi:id="_q3D0QDiPEe-e2Ym_0pL-wg" source="_spRBsAIpEe-eFscfcRltJw" target="_eoTDQDiNEe-e2Ym_0pL-wg">
+              <type href="www.jku.at/tinycc#//Element/properties"/>
+            </edges>
+          </conclusion>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_kgVLsAIpEe-eFscfcRltJw" name="Rhs"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_7gI7EAJEEe-iQM41LkP_bA" name="getFromInfo">
+    <parameters xmi:id="_SdY58AJFEe-iQM41LkP_bA" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_MoOWkDhtEe-cnMHgPk0ivw" name="maxCon" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_7gp4cAJEEe-iQM41LkP_bA" name="Lhs">
+      <nodes xmi:id="_TcKPUAJFEe-iQM41LkP_bA" outgoing="_Z4ZzMDhtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_7s2FcDhqEe-cnMHgPk0ivw" value="fromId">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_GthSsDhtEe-cnMHgPk0ivw" incoming="_Z4ZzMDhtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Property"/>
+        <attributes xmi:id="_HXEmADhtEe-cnMHgPk0ivw" value="'maxCon'">
+          <type href="www.jku.at/tinycc#//Property/name"/>
+        </attributes>
+        <attributes xmi:id="_IZxZIDhtEe-cnMHgPk0ivw" value="maxCon">
+          <type href="www.jku.at/tinycc#//Property/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Z4ZzMDhtEe-cnMHgPk0ivw" source="_TcKPUAJFEe-iQM41LkP_bA" target="_GthSsDhtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Element/properties"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_1zcokAJFEe-iQM41LkP_bA">
+        <conclusion xmi:id="_1zcokQJFEe-iQM41LkP_bA">
+          <nodes xmi:id="_1zcokgJFEe-iQM41LkP_bA" incoming="_Vok7wDh4Ee-cnMHgPk0ivw" outgoing="_1B86MAJFEe-iQM41LkP_bA _Z4aaQDhtEe-cnMHgPk0ivw">
+            <type href="www.jku.at/tinycc#//Component"/>
+            <attributes xmi:id="_7s2FcjhqEe-cnMHgPk0ivw" value="fromId">
+              <type href="www.jku.at/tinycc#//Element/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_T_ipMAJFEe-iQM41LkP_bA" incoming="_1B86MAJFEe-iQM41LkP_bA _3Nx4kAJFEe-iQM41LkP_bA">
+            <type href="www.jku.at/tinycc#//Port"/>
+            <attributes xmi:id="_4IzWYAJFEe-iQM41LkP_bA" value="'IN'">
+              <type href="www.jku.at/tinycc#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_Uap34AJFEe-iQM41LkP_bA" outgoing="_3Nx4kAJFEe-iQM41LkP_bA">
+            <type href="www.jku.at/tinycc#//ConnectorEnd"/>
+          </nodes>
+          <nodes xmi:id="_Gth5wjhtEe-cnMHgPk0ivw" incoming="_Z4aaQDhtEe-cnMHgPk0ivw">
+            <type href="www.jku.at/tinycc#//Property"/>
+            <attributes xmi:id="_HXEmAjhtEe-cnMHgPk0ivw" value="'maxCon'">
+              <type href="www.jku.at/tinycc#//Property/name"/>
+            </attributes>
+            <attributes xmi:id="_IZyAMThtEe-cnMHgPk0ivw" value="maxCon">
+              <type href="www.jku.at/tinycc#//Property/value"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_Aps94AbPEe-Fn4q3pf2wvg" outgoing="_Vok7wDh4Ee-cnMHgPk0ivw">
+            <type href="www.jku.at/tinycc#//Component"/>
+            <attributes xmi:id="_ys02cDhqEe-cnMHgPk0ivw" value="'changeable'">
+              <type href="www.jku.at/tinycc#//Element/name"/>
+            </attributes>
+          </nodes>
+          <edges xmi:id="_1B86MAJFEe-iQM41LkP_bA" source="_1zcokgJFEe-iQM41LkP_bA" target="_T_ipMAJFEe-iQM41LkP_bA">
+            <type href="www.jku.at/tinycc#//Component/ports"/>
+          </edges>
+          <edges xmi:id="_3Nx4kAJFEe-iQM41LkP_bA" source="_Uap34AJFEe-iQM41LkP_bA" target="_T_ipMAJFEe-iQM41LkP_bA">
+            <type href="www.jku.at/tinycc#//ConnectorEnd/port"/>
+          </edges>
+          <edges xmi:id="_Z4aaQDhtEe-cnMHgPk0ivw" source="_1zcokgJFEe-iQM41LkP_bA" target="_Gth5wjhtEe-cnMHgPk0ivw">
+            <type href="www.jku.at/tinycc#//Element/properties"/>
+          </edges>
+          <edges xmi:id="_Vok7wDh4Ee-cnMHgPk0ivw" source="_Aps94AbPEe-Fn4q3pf2wvg" target="_1zcokgJFEe-iQM41LkP_bA">
+            <type href="www.jku.at/tinycc#//Component/components"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_1zcolQJFEe-iQM41LkP_bA" origin="_TcKPUAJFEe-iQM41LkP_bA" image="_1zcokgJFEe-iQM41LkP_bA"/>
+        <mappings xmi:id="_Gth5wzhtEe-cnMHgPk0ivw" origin="_GthSsDhtEe-cnMHgPk0ivw" image="_Gth5wjhtEe-cnMHgPk0ivw"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_7gp4cQJEEe-iQM41LkP_bA" name="Rhs">
+      <nodes xmi:id="_TcKPUQJFEe-iQM41LkP_bA" outgoing="_Z4ZzMThtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Component"/>
+        <attributes xmi:id="_7s2FcThqEe-cnMHgPk0ivw" value="fromId">
+          <type href="www.jku.at/tinycc#//Element/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Gth5wDhtEe-cnMHgPk0ivw" incoming="_Z4ZzMThtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Property"/>
+        <attributes xmi:id="_HXEmAThtEe-cnMHgPk0ivw" value="'maxCon'">
+          <type href="www.jku.at/tinycc#//Property/name"/>
+        </attributes>
+        <attributes xmi:id="_IZyAMDhtEe-cnMHgPk0ivw" value="maxCon">
+          <type href="www.jku.at/tinycc#//Property/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Z4ZzMThtEe-cnMHgPk0ivw" source="_TcKPUQJFEe-iQM41LkP_bA" target="_Gth5wDhtEe-cnMHgPk0ivw">
+        <type href="www.jku.at/tinycc#//Element/properties"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_NxnAgDhtEe-cnMHgPk0ivw" name="checkMaxConnections" conditionText="ocl:self.components->select(c | c.name='changeable').components->select(c1 | c1.name=fromId).ports->select(p | p.direction=FlowDirection::OUT)->collect(p | self.connectors->select(conn | conn.ends->exists(end | end.port = p)))->size() &lt; maxCon.toInteger()"/>
+    <mappings xmi:id="_TcK2YAJFEe-iQM41LkP_bA" origin="_TcKPUAJFEe-iQM41LkP_bA" image="_TcKPUQJFEe-iQM41LkP_bA"/>
+    <mappings xmi:id="_Gth5wThtEe-cnMHgPk0ivw" origin="_GthSsDhtEe-cnMHgPk0ivw" image="_Gth5wDhtEe-cnMHgPk0ivw"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_2aw1UAJHEe-iQM41LkP_bA" name="connectComponent" subUnits="_FPJnwAIpEe-eFscfcRltJw _kgQTMAIpEe-eFscfcRltJw _7gI7EAJEEe-iQM41LkP_bA _nEqiEACnEe-y7ZexWFm13g">
+    <parameters xmi:id="_gPBWcAJIEe-iQM41LkP_bA" name="toId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Sd6-EAJIEe-iQM41LkP_bA" name="fromId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_gPBWcQJIEe-iQM41LkP_bA" name="toType" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_kMq3wAJIEe-iQM41LkP_bA" source="_gPBWcAJIEe-iQM41LkP_bA" target="_LerFEAIpEe-eFscfcRltJw"/>
+    <parameterMappings xmi:id="_kMt7EAJIEe-iQM41LkP_bA" source="_LerFEAIpEe-eFscfcRltJw" target="_gPBWcAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_kMt7EQJIEe-iQM41LkP_bA" source="_gPBWcQJIEe-iQM41LkP_bA" target="_iAcB0AIpEe-eFscfcRltJw"/>
+    <parameterMappings xmi:id="_kMt7EgJIEe-iQM41LkP_bA" source="_iAcB0AIpEe-eFscfcRltJw" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMAbcEe-Fn4q3pf2wvg" source="_gPBWcAJIEe-iQM41LkP_bA" target="_fAPhEQJGEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMQbcEe-Fn4q3pf2wvg" source="_fAPhEQJGEe-iQM41LkP_bA" target="_gPBWcAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMgbcEe-Fn4q3pf2wvg" source="_Sd6-EAJIEe-iQM41LkP_bA" target="_fAPhEAJGEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMwbcEe-Fn4q3pf2wvg" source="_fAPhEAJGEe-iQM41LkP_bA" target="_Sd6-EAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_aRDHQDhuEe-cnMHgPk0ivw" source="_Sd6-EAJIEe-iQM41LkP_bA" target="_SdY58AJFEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_aRDHQThuEe-cnMHgPk0ivw" source="_SdY58AJFEe-iQM41LkP_bA" target="_Sd6-EAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_DG4eADh_Ee-e2Ym_0pL-wg" source="_gPBWcQJIEe-iQM41LkP_bA" target="_B7VQ4Dh_Ee-e2Ym_0pL-wg"/>
+    <parameterMappings xmi:id="_DG4eATh_Ee-e2Ym_0pL-wg" source="_B7VQ4Dh_Ee-e2Ym_0pL-wg" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+  </units>
+</henshin:Module>

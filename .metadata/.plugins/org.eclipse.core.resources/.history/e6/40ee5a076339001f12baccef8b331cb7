@@ -1,0 +1,101 @@
+package fmuvb.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import fmu.VehicleBatteryFMU;
+import fmuvb.Parameter;
+
+public class FitnessCalculator {
+
+   public static Map<String, Integer> outputToIndices = null;
+   public static Map<String, Integer> inputToIndices = null;
+   private static VehicleBatteryFMU testFMU = null;
+
+   public static int simulationTime = 2474;
+
+   public static double calcAuxload(final double batteryVoltage, final double maxTorque) {
+      return 600 + (batteryVoltage - 340) * 2 + (maxTorque - 500) * 0.75;
+   }
+
+   public static double calcMaxPower(final double batteryVoltage, final double internalRes) {
+      return 100000 - internalRes * 100000 + batteryVoltage * 100;
+   }
+
+   public static double getSoC(final fmuvb.VehicleBatteryFMU vb) {
+      return vb.getOutputs().get(outputToIndices.get("SoC")).getValue();
+   }
+
+   public static double getTotalBatteryLosses(final fmuvb.VehicleBatteryFMU vb) {
+      return vb.getOutputs().get(outputToIndices.get("TotalBatteryLosses")).getValue();
+   }
+
+   public static double getTotalTractiveEnergy(final fmuvb.VehicleBatteryFMU vb) {
+      final Map<String, Double> inputs = vb.getInputs().stream()
+            .collect(Collectors.toMap(Parameter::getName, Parameter::getValue));
+
+      if(outputToIndices == null) {
+         System.out.println("Create output indices...");
+         FitnessCalculator.outputToIndices = new HashMap<>();
+         FitnessCalculator.inputToIndices = new HashMap<>();
+
+         for(int i = 0; i < vb.getOutputs().size(); i++) {
+            FitnessCalculator.outputToIndices.put(vb.getOutputs().get(i).getName(), i);
+         }
+         for(int i = 0; i < vb.getInputs().size(); i++) {
+            FitnessCalculator.inputToIndices.put(vb.getInputs().get(i).getName(), i);
+         }
+         FitnessCalculator.testFMU = new VehicleBatteryFMU();
+      }
+
+      final double batteryVoltage = inputs.get("BatteryVoltage");
+      final double internalRes = inputs.get("InternalRes");
+      final double maxTorque = inputs.get("MaxTorque");
+      final double auxload = FitnessCalculator.calcAuxload(batteryVoltage, maxTorque);
+      final double maxPower = FitnessCalculator.calcMaxPower(batteryVoltage, internalRes);
+
+      vb.getInputs().get(inputToIndices.get("Auxload")).setValue(auxload);
+      vb.getInputs().get(inputToIndices.get("MaxPower")).setValue(maxPower);
+
+      FitnessCalculator.testFMU.setup(auxload, batteryVoltage, internalRes, maxTorque, maxPower);
+      FitnessCalculator.testFMU.simulate(simulationTime);
+      //
+      final double totalTractiveEnergy = testFMU.getLast("TotalTractiveEnergy");
+      final double totalBatteryLosses = testFMU.getLast("TotalBatteryLosses");
+      final double soC = testFMU.getLast("SoC");
+
+      vb.getOutputs().get(outputToIndices.get("TotalTractiveEnergy")).setValue(totalTractiveEnergy);
+      vb.getOutputs().get(outputToIndices.get("TotalBatteryLosses")).setValue(totalBatteryLosses);
+      vb.getOutputs().get(outputToIndices.get("SoC")).setValue(soC);
+
+      FitnessCalculator.testFMU.reset();
+
+      // XYSeriesCollection dataset = new XYSeriesCollection();
+      // XYSeries series1 = new XYSeries("State of charge over time");
+      // int x = 0;
+      // for(final double te : testFMU.get("SoC")) {
+      // series1.add(x++, te);
+      // }
+      //
+      // dataset.addSeries(series1);
+      // JFreeChart chart = ChartFactory.createXYLineChart("State of charge over time", "SoC", "t", dataset);
+      // XYPlot plot = (XYPlot) chart.getPlot();
+      // NumberAxis xaxis = (NumberAxis) plot.getDomainAxis();
+      // NumberAxis yaxis = (NumberAxis) plot.getRangeAxis();
+      // yaxis.setRange(50, 100);
+      // try {
+      // ChartUtilities.saveChartAsPNG(new File("fmu_sim_out.png"), chart, 800, 600);
+      // } catch(final IOException e) {
+      // // TODO Auto-generated catch block
+      // e.printStackTrace();
+      // }
+
+      return totalTractiveEnergy;
+   }
+
+   public static void init(final int simulationTime) {
+      FitnessCalculator.simulationTime = simulationTime;
+   }
+
+}

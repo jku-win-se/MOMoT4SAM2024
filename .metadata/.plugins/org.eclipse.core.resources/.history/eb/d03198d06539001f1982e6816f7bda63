@@ -1,0 +1,49 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Loaded Component</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.LoadedComponent#getPressureDrops <em>Pressure Drops</em>}</li>
+ *   <li>{@link tms.LoadedComponent#getFlows <em>Flows</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getLoadedComponent()
+ * @model abstract="true"
+ * @generated
+ */
+public interface LoadedComponent extends ArrangeableBlock {
+   /**
+    * Returns the value of the '<em><b>Pressure Drops</b></em>' attribute list.
+    * The list contents are of type {@link java.lang.Double}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Pressure Drops</em>' attribute list.
+    * @see tms.TmsPackage#getLoadedComponent_PressureDrops()
+    * @model
+    * @generated
+    */
+   EList<Double> getPressureDrops();
+
+   /**
+    * Returns the value of the '<em><b>Flows</b></em>' attribute list.
+    * The list contents are of type {@link java.lang.Double}.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Flows</em>' attribute list.
+    * @see tms.TmsPackage#getLoadedComponent_Flows()
+    * @model
+    * @generated
+    */
+   EList<Double> getFlows();
+
+} // LoadedComponent

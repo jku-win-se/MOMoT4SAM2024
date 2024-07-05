@@ -1,0 +1,265 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import tms.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class TmsFactoryImpl extends EFactoryImpl implements TmsFactory {
+   /**
+    * Creates the default factory implementation.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public static TmsFactory init() {
+      try {
+         TmsFactory theTmsFactory = (TmsFactory)EPackage.Registry.INSTANCE.getEFactory(TmsPackage.eNS_URI);
+         if (theTmsFactory != null) {
+            return theTmsFactory;
+         }
+      }
+      catch (Exception exception) {
+         EcorePlugin.INSTANCE.log(exception);
+      }
+      return new TmsFactoryImpl();
+   }
+
+   /**
+    * Creates an instance of the factory.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public TmsFactoryImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EObject create(EClass eClass) {
+      switch (eClass.getClassifierID()) {
+         case TmsPackage.FAN: return createFan();
+         case TmsPackage.VALVE: return createValve();
+         case TmsPackage.RADIATOR: return createRadiator();
+         case TmsPackage.PUMP: return createPump();
+         case TmsPackage.S1: return createS1();
+         case TmsPackage.S2: return createS2();
+         case TmsPackage.BATTERY_SENSOR: return createBatterySensor();
+         case TmsPackage.BATTERY: return createBattery();
+         case TmsPackage.ELECTRIC_MOTOR_DRIVE: return createElectricMotorDrive();
+         case TmsPackage.DCDC: return createDCDC();
+         case TmsPackage.COOLANT_HEATER: return createCoolantHeater();
+         case TmsPackage.ELECTRIC_MOTOR: return createElectricMotor();
+         case TmsPackage.CHARGER: return createCharger();
+         case TmsPackage.FLOW: return createFlow();
+         case TmsPackage.TMS_MODEL: return createTMSModel();
+         default:
+            throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+      }
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Fan createFan() {
+      FanImpl fan = new FanImpl();
+      return fan;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Valve createValve() {
+      ValveImpl valve = new ValveImpl();
+      return valve;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Radiator createRadiator() {
+      RadiatorImpl radiator = new RadiatorImpl();
+      return radiator;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Pump createPump() {
+      PumpImpl pump = new PumpImpl();
+      return pump;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public S1 createS1() {
+      S1Impl s1 = new S1Impl();
+      return s1;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public S2 createS2() {
+      S2Impl s2 = new S2Impl();
+      return s2;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public BatterySensor createBatterySensor() {
+      BatterySensorImpl batterySensor = new BatterySensorImpl();
+      return batterySensor;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Battery createBattery() {
+      BatteryImpl battery = new BatteryImpl();
+      return battery;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public ElectricMotorDrive createElectricMotorDrive() {
+      ElectricMotorDriveImpl electricMotorDrive = new ElectricMotorDriveImpl();
+      return electricMotorDrive;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public DCDC createDCDC() {
+      DCDCImpl dcdc = new DCDCImpl();
+      return dcdc;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public CoolantHeater createCoolantHeater() {
+      CoolantHeaterImpl coolantHeater = new CoolantHeaterImpl();
+      return coolantHeater;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public ElectricMotor createElectricMotor() {
+      ElectricMotorImpl electricMotor = new ElectricMotorImpl();
+      return electricMotor;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Charger createCharger() {
+      ChargerImpl charger = new ChargerImpl();
+      return charger;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Flow createFlow() {
+      FlowImpl flow = new FlowImpl();
+      return flow;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public TMSModel createTMSModel() {
+      TMSModelImpl tmsModel = new TMSModelImpl();
+      return tmsModel;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public TmsPackage getTmsPackage() {
+      return (TmsPackage)getEPackage();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @deprecated
+    * @generated
+    */
+   @Deprecated
+   public static TmsPackage getPackage() {
+      return TmsPackage.eINSTANCE;
+   }
+
+} //TmsFactoryImpl

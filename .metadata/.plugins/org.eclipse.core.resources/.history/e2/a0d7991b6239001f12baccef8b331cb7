@@ -1,0 +1,152 @@
+package tms.demo;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import no.ntnu.ihb.fmi4j.importer.fmi2.CoSimulationSlave;
+import no.ntnu.ihb.fmi4j.importer.fmi2.Fmu;
+import tinycc.Component;
+import tinycc.FlowDirection;
+import tinycc.Model;
+import tinycc.Port;
+import tms.ArrangeableBlock;
+import tms.CoolantHeater;
+import tms.Flow;
+import tms.LoadedComponent;
+import tms.TMSModel;
+
+public class TMSUtils {
+
+   public static int checkFMU(final TMSModel tmsModel) {
+      Fmu fmu;
+      try {
+         fmu = Fmu.from(new File("fmu/AIDOaRt_FMU_standAlone.fmu"));
+         System.out.print(fmu.getSupportsCoSimulation());
+         final CoSimulationSlave slave = fmu.asCoSimulationFmu().newInstance();
+         final long[] refs = { 0, 1, 2 };
+         final double[] values = { 20.0, 0, 0 };
+         slave.writeReal(refs, values);
+         slave.simpleSetup();
+         double t = 0;
+         final double stop = 10;
+         final double stepSize = 1.0 / 10;
+         while(t <= stop) {
+            if(!slave.doStep(t, stepSize)) {
+               break;
+            }
+            t += stepSize;
+         }
+         slave.terminate(); // or close, try with resources is also supported
+         fmu.close();
+      } catch(final FileNotFoundException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } catch(final IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } // URLs are also supported
+
+      return 0;
+   }
+
+   public static int checkLayoutValidity(final Model m) {
+      final Component selection = m.getComponents().stream().filter(c -> c.getName().compareTo("changeable") == 0)
+            .findFirst().get();
+
+      final Set<String> selectedTypes = selection.getComponents().stream().flatMap(c -> c.getProperties().stream())
+            .filter(p -> p.getName().compareTo("type") == 0).map(p -> p.getValue()).distinct()
+            .collect(Collectors.toSet());
+      return selectedTypes.size() == 6 ? 0 : 1;
+   }
+
+   // public static int checkLayoutValidity(final TMSModel tmsModel) {
+   // int elements = 0;
+   // for(final Flow f : tmsModel.getFlows()) {
+   // elements += f.getCovers().size();
+   // }
+   // return elements == 7 && tmsModel.getSelectedPump() != null ? 0 : 1;
+   // }
+
+   public static void clearOutputDirs() {
+      final File dir = new File("output/models");
+      for(final File f : dir.listFiles()) {
+         if(!f.isDirectory()) {
+            f.delete();
+         }
+      }
+   }
+
+   public static double countDistinctUsedComponents(final Model m) {
+      final Component selection = m.getComponents().stream().filter(c -> c.getName().compareTo("changeable") == 0)
+            .findFirst().get();
+
+      return selection.getComponents().size();
+   }
+
+   public static double countFlows(final Model m) {
+      final Component selection = m.getComponents().stream().filter(c -> c.getName().compareTo("changeable") == 0)
+            .findFirst().get();
+      final Component p = selection.getComponents().stream()
+            .filter(c -> getComponentType(c) != null && getComponentType(c).compareTo("Pump") == 0).findFirst().get();
+      final Port outPort = p.getPorts().stream().filter(port -> port.getDirection() == FlowDirection.OUT).findFirst()
+            .get();
+      final long flows = m.getConnectors().stream().flatMap(c -> c.getEnds().stream())
+            .filter(e -> e.getPort().equals(outPort)).count();
+      return flows;
+   }
+
+   public static double dummyPressure(final TMSModel tmsModel) {
+      final List<Double> values = new ArrayList<>();
+      for(final Flow f : tmsModel.getFlows()) {
+         double flowSum = 0;
+         for(final ArrangeableBlock b : f.getCovers()) {
+            if(b instanceof LoadedComponent && !(b instanceof CoolantHeater)) {
+               flowSum += ((LoadedComponent) b).getPressureDrops().get(0);
+            }
+         }
+         values.add(flowSum);
+      }
+
+      return values.stream().mapToDouble(d -> d).reduce(1, (a, b) -> a * b);
+
+   }
+
+   private static Component getComponentByType(final Model m, final String type) {
+      return m.getComponents().stream().filter(c -> getComponentType(c).compareTo(type) == 0).findFirst().get();
+   }
+
+   private static String getComponentType(final Component c) {
+      return c.getProperties().stream().filter(p -> p.getName().compareTo("type") == 0).findFirst().get().getValue();
+   }
+
+   public static void rewriteToUriPath(final Path p, final String search, final String replace) {
+
+      final Charset charset = StandardCharsets.UTF_8;
+
+      String content = null;
+      try {
+         content = new String(Files.readAllBytes(p), charset);
+      } catch(final IOException e1) {
+         // TODO Auto-generated catch block
+         e1.printStackTrace();
+      }
+      content = content.replaceAll(search, replace);
+      try {
+         Files.write(p, content.getBytes(charset));
+      } catch(final IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+
+   }
+
+}

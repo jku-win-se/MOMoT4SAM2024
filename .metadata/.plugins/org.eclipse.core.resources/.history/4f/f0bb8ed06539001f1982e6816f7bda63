@@ -1,0 +1,185 @@
+/**
+ */
+package tms.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+
+import tms.LoadedComponent;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Loaded Component</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.LoadedComponentImpl#getPressureDrops <em>Pressure Drops</em>}</li>
+ *   <li>{@link tms.impl.LoadedComponentImpl#getFlows <em>Flows</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class LoadedComponentImpl extends ArrangeableBlockImpl implements LoadedComponent {
+   /**
+    * The cached value of the '{@link #getPressureDrops() <em>Pressure Drops</em>}' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getPressureDrops()
+    * @generated
+    * @ordered
+    */
+   protected EList<Double> pressureDrops;
+
+   /**
+    * The cached value of the '{@link #getFlows() <em>Flows</em>}' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getFlows()
+    * @generated
+    * @ordered
+    */
+   protected EList<Double> flows;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected LoadedComponentImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.LOADED_COMPONENT;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EList<Double> getPressureDrops() {
+      if (pressureDrops == null) {
+         pressureDrops = new EDataTypeUniqueEList<Double>(Double.class, this, TmsPackage.LOADED_COMPONENT__PRESSURE_DROPS);
+      }
+      return pressureDrops;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EList<Double> getFlows() {
+      if (flows == null) {
+         flows = new EDataTypeUniqueEList<Double>(Double.class, this, TmsPackage.LOADED_COMPONENT__FLOWS);
+      }
+      return flows;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.LOADED_COMPONENT__PRESSURE_DROPS:
+            return getPressureDrops();
+         case TmsPackage.LOADED_COMPONENT__FLOWS:
+            return getFlows();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @SuppressWarnings("unchecked")
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.LOADED_COMPONENT__PRESSURE_DROPS:
+            getPressureDrops().clear();
+            getPressureDrops().addAll((Collection<? extends Double>)newValue);
+            return;
+         case TmsPackage.LOADED_COMPONENT__FLOWS:
+            getFlows().clear();
+            getFlows().addAll((Collection<? extends Double>)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.LOADED_COMPONENT__PRESSURE_DROPS:
+            getPressureDrops().clear();
+            return;
+         case TmsPackage.LOADED_COMPONENT__FLOWS:
+            getFlows().clear();
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.LOADED_COMPONENT__PRESSURE_DROPS:
+            return pressureDrops != null && !pressureDrops.isEmpty();
+         case TmsPackage.LOADED_COMPONENT__FLOWS:
+            return flows != null && !flows.isEmpty();
+      }
+      return super.eIsSet(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public String toString() {
+      if (eIsProxy()) return super.toString();
+
+      StringBuilder result = new StringBuilder(super.toString());
+      result.append(" (pressureDrops: ");
+      result.append(pressureDrops);
+      result.append(", flows: ");
+      result.append(flows);
+      result.append(')');
+      return result.toString();
+   }
+
+} //LoadedComponentImpl

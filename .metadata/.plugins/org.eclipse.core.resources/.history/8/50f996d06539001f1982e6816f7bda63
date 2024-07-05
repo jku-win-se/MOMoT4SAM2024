@@ -1,0 +1,17 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Coolant Heater</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see tms.TmsPackage#getCoolantHeater()
+ * @model
+ * @generated
+ */
+public interface CoolantHeater extends LoadedComponent {
+} // CoolantHeater

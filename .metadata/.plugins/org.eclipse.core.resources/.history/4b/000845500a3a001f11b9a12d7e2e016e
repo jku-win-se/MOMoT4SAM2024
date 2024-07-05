@@ -1,0 +1,129 @@
+package momot.^search
+
+import at.ac.tuwien.big.momot.^search.^fitness.dimension.TransformationLengthDimension
+import at.ac.tuwien.big.moea.^experiment.executor.listener.SeedRuntimePrintListener
+import at.ac.tuwien.big.momot.problem.unit.parameter.random.RandomIntegerValue
+import fmuvb.demo.RandomDoubleValueFMU
+import fmuvb.VehicleBatteryFMU
+import java.util.List
+import at.ac.tuwien.big.momot.problem.unit.parameter.random.RandomListValue
+import fmuvb.demo.FitnessCalculator
+import fmumodel.FmumodelPackage
+import fmuvb.demo.FMUUtils
+import fmuvb.demo.SimulationEnv
+import at.ac.tuwien.big.momot.util.MomotUtil
+import fmumodel.FMU
+import fmuvb.demo.ConfigurationUtils
+import java.util.HashMap
+import com.google.common.collect.Maps
+import fmuvb.demo.SimulationResult
+import java.util.Map
+
+var attribute = "simResults"
+var fmuPath = "fmu-lib/BEV_5in_9out.fmu"
+var simDuration = 2474
+
+initialization = {
+	FmumodelPackage.eINSTANCE.eClass();
+	FMUUtils.initFMUModel(fmuPath, Map.of("AuxLoad", 600.0, "BatteryVoltage", 340.0, "InternalRes", 0.1));
+	SimulationEnv.init(simDuration, fmuPath);
+	System.out.println("Search started.");
+}
+
+search = {
+	model          = {
+		file       = "models/FMU.xmi"	
+	}
+	solutionLength  = 6	
+
+	transformations = {
+		modules = [ "transformations/fmu.henshin" ]
+		
+		parameterValues = {
+         "fmu::fmu::setInput::val"  : new RandomDoubleValueFMU()
+         "fmu::fmu::setInput::name"  : new RandomListValue(List.of("BatteryVoltage", "InternalRes", "MaxTorque"))
+      	}
+	}
+
+	fitness         = {
+		preprocess = {
+			val root = MomotUtil.getRoot(solution.execute, typeof(FMU))
+			val inputs = newImmutableMap(root.input.map[name -> value])
+
+			val calcInputs = newImmutableMap(
+				'MaxPower' -> 100000 - inputs.get("InternalRes")*100000 + inputs.get("BatteryVoltage")*100, 
+				'AuxLoad' -> 600 + (inputs.get("BatteryVoltage")-340) * 2 + (inputs.get("MaxTorque")-500) * 0.75
+			)
+			
+			solution.setAttribute(attribute, SimulationEnv.runSimulation(root, calcInputs) )
+		}
+		
+		objectives = {
+			
+			TotalTractiveEnergy : minimize {
+				val simResult = solution.getAttribute(attribute, typeof(SimulationResult))
+				simResult.getOutput("TotalTractiveEnergy")
+			}
+			TotalBatteryLosses : minimize {
+						val simResult = solution.getAttribute(attribute, typeof(SimulationResult))
+				simResult.getOutput("TotalBatteryLosses")
+			}
+						SoC : maximize {
+		val simResult = solution.getAttribute(attribute, typeof(SimulationResult))
+				simResult.getOutput("SoC")}
+			
+		}
+	}
+
+	algorithms      = {
+		//Random  : moea.createRandomSearch()
+		NSGAII  : moea.createNSGAII()
+		//NSGAIII : moea.createNSGAIII()
+	}
+}
+
+experiment = {
+	populationSize    = 5
+	maxEvaluations    = 100
+	nrRuns            = 1
+	progressListeners = [ new SeedRuntimePrintListener ]
+}
+
+analysis = {
+	indicators       = [ hypervolume generationalDistance ]
+	significance     = 0.01
+	show             = [ aggregateValues statisticalSignificance individualValues ]
+	outputFile       = "output/analysis/analysis.txt"
+	boxplotDirectory = "output/analysis/"
+	printOutput
+}
+
+results = {
+		
+
+	
+	adaptModels = {
+		
+		
+	}
+	
+	
+	objectives = {
+		outputFile      = "output/objectives/objective_values.txt"
+		printOutput
+	}
+
+	solutions  = {
+		
+		outputFile      = "output/solutions/objective_values.txt"
+		outputDirectory = "output/solutions/"
+	}
+
+	models     = {
+		outputDirectory = "output/models/"
+	}
+}
+
+finalization = {
+	System.out.println("Search finished.");
+}

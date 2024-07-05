@@ -1,0 +1,69 @@
+package fmu;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import no.ntnu.ihb.fmi4j.importer.fmi2.CoSimulationSlave;
+import no.ntnu.ihb.fmi4j.importer.fmi2.Fmu;
+
+public class AIDOaRtTestFMU {
+   private Fmu fmu;
+   private CoSimulationSlave slave;
+   private final long[] inputPorts = { 0, 1, 2 };
+   private final Map<String, List<Double>> measurements;
+
+   public AIDOaRtTestFMU() {
+      this.measurements = new HashMap<>();
+      this.measurements.put("CurrentTemp", new ArrayList<>());
+      try {
+         fmu = Fmu.from(new File("fmu/AIDOaRt_FMU.fmu"));
+         slave = fmu.asCoSimulationFmu().newInstance();
+
+      } catch(final FileNotFoundException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } catch(final IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+
+   }
+
+   public List<Double> get(final String outPort) {
+      return this.measurements.get(outPort);
+   }
+
+   public void setup(final double startTemperature, final double flow, final double pressure) {
+      slave.simpleSetup();
+      slave.setupExperiment();
+      slave.enterInitializationMode();
+
+      final double[] values = { startTemperature, flow, pressure };
+      slave.writeReal(inputPorts, values);
+      slave.getWrapper().writeReal(inputPorts, values);
+      slave.exitInitializationMode();
+   }
+
+   public void simulate(final double stepSize, final double stopAt) {
+      double t = 0;
+      while(t <= stopAt) {
+         if(!slave.doStep(t, stepSize)) {
+            break;
+         }
+         final double[] outs = new double[1];
+         slave.readReal(new long[] { 7 }, outs);
+         this.measurements.get("CurrentTemp").add(outs[0]);
+
+         t += stepSize;
+      }
+   }
+
+   public void terminate() {
+      slave.terminate(); // or close, try with resources is also supported
+   }
+}

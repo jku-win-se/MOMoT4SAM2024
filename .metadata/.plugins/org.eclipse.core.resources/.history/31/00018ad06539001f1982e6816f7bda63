@@ -1,0 +1,839 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import tms.ArrangeableBlock;
+import tms.Battery;
+import tms.BatterySensor;
+import tms.Charger;
+import tms.CoolantHeater;
+import tms.ElectricMotor;
+import tms.ElectricMotorDrive;
+import tms.Fan;
+import tms.Flow;
+import tms.LoadedComponent;
+import tms.Pump;
+import tms.Radiator;
+import tms.Sensor;
+import tms.TMSModel;
+import tms.TmsFactory;
+import tms.TmsPackage;
+import tms.Valve;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class TmsPackageImpl extends EPackageImpl implements TmsPackage {
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass arrangeableBlockEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass sensorEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass fanEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass valveEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass radiatorEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass pumpEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass s1EClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass s2EClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass batterySensorEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass batteryEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass electricMotorDriveEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass dcdcEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass coolantHeaterEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass electricMotorEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass loadedComponentEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass chargerEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass flowEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private EClass tmsModelEClass = null;
+
+   /**
+    * Creates an instance of the model <b>Package</b>, registered with
+    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+    * package URI value.
+    * <p>Note: the correct way to create the package is via the static
+    * factory method {@link #init init()}, which also performs
+    * initialization of the package, or returns the registered package,
+    * if one already exists.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see org.eclipse.emf.ecore.EPackage.Registry
+    * @see tms.TmsPackage#eNS_URI
+    * @see #init()
+    * @generated
+    */
+   private TmsPackageImpl() {
+      super(eNS_URI, TmsFactory.eINSTANCE);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private static boolean isInited = false;
+
+   /**
+    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+    *
+    * <p>This method is used to initialize {@link TmsPackage#eINSTANCE} when that field is accessed.
+    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #eNS_URI
+    * @see #createPackageContents()
+    * @see #initializePackageContents()
+    * @generated
+    */
+   public static TmsPackage init() {
+      if (isInited) return (TmsPackage)EPackage.Registry.INSTANCE.getEPackage(TmsPackage.eNS_URI);
+
+      // Obtain or create and register package
+      Object registeredTmsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+      TmsPackageImpl theTmsPackage = registeredTmsPackage instanceof TmsPackageImpl ? (TmsPackageImpl)registeredTmsPackage : new TmsPackageImpl();
+
+      isInited = true;
+
+      // Create package meta-data objects
+      theTmsPackage.createPackageContents();
+
+      // Initialize created meta-data
+      theTmsPackage.initializePackageContents();
+
+      // Mark meta-data to indicate it can't be changed
+      theTmsPackage.freeze();
+
+      // Update the registry and return the package
+      EPackage.Registry.INSTANCE.put(TmsPackage.eNS_URI, theTmsPackage);
+      return theTmsPackage;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getArrangeableBlock() {
+      return arrangeableBlockEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getArrangeableBlock_Id() {
+      return (EAttribute)arrangeableBlockEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getArrangeableBlock_TypeId() {
+      return (EAttribute)arrangeableBlockEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getSensor() {
+      return sensorEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getFan() {
+      return fanEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getFan_Id() {
+      return (EAttribute)fanEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getValve() {
+      return valveEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getValve_Radiator() {
+      return (EReference)valveEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getValve_Pump() {
+      return (EReference)valveEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getValve_Id() {
+      return (EAttribute)valveEClass.getEStructuralFeatures().get(2);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getRadiator() {
+      return radiatorEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getRadiator_Pump() {
+      return (EReference)radiatorEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getRadiator_Id() {
+      return (EAttribute)radiatorEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getPump() {
+      return pumpEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getPump_Id() {
+      return (EAttribute)pumpEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getPump_Flow() {
+      return (EAttribute)pumpEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getPump_Pressure() {
+      return (EAttribute)pumpEClass.getEStructuralFeatures().get(2);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getS1() {
+      return s1EClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getS1_Valve() {
+      return (EReference)s1EClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getS2() {
+      return s2EClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getBatterySensor() {
+      return batterySensorEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getBattery() {
+      return batteryEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getBattery_Batterysensor() {
+      return (EReference)batteryEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getElectricMotorDrive() {
+      return electricMotorDriveEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getDCDC() {
+      return dcdcEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getCoolantHeater() {
+      return coolantHeaterEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getElectricMotor() {
+      return electricMotorEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getLoadedComponent() {
+      return loadedComponentEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getLoadedComponent_PressureDrops() {
+      return (EAttribute)loadedComponentEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getLoadedComponent_Flows() {
+      return (EAttribute)loadedComponentEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getCharger() {
+      return chargerEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getFlow() {
+      return flowEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getFlow_Covers() {
+      return (EReference)flowEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EAttribute getFlow_Id() {
+      return (EAttribute)flowEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EClass getTMSModel() {
+      return tmsModelEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_Fan() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_Radiator() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(1);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_Valve() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(2);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_Pumps() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(3);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_ArrangeableBlocks() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(4);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_Flows() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(5);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EReference getTMSModel_SelectedPump() {
+      return (EReference)tmsModelEClass.getEStructuralFeatures().get(6);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public TmsFactory getTmsFactory() {
+      return (TmsFactory)getEFactoryInstance();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private boolean isCreated = false;
+
+   /**
+    * Creates the meta-model objects for the package.  This method is
+    * guarded to have no affect on any invocation but its first.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public void createPackageContents() {
+      if (isCreated) return;
+      isCreated = true;
+
+      // Create classes and their features
+      arrangeableBlockEClass = createEClass(ARRANGEABLE_BLOCK);
+      createEAttribute(arrangeableBlockEClass, ARRANGEABLE_BLOCK__ID);
+      createEAttribute(arrangeableBlockEClass, ARRANGEABLE_BLOCK__TYPE_ID);
+
+      sensorEClass = createEClass(SENSOR);
+
+      fanEClass = createEClass(FAN);
+      createEAttribute(fanEClass, FAN__ID);
+
+      valveEClass = createEClass(VALVE);
+      createEReference(valveEClass, VALVE__RADIATOR);
+      createEReference(valveEClass, VALVE__PUMP);
+      createEAttribute(valveEClass, VALVE__ID);
+
+      radiatorEClass = createEClass(RADIATOR);
+      createEReference(radiatorEClass, RADIATOR__PUMP);
+      createEAttribute(radiatorEClass, RADIATOR__ID);
+
+      pumpEClass = createEClass(PUMP);
+      createEAttribute(pumpEClass, PUMP__ID);
+      createEAttribute(pumpEClass, PUMP__FLOW);
+      createEAttribute(pumpEClass, PUMP__PRESSURE);
+
+      s1EClass = createEClass(S1);
+      createEReference(s1EClass, S1__VALVE);
+
+      s2EClass = createEClass(S2);
+
+      batterySensorEClass = createEClass(BATTERY_SENSOR);
+
+      batteryEClass = createEClass(BATTERY);
+      createEReference(batteryEClass, BATTERY__BATTERYSENSOR);
+
+      electricMotorDriveEClass = createEClass(ELECTRIC_MOTOR_DRIVE);
+
+      dcdcEClass = createEClass(DCDC);
+
+      coolantHeaterEClass = createEClass(COOLANT_HEATER);
+
+      electricMotorEClass = createEClass(ELECTRIC_MOTOR);
+
+      loadedComponentEClass = createEClass(LOADED_COMPONENT);
+      createEAttribute(loadedComponentEClass, LOADED_COMPONENT__PRESSURE_DROPS);
+      createEAttribute(loadedComponentEClass, LOADED_COMPONENT__FLOWS);
+
+      chargerEClass = createEClass(CHARGER);
+
+      flowEClass = createEClass(FLOW);
+      createEReference(flowEClass, FLOW__COVERS);
+      createEAttribute(flowEClass, FLOW__ID);
+
+      tmsModelEClass = createEClass(TMS_MODEL);
+      createEReference(tmsModelEClass, TMS_MODEL__FAN);
+      createEReference(tmsModelEClass, TMS_MODEL__RADIATOR);
+      createEReference(tmsModelEClass, TMS_MODEL__VALVE);
+      createEReference(tmsModelEClass, TMS_MODEL__PUMPS);
+      createEReference(tmsModelEClass, TMS_MODEL__ARRANGEABLE_BLOCKS);
+      createEReference(tmsModelEClass, TMS_MODEL__FLOWS);
+      createEReference(tmsModelEClass, TMS_MODEL__SELECTED_PUMP);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   private boolean isInitialized = false;
+
+   /**
+    * Complete the initialization of the package and its meta-model.  This
+    * method is guarded to have no affect on any invocation but its first.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public void initializePackageContents() {
+      if (isInitialized) return;
+      isInitialized = true;
+
+      // Initialize package
+      setName(eNAME);
+      setNsPrefix(eNS_PREFIX);
+      setNsURI(eNS_URI);
+
+      // Create type parameters
+
+      // Set bounds for type parameters
+
+      // Add supertypes to classes
+      sensorEClass.getESuperTypes().add(this.getArrangeableBlock());
+      s1EClass.getESuperTypes().add(this.getSensor());
+      s2EClass.getESuperTypes().add(this.getSensor());
+      batterySensorEClass.getESuperTypes().add(this.getSensor());
+      batteryEClass.getESuperTypes().add(this.getLoadedComponent());
+      electricMotorDriveEClass.getESuperTypes().add(this.getLoadedComponent());
+      dcdcEClass.getESuperTypes().add(this.getLoadedComponent());
+      coolantHeaterEClass.getESuperTypes().add(this.getLoadedComponent());
+      electricMotorEClass.getESuperTypes().add(this.getLoadedComponent());
+      loadedComponentEClass.getESuperTypes().add(this.getArrangeableBlock());
+      chargerEClass.getESuperTypes().add(this.getLoadedComponent());
+
+      // Initialize classes, features, and operations; add parameters
+      initEClass(arrangeableBlockEClass, ArrangeableBlock.class, "ArrangeableBlock", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getArrangeableBlock_Id(), ecorePackage.getEString(), "id", null, 0, 1, ArrangeableBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getArrangeableBlock_TypeId(), ecorePackage.getEString(), "typeId", "", 0, 1, ArrangeableBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(sensorEClass, Sensor.class, "Sensor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(fanEClass, Fan.class, "Fan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getFan_Id(), ecorePackage.getEString(), "id", null, 0, 1, Fan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(valveEClass, Valve.class, "Valve", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getValve_Radiator(), this.getRadiator(), null, "radiator", null, 1, 1, Valve.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getValve_Pump(), this.getPump(), null, "pump", null, 1, 1, Valve.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getValve_Id(), ecorePackage.getEString(), "id", null, 0, 1, Valve.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(radiatorEClass, Radiator.class, "Radiator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getRadiator_Pump(), this.getPump(), null, "pump", null, 1, 1, Radiator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getRadiator_Id(), ecorePackage.getEString(), "id", null, 0, 1, Radiator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(pumpEClass, Pump.class, "Pump", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getPump_Id(), ecorePackage.getEString(), "id", null, 0, 1, Pump.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getPump_Flow(), ecorePackage.getEDouble(), "flow", null, 0, 1, Pump.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getPump_Pressure(), ecorePackage.getEDouble(), "pressure", null, 0, 1, Pump.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(s1EClass, tms.S1.class, "S1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getS1_Valve(), this.getValve(), null, "valve", null, 1, 1, tms.S1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(s2EClass, tms.S2.class, "S2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(batterySensorEClass, BatterySensor.class, "BatterySensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(batteryEClass, Battery.class, "Battery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getBattery_Batterysensor(), this.getBatterySensor(), null, "batterysensor", null, 0, 1, Battery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(electricMotorDriveEClass, ElectricMotorDrive.class, "ElectricMotorDrive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(dcdcEClass, tms.DCDC.class, "DCDC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(coolantHeaterEClass, CoolantHeater.class, "CoolantHeater", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(electricMotorEClass, ElectricMotor.class, "ElectricMotor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(loadedComponentEClass, LoadedComponent.class, "LoadedComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getLoadedComponent_PressureDrops(), ecorePackage.getEDouble(), "pressureDrops", null, 0, -1, LoadedComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getLoadedComponent_Flows(), ecorePackage.getEDouble(), "flows", null, 0, -1, LoadedComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(chargerEClass, Charger.class, "Charger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+      initEClass(flowEClass, Flow.class, "Flow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getFlow_Covers(), this.getArrangeableBlock(), null, "covers", null, 0, -1, Flow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getFlow_Id(), ecorePackage.getEString(), "id", null, 0, 1, Flow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(tmsModelEClass, TMSModel.class, "TMSModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getTMSModel_Fan(), this.getFan(), null, "fan", null, 0, 1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_Radiator(), this.getRadiator(), null, "radiator", null, 0, 1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_Valve(), this.getValve(), null, "valve", null, 0, 1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_Pumps(), this.getPump(), null, "pumps", null, 0, -1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_ArrangeableBlocks(), this.getArrangeableBlock(), null, "arrangeableBlocks", null, 0, -1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_Flows(), this.getFlow(), null, "flows", null, 0, 3, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getTMSModel_SelectedPump(), this.getPump(), null, "selectedPump", null, 0, 1, TMSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      // Create resource
+      createResource(eNS_URI);
+   }
+
+} //TmsPackageImpl

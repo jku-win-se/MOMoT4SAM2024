@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_PXSGwACnEe-y7ZexWFm13g" name="tmsModule">
+  <imports href="/tinycc/TinyCC/model/tinycc.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_nEqiEACnEe-y7ZexWFm13g" name="addComponent">
+    <parameters xmi:id="_fAPhEQJGEe-iQM41LkP_bA" name="to" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_fAPhEAJGEe-iQM41LkP_bA" name="from" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_WMW7IAbcEe-Fn4q3pf2wvg" name="toType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_WMYJQAbcEe-Fn4q3pf2wvg" name="fromType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_nE818ACnEe-y7ZexWFm13g" name="Lhs">
+      <nodes xmi:id="_wvUCcACnEe-y7ZexWFm13g" outgoing="_iXyRUACpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_xXjuMACnEe-y7ZexWFm13g" value="to">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_g5KXMACpEe-y7ZexWFm13g" incoming="_iXyRUACpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_k--9EACpEe-y7ZexWFm13g" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_1_BPQACsEe-y7ZexWFm13g" outgoing="_GtD54ACtEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_gp7uwACxEe-y7ZexWFm13g" value="from">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_7AxR4ACsEe-y7ZexWFm13g" incoming="_GtD54ACtEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_8O1ngACsEe-y7ZexWFm13g" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_MmYzIAG9Ee-1sPaWkgAI_g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_b8ahIAbPEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_chZdgAbPEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_iXyRUACpEe-y7ZexWFm13g" source="_wvUCcACnEe-y7ZexWFm13g" target="_g5KXMACpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_GtD54ACtEe-y7ZexWFm13g" source="_1_BPQACsEe-y7ZexWFm13g" target="_7AxR4ACsEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_nE818QCnEe-y7ZexWFm13g" name="Rhs">
+      <nodes xmi:id="_wvUpgACnEe-y7ZexWFm13g" incoming="_drR2sAbPEe-Fn4q3pf2wvg" outgoing="_iXyRUQCpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_xXjuMQCnEe-y7ZexWFm13g" value="to">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_g5KXMQCpEe-y7ZexWFm13g" incoming="_iXyRUQCpEe-y7ZexWFm13g _Gr2-AADDEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_k-_kIACpEe-y7ZexWFm13g" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_hiaIgACpEe-y7ZexWFm13g" incoming="_FFAU8ADDEe-y7ZexWFm13g" outgoing="_CLnH8ACtEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_1_BPQQCsEe-y7ZexWFm13g" outgoing="_GtD54QCtEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_gp884ACxEe-y7ZexWFm13g" value="from">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_7Ax48ACsEe-y7ZexWFm13g" incoming="_CLnH8ACtEe-y7ZexWFm13g _GtD54QCtEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_8O1ngQCsEe-y7ZexWFm13g" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_0gGYMADCEe-y7ZexWFm13g" name="" incoming="_M8FWUAG9Ee-1sPaWkgAI_g" outgoing="_FFAU8ADDEe-y7ZexWFm13g _FWiJ0ADDEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+        <attributes xmi:id="_PTddYAG9Ee-1sPaWkgAI_g" value="fromType + '#to#' + toType">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_4kMfwADCEe-y7ZexWFm13g" incoming="_FWiJ0ADDEe-y7ZexWFm13g" outgoing="_Gr2-AADDEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_MmaBQAG9Ee-1sPaWkgAI_g" outgoing="_M8FWUAG9Ee-1sPaWkgAI_g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_b8ahIQbPEe-Fn4q3pf2wvg" outgoing="_drR2sAbPEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_chZdgQbPEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_iXyRUQCpEe-y7ZexWFm13g" source="_wvUpgACnEe-y7ZexWFm13g" target="_g5KXMQCpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_CLnH8ACtEe-y7ZexWFm13g" source="_hiaIgACpEe-y7ZexWFm13g" target="_7Ax48ACsEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_GtD54QCtEe-y7ZexWFm13g" source="_1_BPQQCsEe-y7ZexWFm13g" target="_7Ax48ACsEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_FFAU8ADDEe-y7ZexWFm13g" source="_0gGYMADCEe-y7ZexWFm13g" target="_hiaIgACpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_FWiJ0ADDEe-y7ZexWFm13g" source="_0gGYMADCEe-y7ZexWFm13g" target="_4kMfwADCEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_Gr2-AADDEe-y7ZexWFm13g" source="_4kMfwADCEe-y7ZexWFm13g" target="_g5KXMQCpEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_M8FWUAG9Ee-1sPaWkgAI_g" source="_MmaBQAG9Ee-1sPaWkgAI_g" target="_0gGYMADCEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model/connectors"/>
+      </edges>
+      <edges xmi:id="_drR2sAbPEe-Fn4q3pf2wvg" source="_b8ahIQbPEe-Fn4q3pf2wvg" target="_wvUpgACnEe-y7ZexWFm13g">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_wvUpgQCnEe-y7ZexWFm13g" origin="_wvUCcACnEe-y7ZexWFm13g" image="_wvUpgACnEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_g5K-QACpEe-y7ZexWFm13g" origin="_g5KXMACpEe-y7ZexWFm13g" image="_g5KXMQCpEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_1_BPQgCsEe-y7ZexWFm13g" origin="_1_BPQACsEe-y7ZexWFm13g" image="_1_BPQQCsEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_7Ax48QCsEe-y7ZexWFm13g" origin="_7AxR4ACsEe-y7ZexWFm13g" image="_7Ax48ACsEe-y7ZexWFm13g"/>
+    <mappings xmi:id="_MmaBQQG9Ee-1sPaWkgAI_g" origin="_MmYzIAG9Ee-1sPaWkgAI_g" image="_MmaBQAG9Ee-1sPaWkgAI_g"/>
+    <mappings xmi:id="_b8ahIgbPEe-Fn4q3pf2wvg" origin="_b8ahIAbPEe-Fn4q3pf2wvg" image="_b8ahIQbPEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_FPJnwAIpEe-eFscfcRltJw" name="getType">
+    <parameters xmi:id="_LerFEAIpEe-eFscfcRltJw" name="id" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_iAcB0AIpEe-eFscfcRltJw" name="type" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_FPMEAAIpEe-eFscfcRltJw" name="Lhs">
+      <nodes xmi:id="_MQ82kAIpEe-eFscfcRltJw" incoming="_Q1qWgAbMEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_NMaZQAIpEe-eFscfcRltJw" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_gCtJ0AIpEe-eFscfcRltJw" value="type">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_P9gmgAbMEe-Fn4q3pf2wvg" outgoing="_Q1qWgAbMEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <edges xmi:id="_Q1qWgAbMEe-Fn4q3pf2wvg" source="_P9gmgAbMEe-Fn4q3pf2wvg" target="_MQ82kAIpEe-eFscfcRltJw">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_W2ROEAbMEe-Fn4q3pf2wvg">
+        <conclusion xmi:id="_W2ROEQbMEe-Fn4q3pf2wvg">
+          <nodes xmi:id="_W2ROEgbMEe-Fn4q3pf2wvg" outgoing="_W2ROGQbMEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_SjcuAAbMEe-Fn4q3pf2wvg" value="'movables'">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_W2ROFQbMEe-Fn4q3pf2wvg" incoming="_W2ROGQbMEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_W2ROFgbMEe-Fn4q3pf2wvg" value="id">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+            <attributes xmi:id="_W2ROFwbMEe-Fn4q3pf2wvg" value="type">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <edges xmi:id="_W2ROGQbMEe-Fn4q3pf2wvg" source="_W2ROEgbMEe-Fn4q3pf2wvg" target="_W2ROFQbMEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_W2ROFAbMEe-Fn4q3pf2wvg" origin="_P9gmgAbMEe-Fn4q3pf2wvg" image="_W2ROEgbMEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_W2ROGAbMEe-Fn4q3pf2wvg" origin="_MQ82kAIpEe-eFscfcRltJw" image="_W2ROFQbMEe-Fn4q3pf2wvg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_FPPuYAIpEe-eFscfcRltJw" name="Rhs">
+      <nodes xmi:id="_MQ82kQIpEe-eFscfcRltJw" incoming="_Q1qWgQbMEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_NMaZQQIpEe-eFscfcRltJw" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_gCtJ0QIpEe-eFscfcRltJw" value="type">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_P9hNkAbMEe-Fn4q3pf2wvg" outgoing="_Q1qWgQbMEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <edges xmi:id="_Q1qWgQbMEe-Fn4q3pf2wvg" source="_P9hNkAbMEe-Fn4q3pf2wvg" target="_MQ82kQIpEe-eFscfcRltJw">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MQ82kgIpEe-eFscfcRltJw" origin="_MQ82kAIpEe-eFscfcRltJw" image="_MQ82kQIpEe-eFscfcRltJw"/>
+    <mappings xmi:id="_P9hNkQbMEe-Fn4q3pf2wvg" origin="_P9gmgAbMEe-Fn4q3pf2wvg" image="_P9hNkAbMEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_kgQTMAIpEe-eFscfcRltJw" name="checkTypeNotSelectedYet">
+    <parameters xmi:id="_LwbB8AJhEe-iQM41LkP_bA" name="type" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_kgSvcAIpEe-eFscfcRltJw" name="Lhs">
+      <nodes xmi:id="_9tJioAbNEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_H3HcQAbOEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_49-UkAIpEe-eFscfcRltJw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_49-UkQIpEe-eFscfcRltJw">
+          <conclusion xmi:id="_49-UkgIpEe-eFscfcRltJw">
+            <nodes xmi:id="_spRBsAIpEe-eFscfcRltJw" incoming="_-J-BgAbNEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_tUDrIAIpEe-eFscfcRltJw" value="type">
+                <type href="www.jku.at/tinycc#//Component/type"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_9tKJsAbNEe-Fn4q3pf2wvg" outgoing="_-J-BgAbNEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_H3IDUQbOEe-Fn4q3pf2wvg" value="'selection'">
+                <type href="www.jku.at/tinycc#//Entity/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_-J-BgAbNEe-Fn4q3pf2wvg" source="_9tKJsAbNEe-Fn4q3pf2wvg" target="_spRBsAIpEe-eFscfcRltJw">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_9tKJsQbNEe-Fn4q3pf2wvg" origin="_9tJioAbNEe-Fn4q3pf2wvg" image="_9tKJsAbNEe-Fn4q3pf2wvg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_kgVLsAIpEe-eFscfcRltJw" name="Rhs">
+      <nodes xmi:id="_9tJioQbNEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_H3IDUAbOEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_9tJiogbNEe-Fn4q3pf2wvg" origin="_9tJioAbNEe-Fn4q3pf2wvg" image="_9tJioQbNEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_7gI7EAJEEe-iQM41LkP_bA" name="getFromInfo">
+    <parameters xmi:id="_SdY58AJFEe-iQM41LkP_bA" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_p3cJkAJFEe-iQM41LkP_bA" name="fromType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_SdYS4AJFEe-iQM41LkP_bA" name="toType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_7gp4cAJEEe-iQM41LkP_bA" name="Lhs">
+      <nodes xmi:id="_TcKPUAJFEe-iQM41LkP_bA">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_r2AIAAJFEe-iQM41LkP_bA" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_snSbAAJFEe-iQM41LkP_bA" value="fromType">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Aps94AbPEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_CSKJcAbPEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <formula xsi:type="henshin:And" xmi:id="_ngz-sAJsEe-Fn4q3pf2wvg">
+        <left xsi:type="henshin:NestedCondition" xmi:id="_1zcokAJFEe-iQM41LkP_bA">
+          <conclusion xmi:id="_1zcokQJFEe-iQM41LkP_bA">
+            <nodes xmi:id="_1zcokgJFEe-iQM41LkP_bA" incoming="_Bap5sAbPEe-Fn4q3pf2wvg" outgoing="_1B86MAJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_1zcokwJFEe-iQM41LkP_bA" value="fromId">
+                <type href="www.jku.at/tinycc#//Entity/name"/>
+              </attributes>
+              <attributes xmi:id="_1zcolAJFEe-iQM41LkP_bA" value="fromType">
+                <type href="www.jku.at/tinycc#//Component/type"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_T_ipMAJFEe-iQM41LkP_bA" incoming="_1B86MAJFEe-iQM41LkP_bA _3Nx4kAJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+              <attributes xmi:id="_4IzWYAJFEe-iQM41LkP_bA" value="'IN'">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Uap34AJFEe-iQM41LkP_bA" outgoing="_3Nx4kAJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+            </nodes>
+            <nodes xmi:id="_Aptk8AbPEe-Fn4q3pf2wvg" outgoing="_Bap5sAbPEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_CSKJcgbPEe-Fn4q3pf2wvg" value="'selection'">
+                <type href="www.jku.at/tinycc#//Entity/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_1B86MAJFEe-iQM41LkP_bA" source="_1zcokgJFEe-iQM41LkP_bA" target="_T_ipMAJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+            </edges>
+            <edges xmi:id="_3Nx4kAJFEe-iQM41LkP_bA" source="_Uap34AJFEe-iQM41LkP_bA" target="_T_ipMAJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+            </edges>
+            <edges xmi:id="_Bap5sAbPEe-Fn4q3pf2wvg" source="_Aptk8AbPEe-Fn4q3pf2wvg" target="_1zcokgJFEe-iQM41LkP_bA">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_1zcolQJFEe-iQM41LkP_bA" origin="_TcKPUAJFEe-iQM41LkP_bA" image="_1zcokgJFEe-iQM41LkP_bA"/>
+          <mappings xmi:id="_Aptk8QbPEe-Fn4q3pf2wvg" origin="_Aps94AbPEe-Fn4q3pf2wvg" image="_Aptk8AbPEe-Fn4q3pf2wvg"/>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_ngz-sQJsEe-Fn4q3pf2wvg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_ngz-sgJsEe-Fn4q3pf2wvg">
+            <conclusion xmi:id="_ngz-swJsEe-Fn4q3pf2wvg">
+              <nodes xmi:id="_ngz-tAJsEe-Fn4q3pf2wvg" outgoing="_lbhtMAJsEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+                <attributes xmi:id="_ngz-tQJsEe-Fn4q3pf2wvg" value="fromId">
+                  <type href="www.jku.at/tinycc#//Entity/name"/>
+                </attributes>
+                <attributes xmi:id="_ngz-tgJsEe-Fn4q3pf2wvg" value="fromType">
+                  <type href="www.jku.at/tinycc#//Component/type"/>
+                </attributes>
+              </nodes>
+              <nodes xmi:id="_kdOR4AJsEe-Fn4q3pf2wvg" incoming="_lbhtMAJsEe-Fn4q3pf2wvg _ozzQkAJsEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+                <attributes xmi:id="_7fCjgAJzEe-Fn4q3pf2wvg" value="'OUT'">
+                  <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+                </attributes>
+              </nodes>
+              <nodes xmi:id="_kw1xcAJsEe-Fn4q3pf2wvg" outgoing="_ozzQkAJsEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+              </nodes>
+              <nodes xmi:id="_Aptk8gbPEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+                <attributes xmi:id="_CSKJcwbPEe-Fn4q3pf2wvg" value="'selection'">
+                  <type href="www.jku.at/tinycc#//Entity/name"/>
+                </attributes>
+              </nodes>
+              <edges xmi:id="_lbhtMAJsEe-Fn4q3pf2wvg" source="_ngz-tAJsEe-Fn4q3pf2wvg" target="_kdOR4AJsEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+              </edges>
+              <edges xmi:id="_ozzQkAJsEe-Fn4q3pf2wvg" source="_kw1xcAJsEe-Fn4q3pf2wvg" target="_kdOR4AJsEe-Fn4q3pf2wvg">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_ngz-twJsEe-Fn4q3pf2wvg" origin="_TcKPUAJFEe-iQM41LkP_bA" image="_ngz-tAJsEe-Fn4q3pf2wvg"/>
+            <mappings xmi:id="_Aptk8wbPEe-Fn4q3pf2wvg" origin="_Aps94AbPEe-Fn4q3pf2wvg" image="_Aptk8gbPEe-Fn4q3pf2wvg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_7gp4cQJEEe-iQM41LkP_bA" name="Rhs">
+      <nodes xmi:id="_TcKPUQJFEe-iQM41LkP_bA">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_r2AIAQJFEe-iQM41LkP_bA" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_snTCEAJFEe-iQM41LkP_bA" value="fromType">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Aps94QbPEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_CSKJcQbPEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_TcK2YAJFEe-iQM41LkP_bA" origin="_TcKPUAJFEe-iQM41LkP_bA" image="_TcKPUQJFEe-iQM41LkP_bA"/>
+    <mappings xmi:id="_Aps94gbPEe-Fn4q3pf2wvg" origin="_Aps94AbPEe-Fn4q3pf2wvg" image="_Aps94QbPEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_2aw1UAJHEe-iQM41LkP_bA" name="connectComponent" subUnits="_FPJnwAIpEe-eFscfcRltJw _kgQTMAIpEe-eFscfcRltJw _5KFskAYcEe-Fn4q3pf2wvg _nEqiEACnEe-y7ZexWFm13g">
+    <parameters xmi:id="_gPBWcAJIEe-iQM41LkP_bA" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Sd6-EAJIEe-iQM41LkP_bA" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_gPBWcQJIEe-iQM41LkP_bA" name="toType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Sd6-EQJIEe-iQM41LkP_bA" name="fromType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_kMq3wAJIEe-iQM41LkP_bA" source="_gPBWcAJIEe-iQM41LkP_bA" target="_LerFEAIpEe-eFscfcRltJw"/>
+    <parameterMappings xmi:id="_kMt7EAJIEe-iQM41LkP_bA" source="_LerFEAIpEe-eFscfcRltJw" target="_gPBWcAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_kMt7EQJIEe-iQM41LkP_bA" source="_gPBWcQJIEe-iQM41LkP_bA" target="_iAcB0AIpEe-eFscfcRltJw"/>
+    <parameterMappings xmi:id="_kMt7EgJIEe-iQM41LkP_bA" source="_iAcB0AIpEe-eFscfcRltJw" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_N3HBoAJhEe-iQM41LkP_bA" source="_gPBWcQJIEe-iQM41LkP_bA" target="_LwbB8AJhEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_N3HBoQJhEe-iQM41LkP_bA" source="_LwbB8AJhEe-iQM41LkP_bA" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_wPlaQAYdEe-Fn4q3pf2wvg" source="_Sd6-EAJIEe-iQM41LkP_bA" target="_Ftqh4AYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_wPlaQQYdEe-Fn4q3pf2wvg" source="_Ftqh4AYdEe-Fn4q3pf2wvg" target="_Sd6-EAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_wPlaQgYdEe-Fn4q3pf2wvg" source="_Sd6-EQJIEe-iQM41LkP_bA" target="_Ftqh4QYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_wPlaQwYdEe-Fn4q3pf2wvg" source="_Ftqh4QYdEe-Fn4q3pf2wvg" target="_Sd6-EQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_wPlaRAYdEe-Fn4q3pf2wvg" source="_gPBWcQJIEe-iQM41LkP_bA" target="_Ftqh4gYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_wPlaRQYdEe-Fn4q3pf2wvg" source="_Ftqh4gYdEe-Fn4q3pf2wvg" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMAbcEe-Fn4q3pf2wvg" source="_gPBWcAJIEe-iQM41LkP_bA" target="_fAPhEQJGEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMQbcEe-Fn4q3pf2wvg" source="_fAPhEQJGEe-iQM41LkP_bA" target="_gPBWcAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMgbcEe-Fn4q3pf2wvg" source="_Sd6-EAJIEe-iQM41LkP_bA" target="_fAPhEAJGEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTMwbcEe-Fn4q3pf2wvg" source="_fAPhEAJGEe-iQM41LkP_bA" target="_Sd6-EAJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTNAbcEe-Fn4q3pf2wvg" source="_Sd6-EQJIEe-iQM41LkP_bA" target="_WMW7IAbcEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_ZjXTNQbcEe-Fn4q3pf2wvg" source="_WMW7IAbcEe-Fn4q3pf2wvg" target="_Sd6-EQJIEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_ZjXTNgbcEe-Fn4q3pf2wvg" source="_gPBWcQJIEe-iQM41LkP_bA" target="_WMYJQAbcEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_ZjXTNwbcEe-Fn4q3pf2wvg" source="_WMYJQAbcEe-Fn4q3pf2wvg" target="_gPBWcQJIEe-iQM41LkP_bA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_RIljAAJtEe-Fn4q3pf2wvg" name="selectPump">
+    <parameters xmi:id="_SFR0wAJtEe-Fn4q3pf2wvg" name="id" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_RIn_QAJtEe-Fn4q3pf2wvg" name="Lhs">
+      <nodes xmi:id="_SwvMkAJtEe-Fn4q3pf2wvg" incoming="_FpX4sAbWEe-Fn4q3pf2wvg" outgoing="_jnlV8AYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_TZJQYAJtEe-Fn4q3pf2wvg" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_XzMlwCJqEe-ygdK6QO-Ltw" value="'Pump'">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gLpakAYzEe-Fn4q3pf2wvg" incoming="_jnlV8AYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_ocfPYAYzEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_FS2PEAbWEe-Fn4q3pf2wvg" outgoing="_FpX4sAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_GkdA4AbWEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_jnlV8AYzEe-Fn4q3pf2wvg" source="_SwvMkAJtEe-Fn4q3pf2wvg" target="_gLpakAYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_FpX4sAbWEe-Fn4q3pf2wvg" source="_FS2PEAbWEe-Fn4q3pf2wvg" target="_SwvMkAJtEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_6me6oQYzEe-Fn4q3pf2wvg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_6me6ogYzEe-Fn4q3pf2wvg">
+          <conclusion xmi:id="_6me6owYzEe-Fn4q3pf2wvg">
+            <nodes xmi:id="_6me6pgYzEe-Fn4q3pf2wvg" incoming="_7T8dkwYzEe-Fn4q3pf2wvg _7tx54AYzEe-Fn4q3pf2wvg _5YalAAYzEe-Fn4q3pf2wvg _5io4AAYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+              <attributes xmi:id="_6me6pwYzEe-Fn4q3pf2wvg" value="'OUT'">
+                <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_7T8dkAYzEe-Fn4q3pf2wvg" incoming="_FpX4swbWEe-Fn4q3pf2wvg" outgoing="_7T8dkwYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_7T8dkQYzEe-Fn4q3pf2wvg" value="id">
+                <type href="www.jku.at/tinycc#//Entity/name"/>
+              </attributes>
+              <attributes xmi:id="_XzMlwiJqEe-ygdK6QO-Ltw" value="'Pump'">
+                <type href="www.jku.at/tinycc#//Component/type"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_4T_6oAYzEe-Fn4q3pf2wvg" description="" outgoing="_7tx54AYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+            </nodes>
+            <nodes xmi:id="_4l6KAAYzEe-Fn4q3pf2wvg" outgoing="_5YalAAYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+            </nodes>
+            <nodes xmi:id="_47oiYAYzEe-Fn4q3pf2wvg" outgoing="_5io4AAYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+            </nodes>
+            <nodes xmi:id="_FS2PFQbWEe-Fn4q3pf2wvg" outgoing="_FpX4swbWEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+              <attributes xmi:id="_GkdA4wbWEe-Fn4q3pf2wvg" value="'selection'">
+                <type href="www.jku.at/tinycc#//Entity/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_7T8dkwYzEe-Fn4q3pf2wvg" source="_7T8dkAYzEe-Fn4q3pf2wvg" target="_6me6pgYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+            </edges>
+            <edges xmi:id="_7tx54AYzEe-Fn4q3pf2wvg" source="_4T_6oAYzEe-Fn4q3pf2wvg" target="_6me6pgYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+            </edges>
+            <edges xmi:id="_5YalAAYzEe-Fn4q3pf2wvg" source="_4l6KAAYzEe-Fn4q3pf2wvg" target="_6me6pgYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+            </edges>
+            <edges xmi:id="_5io4AAYzEe-Fn4q3pf2wvg" source="_47oiYAYzEe-Fn4q3pf2wvg" target="_6me6pgYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+            </edges>
+            <edges xmi:id="_FpX4swbWEe-Fn4q3pf2wvg" source="_FS2PFQbWEe-Fn4q3pf2wvg" target="_7T8dkAYzEe-Fn4q3pf2wvg">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_6me6qAYzEe-Fn4q3pf2wvg" origin="_gLpakAYzEe-Fn4q3pf2wvg" image="_6me6pgYzEe-Fn4q3pf2wvg"/>
+          <mappings xmi:id="_7T8dkgYzEe-Fn4q3pf2wvg" origin="_SwvMkAJtEe-Fn4q3pf2wvg" image="_7T8dkAYzEe-Fn4q3pf2wvg"/>
+          <mappings xmi:id="_FS2PFgbWEe-Fn4q3pf2wvg" origin="_FS2PEAbWEe-Fn4q3pf2wvg" image="_FS2PFQbWEe-Fn4q3pf2wvg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_RIn_QQJtEe-Fn4q3pf2wvg" name="Rhs">
+      <nodes xmi:id="_SwvMkQJtEe-Fn4q3pf2wvg" incoming="_FpX4sQbWEe-Fn4q3pf2wvg" outgoing="_jnlV8QYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_TZJQYQJtEe-Fn4q3pf2wvg" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_XzMlwSJqEe-ygdK6QO-Ltw" value="'Pump'">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gLpakQYzEe-Fn4q3pf2wvg" incoming="_jnlV8QYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_ocfPYQYzEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_FS2PEQbWEe-Fn4q3pf2wvg" outgoing="_FpX4sQbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_GkdA4QbWEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_jnlV8QYzEe-Fn4q3pf2wvg" source="_SwvMkQJtEe-Fn4q3pf2wvg" target="_gLpakQYzEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_FpX4sQbWEe-Fn4q3pf2wvg" source="_FS2PEQbWEe-Fn4q3pf2wvg" target="_SwvMkQJtEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_SwvMkgJtEe-Fn4q3pf2wvg" origin="_SwvMkAJtEe-Fn4q3pf2wvg" image="_SwvMkQJtEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_gLpakgYzEe-Fn4q3pf2wvg" origin="_gLpakAYzEe-Fn4q3pf2wvg" image="_gLpakQYzEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_FS2PEgbWEe-Fn4q3pf2wvg" origin="_FS2PEAbWEe-Fn4q3pf2wvg" image="_FS2PEQbWEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_5KFskAYcEe-Fn4q3pf2wvg" name="getPredecessor" subUnits="_7gI7EAJEEe-iQM41LkP_bA _qy0RcCJqEe-ygdK6QO-Ltw">
+    <parameters xmi:id="_Ftqh4AYdEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Ftqh4QYdEe-Fn4q3pf2wvg" name="fromType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Ftqh4gYdEe-Fn4q3pf2wvg" name="toType" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_9sjtAAYuEe-Fn4q3pf2wvg" source="_Ftqh4AYdEe-Fn4q3pf2wvg" target="_SdY58AJFEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_9sjtAQYuEe-Fn4q3pf2wvg" source="_SdY58AJFEe-iQM41LkP_bA" target="_Ftqh4AYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_9sjtAgYuEe-Fn4q3pf2wvg" source="_Ftqh4QYdEe-Fn4q3pf2wvg" target="_p3cJkAJFEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_9sjtAwYuEe-Fn4q3pf2wvg" source="_p3cJkAJFEe-iQM41LkP_bA" target="_Ftqh4QYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_9sjtBAYuEe-Fn4q3pf2wvg" source="_Ftqh4gYdEe-Fn4q3pf2wvg" target="_SdYS4AJFEe-iQM41LkP_bA"/>
+    <parameterMappings xmi:id="_9sjtBQYuEe-Fn4q3pf2wvg" source="_SdYS4AJFEe-iQM41LkP_bA" target="_Ftqh4gYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_UsgNwCG-Ee-Lbuo-_kOFrA" source="_Ftqh4AYdEe-Fn4q3pf2wvg" target="_SFR0wAJtEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_UsgNwSG-Ee-Lbuo-_kOFrA" source="_SFR0wAJtEe-Fn4q3pf2wvg" target="_Ftqh4AYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_VwMWwCJrEe-ygdK6QO-Ltw" source="_Ftqh4AYdEe-Fn4q3pf2wvg" target="_4Bvw4CJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_VwMWwSJrEe-ygdK6QO-Ltw" source="_4Bvw4CJqEe-ygdK6QO-Ltw" target="_Ftqh4AYdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_VwMWwiJrEe-ygdK6QO-Ltw" source="_Ftqh4QYdEe-Fn4q3pf2wvg" target="_4Bvw4SJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_VwMWwyJrEe-ygdK6QO-Ltw" source="_4Bvw4SJqEe-ygdK6QO-Ltw" target="_Ftqh4QYdEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_GiPP0AbVEe-Fn4q3pf2wvg" name="changePumpOutputs" subUnit="_O9LmYAbWEe-Fn4q3pf2wvg">
+    <parameters xmi:id="_KkegwAbWEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_KkfH0AbWEe-Fn4q3pf2wvg" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_6gwwEAbWEe-Fn4q3pf2wvg" source="_KkegwAbWEe-Fn4q3pf2wvg" target="_RiVDsAbWEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_6gwwEQbWEe-Fn4q3pf2wvg" source="_RiVDsAbWEe-Fn4q3pf2wvg" target="_KkegwAbWEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_6gwwEgbWEe-Fn4q3pf2wvg" source="_KkfH0AbWEe-Fn4q3pf2wvg" target="_RiVDsQbWEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_6gwwEwbWEe-Fn4q3pf2wvg" source="_RiVDsQbWEe-Fn4q3pf2wvg" target="_KkfH0AbWEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_L3rDcAbVEe-Fn4q3pf2wvg" name="changePump">
+    <parameters xmi:id="_E67o4AbXEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_TfP40AbVEe-Fn4q3pf2wvg" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_L3sRkAbVEe-Fn4q3pf2wvg" name="Lhs">
+      <nodes xmi:id="_V3FS4AbVEe-Fn4q3pf2wvg" incoming="_ZQ3SIAbVEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_CVa_MAbXEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y1SJYAbVEe-Fn4q3pf2wvg" outgoing="_ZQ3SIAbVEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_aK7tsAbVEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_AlUTgAbXEe-Fn4q3pf2wvg" incoming="_jO1LkAbfEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_DWezkAbXEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f4KxwAbfEe-Fn4q3pf2wvg" outgoing="_jO1LkAbfEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model"/>
+      </nodes>
+      <edges xmi:id="_ZQ3SIAbVEe-Fn4q3pf2wvg" source="_Y1SJYAbVEe-Fn4q3pf2wvg" target="_V3FS4AbVEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+      <edges xmi:id="_jO1LkAbfEe-Fn4q3pf2wvg" source="_f4KxwAbfEe-Fn4q3pf2wvg" target="_AlUTgAbXEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model/components"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_XyLGkAbVEe-Fn4q3pf2wvg">
+        <conclusion xmi:id="_XyLGkQbVEe-Fn4q3pf2wvg">
+          <nodes xmi:id="_XyLGkgbVEe-Fn4q3pf2wvg" incoming="_ZQ3SIgbVEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_WpgOUAbVEe-Fn4q3pf2wvg" value="'Pump'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+            <attributes xmi:id="_CVa_MgbXEe-Fn4q3pf2wvg" value="fromId">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_Y1SwcAbVEe-Fn4q3pf2wvg" outgoing="_ZQ3SIgbVEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_aK7tsgbVEe-Fn4q3pf2wvg" value="'selection'">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_AlU6kAbXEe-Fn4q3pf2wvg" incoming="_jO1LkgbfEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_DWezkgbXEe-Fn4q3pf2wvg" value="toId">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+            <attributes xmi:id="_GFfXgAbXEe-Fn4q3pf2wvg" value="'Pump'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_f4L_4gbfEe-Fn4q3pf2wvg" outgoing="_jO1LkgbfEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model"/>
+          </nodes>
+          <edges xmi:id="_ZQ3SIgbVEe-Fn4q3pf2wvg" source="_Y1SwcAbVEe-Fn4q3pf2wvg" target="_XyLGkgbVEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+          </edges>
+          <edges xmi:id="_jO1LkgbfEe-Fn4q3pf2wvg" source="_f4L_4gbfEe-Fn4q3pf2wvg" target="_AlU6kAbXEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model/components"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_XyLGlAbVEe-Fn4q3pf2wvg" origin="_V3FS4AbVEe-Fn4q3pf2wvg" image="_XyLGkgbVEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_Y1SwcQbVEe-Fn4q3pf2wvg" origin="_Y1SJYAbVEe-Fn4q3pf2wvg" image="_Y1SwcAbVEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_AlU6kQbXEe-Fn4q3pf2wvg" origin="_AlUTgAbXEe-Fn4q3pf2wvg" image="_AlU6kAbXEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_f4L_4wbfEe-Fn4q3pf2wvg" origin="_f4KxwAbfEe-Fn4q3pf2wvg" image="_f4L_4gbfEe-Fn4q3pf2wvg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_L3sRkQbVEe-Fn4q3pf2wvg" name="Rhs">
+      <nodes xmi:id="_V3FS4QbVEe-Fn4q3pf2wvg" incoming="_ghFL4AbfEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_CVa_MQbXEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y1SJYQbVEe-Fn4q3pf2wvg" outgoing="_JVcsYAbXEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_aK7tsQbVEe-Fn4q3pf2wvg" value="'selection'">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_AlUTgQbXEe-Fn4q3pf2wvg" incoming="_JVcsYAbXEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_DWezkQbXEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f4L_4AbfEe-Fn4q3pf2wvg" outgoing="_ghFL4AbfEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model"/>
+      </nodes>
+      <edges xmi:id="_JVcsYAbXEe-Fn4q3pf2wvg" source="_Y1SJYQbVEe-Fn4q3pf2wvg" target="_AlUTgQbXEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/components"/>
+      </edges>
+      <edges xmi:id="_ghFL4AbfEe-Fn4q3pf2wvg" source="_f4L_4AbfEe-Fn4q3pf2wvg" target="_V3FS4QbVEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Model/components"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_V3FS4gbVEe-Fn4q3pf2wvg" origin="_V3FS4AbVEe-Fn4q3pf2wvg" image="_V3FS4QbVEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_Y1SJYgbVEe-Fn4q3pf2wvg" origin="_Y1SJYAbVEe-Fn4q3pf2wvg" image="_Y1SJYQbVEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_AlUTggbXEe-Fn4q3pf2wvg" origin="_AlUTgAbXEe-Fn4q3pf2wvg" image="_AlUTgQbXEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_f4L_4QbfEe-Fn4q3pf2wvg" origin="_f4KxwAbfEe-Fn4q3pf2wvg" image="_f4L_4AbfEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_h-6nYAbVEe-Fn4q3pf2wvg" name="changePumpUnit" subUnits="_L3rDcAbVEe-Fn4q3pf2wvg _DG0_QAbdEe-Fn4q3pf2wvg _GiPP0AbVEe-Fn4q3pf2wvg" strict="false" rollback="false">
+    <parameters xmi:id="_Q-UiQAbXEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Q-UiQQbXEe-Fn4q3pf2wvg" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_Sa0VcAbXEe-Fn4q3pf2wvg" source="_Q-UiQAbXEe-Fn4q3pf2wvg" target="_KkegwAbWEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_Sa0VcQbXEe-Fn4q3pf2wvg" source="_KkegwAbWEe-Fn4q3pf2wvg" target="_Q-UiQAbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_Sa0VcgbXEe-Fn4q3pf2wvg" source="_Q-UiQQbXEe-Fn4q3pf2wvg" target="_KkfH0AbWEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_Sa0VcwbXEe-Fn4q3pf2wvg" source="_KkfH0AbWEe-Fn4q3pf2wvg" target="_Q-UiQQbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_TgbSoAbXEe-Fn4q3pf2wvg" source="_Q-UiQAbXEe-Fn4q3pf2wvg" target="_E67o4AbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_TgbSoQbXEe-Fn4q3pf2wvg" source="_E67o4AbXEe-Fn4q3pf2wvg" target="_Q-UiQAbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_TgbSogbXEe-Fn4q3pf2wvg" source="_Q-UiQQbXEe-Fn4q3pf2wvg" target="_TfP40AbVEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_TgbSowbXEe-Fn4q3pf2wvg" source="_TfP40AbVEe-Fn4q3pf2wvg" target="_Q-UiQQbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_G7_WICG8Ee-Lbuo-_kOFrA" source="_Q-UiQAbXEe-Fn4q3pf2wvg" target="_DRrScAbfEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_G7_WISG8Ee-Lbuo-_kOFrA" source="_DRrScAbfEe-Fn4q3pf2wvg" target="_Q-UiQAbXEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_G7_WIiG8Ee-Lbuo-_kOFrA" source="_Q-UiQQbXEe-Fn4q3pf2wvg" target="_E0QxcQbdEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_G7_WIyG8Ee-Lbuo-_kOFrA" source="_E0QxcQbdEe-Fn4q3pf2wvg" target="_Q-UiQQbXEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_O9LmYAbWEe-Fn4q3pf2wvg" name="reconnectToPump">
+    <parameters xmi:id="_RiVDsAbWEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_RiVDsQbWEe-Fn4q3pf2wvg" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_O9NbkAbWEe-Fn4q3pf2wvg" name="Lhs">
+      <nodes xmi:id="_SHrzgAbWEe-Fn4q3pf2wvg" outgoing="_sSVigAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_SrymIAbWEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_UPbjIAbWEe-Fn4q3pf2wvg" outgoing="_sdEy4AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_U0-gMAbWEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y1HU0AbWEe-Fn4q3pf2wvg" incoming="_sSVigAbWEe-Fn4q3pf2wvg _uPNe4AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_bZdg4AbWEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_aC5WkAbWEe-Fn4q3pf2wvg" incoming="_sdEy4AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_atP7IAbWEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ttR2gAbWEe-Fn4q3pf2wvg" incoming="_-fkdEAbYEe-Fn4q3pf2wvg" outgoing="_uPNe4AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_53YJ8AbYEe-Fn4q3pf2wvg" outgoing="_-fkdEAbYEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <edges xmi:id="_sSVigAbWEe-Fn4q3pf2wvg" source="_SHrzgAbWEe-Fn4q3pf2wvg" target="_Y1HU0AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_sdEy4AbWEe-Fn4q3pf2wvg" source="_UPbjIAbWEe-Fn4q3pf2wvg" target="_aC5WkAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_uPNe4AbWEe-Fn4q3pf2wvg" source="_ttR2gAbWEe-Fn4q3pf2wvg" target="_Y1HU0AbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_-fkdEAbYEe-Fn4q3pf2wvg" source="_53YJ8AbYEe-Fn4q3pf2wvg" target="_ttR2gAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_fiLpwAbWEe-Fn4q3pf2wvg">
+        <conclusion xmi:id="_fiLpwQbWEe-Fn4q3pf2wvg">
+          <nodes xmi:id="_fiLpwgbWEe-Fn4q3pf2wvg" outgoing="_sSVihQbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_fiLpwwbWEe-Fn4q3pf2wvg" value="fromId">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+            <attributes xmi:id="_eTrPQAbWEe-Fn4q3pf2wvg" value="'Pump'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_hb3IMAbWEe-Fn4q3pf2wvg" outgoing="_sdEy5QbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_hb3IMQbWEe-Fn4q3pf2wvg" value="toId">
+              <type href="www.jku.at/tinycc#//Entity/name"/>
+            </attributes>
+            <attributes xmi:id="_ge2GUAbWEe-Fn4q3pf2wvg" value="'Pump'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_sSViggbWEe-Fn4q3pf2wvg" incoming="_sSVihQbWEe-Fn4q3pf2wvg _uPNe4gbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_sSVigwbWEe-Fn4q3pf2wvg" value="'OUT'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_sdEy4gbWEe-Fn4q3pf2wvg" incoming="_sdEy5QbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_sdEy4wbWEe-Fn4q3pf2wvg" value="'OUT'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_ttSdkgbWEe-Fn4q3pf2wvg" incoming="_-fkdEgbYEe-Fn4q3pf2wvg" outgoing="_uPNe4gbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+          </nodes>
+          <nodes xmi:id="_53YxAAbYEe-Fn4q3pf2wvg" outgoing="_-fkdEgbYEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+          </nodes>
+          <edges xmi:id="_sSVihQbWEe-Fn4q3pf2wvg" source="_fiLpwgbWEe-Fn4q3pf2wvg" target="_sSViggbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+          </edges>
+          <edges xmi:id="_sdEy5QbWEe-Fn4q3pf2wvg" source="_hb3IMAbWEe-Fn4q3pf2wvg" target="_sdEy4gbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+          </edges>
+          <edges xmi:id="_uPNe4gbWEe-Fn4q3pf2wvg" source="_ttSdkgbWEe-Fn4q3pf2wvg" target="_sSViggbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+          </edges>
+          <edges xmi:id="_-fkdEgbYEe-Fn4q3pf2wvg" source="_53YxAAbYEe-Fn4q3pf2wvg" target="_ttSdkgbWEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_fiLpxQbWEe-Fn4q3pf2wvg" origin="_SHrzgAbWEe-Fn4q3pf2wvg" image="_fiLpwgbWEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_hb3IMwbWEe-Fn4q3pf2wvg" origin="_UPbjIAbWEe-Fn4q3pf2wvg" image="_hb3IMAbWEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_sSVihAbWEe-Fn4q3pf2wvg" origin="_Y1HU0AbWEe-Fn4q3pf2wvg" image="_sSViggbWEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_sdEy5AbWEe-Fn4q3pf2wvg" origin="_aC5WkAbWEe-Fn4q3pf2wvg" image="_sdEy4gbWEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_ttSdkwbWEe-Fn4q3pf2wvg" origin="_ttR2gAbWEe-Fn4q3pf2wvg" image="_ttSdkgbWEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_53YxAQbYEe-Fn4q3pf2wvg" origin="_53YJ8AbYEe-Fn4q3pf2wvg" image="_53YxAAbYEe-Fn4q3pf2wvg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_O9NbkQbWEe-Fn4q3pf2wvg" name="Rhs">
+      <nodes xmi:id="_SHrzgQbWEe-Fn4q3pf2wvg" outgoing="_sSVigQbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_SrzNMAbWEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_UPbjIQbWEe-Fn4q3pf2wvg" outgoing="_sdEy4QbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_U0-gMQbWEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y1HU0QbWEe-Fn4q3pf2wvg" incoming="_sSVigQbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_bZdg4QbWEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_aC5WkQbWEe-Fn4q3pf2wvg" incoming="_sdEy4QbWEe-Fn4q3pf2wvg _u3g1AAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_atP7IQbWEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ttSdkAbWEe-Fn4q3pf2wvg" incoming="_-fkdEQbYEe-Fn4q3pf2wvg" outgoing="_u3g1AAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_53YJ8QbYEe-Fn4q3pf2wvg" outgoing="_-fkdEQbYEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <edges xmi:id="_sSVigQbWEe-Fn4q3pf2wvg" source="_SHrzgQbWEe-Fn4q3pf2wvg" target="_Y1HU0QbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_sdEy4QbWEe-Fn4q3pf2wvg" source="_UPbjIQbWEe-Fn4q3pf2wvg" target="_aC5WkQbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_u3g1AAbWEe-Fn4q3pf2wvg" source="_ttSdkAbWEe-Fn4q3pf2wvg" target="_aC5WkQbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_-fkdEQbYEe-Fn4q3pf2wvg" source="_53YJ8QbYEe-Fn4q3pf2wvg" target="_ttSdkAbWEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_SHrzggbWEe-Fn4q3pf2wvg" origin="_SHrzgAbWEe-Fn4q3pf2wvg" image="_SHrzgQbWEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_UPbjIgbWEe-Fn4q3pf2wvg" origin="_UPbjIAbWEe-Fn4q3pf2wvg" image="_UPbjIQbWEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_Y1HU0gbWEe-Fn4q3pf2wvg" origin="_Y1HU0AbWEe-Fn4q3pf2wvg" image="_Y1HU0QbWEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_aC5WkgbWEe-Fn4q3pf2wvg" origin="_aC5WkAbWEe-Fn4q3pf2wvg" image="_aC5WkQbWEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_ttSdkQbWEe-Fn4q3pf2wvg" origin="_ttR2gAbWEe-Fn4q3pf2wvg" image="_ttSdkAbWEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_53YJ8gbYEe-Fn4q3pf2wvg" origin="_53YJ8AbYEe-Fn4q3pf2wvg" image="_53YJ8QbYEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_DG0_QAbdEe-Fn4q3pf2wvg" name="changePumpInputs">
+    <parameters xmi:id="_DRrScAbfEe-Fn4q3pf2wvg" name="fromId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_E0QxcQbdEe-Fn4q3pf2wvg" name="toId" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_DG20cAbdEe-Fn4q3pf2wvg" name="Lhs">
+      <nodes xmi:id="_IVW5oAbdEe-Fn4q3pf2wvg" outgoing="_Y0toAAbdEe-Fn4q3pf2wvg _ZAD8YAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_gqvJEAbdEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JP090AbdEe-Fn4q3pf2wvg" incoming="_Y0toAAbdEe-Fn4q3pf2wvg _aq4bQAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_C1gJQAbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JzXIsAbdEe-Fn4q3pf2wvg" incoming="_MZ3zwAbkEe-Fn4q3pf2wvg" outgoing="_am4wQAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_KJdUgAbdEe-Fn4q3pf2wvg" incoming="_ezpAYAbkEe-Fn4q3pf2wvg" outgoing="_aOSDAAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_Kh30gAbdEe-Fn4q3pf2wvg" outgoing="_ZSlPwAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <nodes xmi:id="_K4LbsAbdEe-Fn4q3pf2wvg" outgoing="_ZbKkAAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <nodes xmi:id="_RwHj4AbdEe-Fn4q3pf2wvg" incoming="_ZbKkAAbdEe-Fn4q3pf2wvg _aOSDAAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_vPDHEAbdEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_SOlBgAbdEe-Fn4q3pf2wvg" incoming="_ZSlPwAbdEe-Fn4q3pf2wvg _am4wQAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_tLf68AbdEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_UtJVsAbdEe-Fn4q3pf2wvg" incoming="_ZAD8YAbdEe-Fn4q3pf2wvg _R1-QEAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_CKjHwAbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_nim_0AbdEe-Fn4q3pf2wvg" outgoing="_rm4tkAbdEe-Fn4q3pf2wvg _rurXoAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_oUfvwAbdEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_p62pkAbdEe-Fn4q3pf2wvg" incoming="_rurXoAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_BLs54AbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_qJe7cAbdEe-Fn4q3pf2wvg" incoming="_rm4tkAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_-GW5kAbdEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_L1kM0AbkEe-Fn4q3pf2wvg" outgoing="_MZ3zwAbkEe-Fn4q3pf2wvg _QdVpMAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <nodes xmi:id="_PvbaUAbkEe-Fn4q3pf2wvg" incoming="_QdVpMAbkEe-Fn4q3pf2wvg" outgoing="_R1-QEAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_W4pfwAbkEe-Fn4q3pf2wvg" incoming="_eRkOEAbkEe-Fn4q3pf2wvg" outgoing="_aq4bQAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_XLsXkAbkEe-Fn4q3pf2wvg" outgoing="_eRkOEAbkEe-Fn4q3pf2wvg _ezpAYAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <edges xmi:id="_Y0toAAbdEe-Fn4q3pf2wvg" source="_IVW5oAbdEe-Fn4q3pf2wvg" target="_JP090AbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZAD8YAbdEe-Fn4q3pf2wvg" source="_IVW5oAbdEe-Fn4q3pf2wvg" target="_UtJVsAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZSlPwAbdEe-Fn4q3pf2wvg" source="_Kh30gAbdEe-Fn4q3pf2wvg" target="_SOlBgAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZbKkAAbdEe-Fn4q3pf2wvg" source="_K4LbsAbdEe-Fn4q3pf2wvg" target="_RwHj4AbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_aOSDAAbdEe-Fn4q3pf2wvg" source="_KJdUgAbdEe-Fn4q3pf2wvg" target="_RwHj4AbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_am4wQAbdEe-Fn4q3pf2wvg" source="_JzXIsAbdEe-Fn4q3pf2wvg" target="_SOlBgAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_rm4tkAbdEe-Fn4q3pf2wvg" source="_nim_0AbdEe-Fn4q3pf2wvg" target="_qJe7cAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_rurXoAbdEe-Fn4q3pf2wvg" source="_nim_0AbdEe-Fn4q3pf2wvg" target="_p62pkAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_MZ3zwAbkEe-Fn4q3pf2wvg" source="_L1kM0AbkEe-Fn4q3pf2wvg" target="_JzXIsAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_QdVpMAbkEe-Fn4q3pf2wvg" source="_L1kM0AbkEe-Fn4q3pf2wvg" target="_PvbaUAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_R1-QEAbkEe-Fn4q3pf2wvg" source="_PvbaUAbkEe-Fn4q3pf2wvg" target="_UtJVsAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_aq4bQAbkEe-Fn4q3pf2wvg" source="_W4pfwAbkEe-Fn4q3pf2wvg" target="_JP090AbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_eRkOEAbkEe-Fn4q3pf2wvg" source="_XLsXkAbkEe-Fn4q3pf2wvg" target="_W4pfwAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_ezpAYAbkEe-Fn4q3pf2wvg" source="_XLsXkAbkEe-Fn4q3pf2wvg" target="_KJdUgAbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_GGYHUAbiEe-Fn4q3pf2wvg">
+        <conclusion xmi:id="_GGYHUQbiEe-Fn4q3pf2wvg">
+          <nodes xmi:id="_GGYHUgbiEe-Fn4q3pf2wvg" outgoing="_GGYHWAbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_LrfH8AbdEe-Fn4q3pf2wvg" value="'Valve'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_GGYHVQbiEe-Fn4q3pf2wvg" incoming="_GGYHWAbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_GGYHVgbiEe-Fn4q3pf2wvg" value="'OUT'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_GrwsUAbiEe-Fn4q3pf2wvg" outgoing="_GrwsVgbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+            <attributes xmi:id="_NcNesAbdEe-Fn4q3pf2wvg" value="'Radiator'">
+              <type href="www.jku.at/tinycc#//Component/type"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_GrwsUwbiEe-Fn4q3pf2wvg" incoming="_GrwsVgbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_GrwsVAbiEe-Fn4q3pf2wvg" value="'OUT'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_L1kz4gbkEe-Fn4q3pf2wvg" outgoing="_MZ4a0gbkEe-Fn4q3pf2wvg _QdVpMgbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+          </nodes>
+          <nodes xmi:id="_MZ4a0AbkEe-Fn4q3pf2wvg" incoming="_MZ4a0gbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+          </nodes>
+          <nodes xmi:id="_PvcBYAbkEe-Fn4q3pf2wvg" incoming="_QdVpMgbkEe-Fn4q3pf2wvg" outgoing="_R1-QFQbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+          </nodes>
+          <nodes xmi:id="_R1-QEgbkEe-Fn4q3pf2wvg" incoming="_R1-QFQbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_R1-QEwbkEe-Fn4q3pf2wvg" value="'IN'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_SMUTggbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_SMUTgwbkEe-Fn4q3pf2wvg" value="'IN'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_W4pfwwbkEe-Fn4q3pf2wvg" incoming="_eRkOEgbkEe-Fn4q3pf2wvg" outgoing="_aq4bRQbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+          </nodes>
+          <nodes xmi:id="_XLs-ogbkEe-Fn4q3pf2wvg" outgoing="_eRkOEgbkEe-Fn4q3pf2wvg _ezpAZAbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+          </nodes>
+          <nodes xmi:id="_ahSaYAbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_ahSaYQbkEe-Fn4q3pf2wvg" value="'IN'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_aq4bQgbkEe-Fn4q3pf2wvg" incoming="_aq4bRQbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+            <attributes xmi:id="_aq4bQwbkEe-Fn4q3pf2wvg" value="'IN'">
+              <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+            </attributes>
+          </nodes>
+          <nodes xmi:id="_ezpAYgbkEe-Fn4q3pf2wvg" incoming="_ezpAZAbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+          </nodes>
+          <edges xmi:id="_GGYHWAbiEe-Fn4q3pf2wvg" source="_GGYHUgbiEe-Fn4q3pf2wvg" target="_GGYHVQbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+          </edges>
+          <edges xmi:id="_GrwsVgbiEe-Fn4q3pf2wvg" source="_GrwsUAbiEe-Fn4q3pf2wvg" target="_GrwsUwbiEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+          </edges>
+          <edges xmi:id="_MZ4a0gbkEe-Fn4q3pf2wvg" source="_L1kz4gbkEe-Fn4q3pf2wvg" target="_MZ4a0AbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+          </edges>
+          <edges xmi:id="_QdVpMgbkEe-Fn4q3pf2wvg" source="_L1kz4gbkEe-Fn4q3pf2wvg" target="_PvcBYAbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+          </edges>
+          <edges xmi:id="_R1-QFQbkEe-Fn4q3pf2wvg" source="_PvcBYAbkEe-Fn4q3pf2wvg" target="_R1-QEgbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+          </edges>
+          <edges xmi:id="_aq4bRQbkEe-Fn4q3pf2wvg" source="_W4pfwwbkEe-Fn4q3pf2wvg" target="_aq4bQgbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+          </edges>
+          <edges xmi:id="_eRkOEgbkEe-Fn4q3pf2wvg" source="_XLs-ogbkEe-Fn4q3pf2wvg" target="_W4pfwwbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+          </edges>
+          <edges xmi:id="_ezpAZAbkEe-Fn4q3pf2wvg" source="_XLs-ogbkEe-Fn4q3pf2wvg" target="_ezpAYgbkEe-Fn4q3pf2wvg">
+            <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_GGYHVAbiEe-Fn4q3pf2wvg" origin="_Kh30gAbdEe-Fn4q3pf2wvg" image="_GGYHUgbiEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_GGYHVwbiEe-Fn4q3pf2wvg" origin="_SOlBgAbdEe-Fn4q3pf2wvg" image="_GGYHVQbiEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_GrwsUgbiEe-Fn4q3pf2wvg" origin="_K4LbsAbdEe-Fn4q3pf2wvg" image="_GrwsUAbiEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_GrwsVQbiEe-Fn4q3pf2wvg" origin="_RwHj4AbdEe-Fn4q3pf2wvg" image="_GrwsUwbiEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_L1kz4wbkEe-Fn4q3pf2wvg" origin="_L1kM0AbkEe-Fn4q3pf2wvg" image="_L1kz4gbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_MZ4a0QbkEe-Fn4q3pf2wvg" origin="_JzXIsAbdEe-Fn4q3pf2wvg" image="_MZ4a0AbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_PvcBYQbkEe-Fn4q3pf2wvg" origin="_PvbaUAbkEe-Fn4q3pf2wvg" image="_PvcBYAbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_R1-QFAbkEe-Fn4q3pf2wvg" origin="_UtJVsAbdEe-Fn4q3pf2wvg" image="_R1-QEgbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_SMUThAbkEe-Fn4q3pf2wvg" origin="_qJe7cAbdEe-Fn4q3pf2wvg" image="_SMUTggbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_W4pfxAbkEe-Fn4q3pf2wvg" origin="_W4pfwAbkEe-Fn4q3pf2wvg" image="_W4pfwwbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_XLs-owbkEe-Fn4q3pf2wvg" origin="_XLsXkAbkEe-Fn4q3pf2wvg" image="_XLs-ogbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_ahSaYgbkEe-Fn4q3pf2wvg" origin="_p62pkAbdEe-Fn4q3pf2wvg" image="_ahSaYAbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_aq4bRAbkEe-Fn4q3pf2wvg" origin="_JP090AbdEe-Fn4q3pf2wvg" image="_aq4bQgbkEe-Fn4q3pf2wvg"/>
+        <mappings xmi:id="_ezpAYwbkEe-Fn4q3pf2wvg" origin="_KJdUgAbdEe-Fn4q3pf2wvg" image="_ezpAYgbkEe-Fn4q3pf2wvg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_DG20cQbdEe-Fn4q3pf2wvg" name="Rhs">
+      <nodes xmi:id="_IVW5oQbdEe-Fn4q3pf2wvg" outgoing="_Y0toAQbdEe-Fn4q3pf2wvg _ZAD8YQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_gqvJEQbdEe-Fn4q3pf2wvg" value="fromId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JP090QbdEe-Fn4q3pf2wvg" incoming="_Y0toAQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_C1gJQQbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JzXIsQbdEe-Fn4q3pf2wvg" incoming="_MZ3zwQbkEe-Fn4q3pf2wvg" outgoing="_am4wQQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_KJdUgQbdEe-Fn4q3pf2wvg" incoming="_ezpAYQbkEe-Fn4q3pf2wvg" outgoing="_aOSDAQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_Kh30gQbdEe-Fn4q3pf2wvg" outgoing="_ZSlPwQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <nodes xmi:id="_K4LbsQbdEe-Fn4q3pf2wvg" outgoing="_ZbKkAQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+      </nodes>
+      <nodes xmi:id="_RwHj4QbdEe-Fn4q3pf2wvg" incoming="_ZbKkAQbdEe-Fn4q3pf2wvg _aOSDAQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_vPDHEQbdEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_SOlBgQbdEe-Fn4q3pf2wvg" incoming="_ZSlPwQbdEe-Fn4q3pf2wvg _am4wQQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_tLf68QbdEe-Fn4q3pf2wvg" value="'OUT'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_UtJVsQbdEe-Fn4q3pf2wvg" incoming="_ZAD8YQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_CKjHwQbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ninm4AbdEe-Fn4q3pf2wvg" outgoing="_rm4tkQbdEe-Fn4q3pf2wvg _rurXoQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_oUfvwQbdEe-Fn4q3pf2wvg" value="toId">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_p62pkQbdEe-Fn4q3pf2wvg" incoming="_rurXoQbdEe-Fn4q3pf2wvg _ahRzUAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_BLs54QbeEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_qJe7cQbdEe-Fn4q3pf2wvg" incoming="_rm4tkQbdEe-Fn4q3pf2wvg _SMUTgAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port"/>
+        <attributes xmi:id="_-GW5kQbdEe-Fn4q3pf2wvg" value="'IN'">
+          <type href="/tinycc/TinyCC/model/tinycc.ecore#//Port/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_L1kz4AbkEe-Fn4q3pf2wvg" outgoing="_MZ3zwQbkEe-Fn4q3pf2wvg _QdVpMQbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <nodes xmi:id="_PvbaUQbkEe-Fn4q3pf2wvg" incoming="_QdVpMQbkEe-Fn4q3pf2wvg" outgoing="_SMUTgAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_W4pfwQbkEe-Fn4q3pf2wvg" incoming="_eRkOEQbkEe-Fn4q3pf2wvg" outgoing="_ahRzUAbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd"/>
+      </nodes>
+      <nodes xmi:id="_XLs-oAbkEe-Fn4q3pf2wvg" outgoing="_eRkOEQbkEe-Fn4q3pf2wvg _ezpAYQbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector"/>
+      </nodes>
+      <edges xmi:id="_Y0toAQbdEe-Fn4q3pf2wvg" source="_IVW5oQbdEe-Fn4q3pf2wvg" target="_JP090QbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZAD8YQbdEe-Fn4q3pf2wvg" source="_IVW5oQbdEe-Fn4q3pf2wvg" target="_UtJVsQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZSlPwQbdEe-Fn4q3pf2wvg" source="_Kh30gQbdEe-Fn4q3pf2wvg" target="_SOlBgQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_ZbKkAQbdEe-Fn4q3pf2wvg" source="_K4LbsQbdEe-Fn4q3pf2wvg" target="_RwHj4QbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_aOSDAQbdEe-Fn4q3pf2wvg" source="_KJdUgQbdEe-Fn4q3pf2wvg" target="_RwHj4QbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_am4wQQbdEe-Fn4q3pf2wvg" source="_JzXIsQbdEe-Fn4q3pf2wvg" target="_SOlBgQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_rm4tkQbdEe-Fn4q3pf2wvg" source="_ninm4AbdEe-Fn4q3pf2wvg" target="_qJe7cQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_rurXoQbdEe-Fn4q3pf2wvg" source="_ninm4AbdEe-Fn4q3pf2wvg" target="_p62pkQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component/ports"/>
+      </edges>
+      <edges xmi:id="_MZ3zwQbkEe-Fn4q3pf2wvg" source="_L1kz4AbkEe-Fn4q3pf2wvg" target="_JzXIsQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_QdVpMQbkEe-Fn4q3pf2wvg" source="_L1kz4AbkEe-Fn4q3pf2wvg" target="_PvbaUQbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_SMUTgAbkEe-Fn4q3pf2wvg" source="_PvbaUQbkEe-Fn4q3pf2wvg" target="_qJe7cQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_ahRzUAbkEe-Fn4q3pf2wvg" source="_W4pfwQbkEe-Fn4q3pf2wvg" target="_p62pkQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//ConnectorEnd/port"/>
+      </edges>
+      <edges xmi:id="_eRkOEQbkEe-Fn4q3pf2wvg" source="_XLs-oAbkEe-Fn4q3pf2wvg" target="_W4pfwQbkEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+      <edges xmi:id="_ezpAYQbkEe-Fn4q3pf2wvg" source="_XLs-oAbkEe-Fn4q3pf2wvg" target="_KJdUgQbdEe-Fn4q3pf2wvg">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Connector/ends"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_IVW5ogbdEe-Fn4q3pf2wvg" origin="_IVW5oAbdEe-Fn4q3pf2wvg" image="_IVW5oQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_JP090gbdEe-Fn4q3pf2wvg" origin="_JP090AbdEe-Fn4q3pf2wvg" image="_JP090QbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_JzXIsgbdEe-Fn4q3pf2wvg" origin="_JzXIsAbdEe-Fn4q3pf2wvg" image="_JzXIsQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_KJdUggbdEe-Fn4q3pf2wvg" origin="_KJdUgAbdEe-Fn4q3pf2wvg" image="_KJdUgQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_Kh30ggbdEe-Fn4q3pf2wvg" origin="_Kh30gAbdEe-Fn4q3pf2wvg" image="_Kh30gQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_K4LbsgbdEe-Fn4q3pf2wvg" origin="_K4LbsAbdEe-Fn4q3pf2wvg" image="_K4LbsQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_RwHj4gbdEe-Fn4q3pf2wvg" origin="_RwHj4AbdEe-Fn4q3pf2wvg" image="_RwHj4QbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_SOlBggbdEe-Fn4q3pf2wvg" origin="_SOlBgAbdEe-Fn4q3pf2wvg" image="_SOlBgQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_UtJVsgbdEe-Fn4q3pf2wvg" origin="_UtJVsAbdEe-Fn4q3pf2wvg" image="_UtJVsQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_ninm4QbdEe-Fn4q3pf2wvg" origin="_nim_0AbdEe-Fn4q3pf2wvg" image="_ninm4AbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_p62pkgbdEe-Fn4q3pf2wvg" origin="_p62pkAbdEe-Fn4q3pf2wvg" image="_p62pkQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_qJe7cgbdEe-Fn4q3pf2wvg" origin="_qJe7cAbdEe-Fn4q3pf2wvg" image="_qJe7cQbdEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_L1kz4QbkEe-Fn4q3pf2wvg" origin="_L1kM0AbkEe-Fn4q3pf2wvg" image="_L1kz4AbkEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_PvbaUgbkEe-Fn4q3pf2wvg" origin="_PvbaUAbkEe-Fn4q3pf2wvg" image="_PvbaUQbkEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_W4pfwgbkEe-Fn4q3pf2wvg" origin="_W4pfwAbkEe-Fn4q3pf2wvg" image="_W4pfwQbkEe-Fn4q3pf2wvg"/>
+    <mappings xmi:id="_XLs-oQbkEe-Fn4q3pf2wvg" origin="_XLsXkAbkEe-Fn4q3pf2wvg" image="_XLs-oAbkEe-Fn4q3pf2wvg"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_qy0RcCJqEe-ygdK6QO-Ltw" name="getPump" subUnits="_RIljAAJtEe-Fn4q3pf2wvg _81lTUCJqEe-ygdK6QO-Ltw">
+    <parameters xmi:id="_4Bvw4CJqEe-ygdK6QO-Ltw" name="id" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4Bvw4SJqEe-ygdK6QO-Ltw" name="type" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_PqLawCJrEe-ygdK6QO-Ltw" source="_4Bvw4CJqEe-ygdK6QO-Ltw" target="_SFR0wAJtEe-Fn4q3pf2wvg"/>
+    <parameterMappings xmi:id="_PqLawSJrEe-ygdK6QO-Ltw" source="_SFR0wAJtEe-Fn4q3pf2wvg" target="_4Bvw4CJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_Q9EmACJrEe-ygdK6QO-Ltw" source="_4Bvw4CJqEe-ygdK6QO-Ltw" target="__18F8CJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_Q9EmASJrEe-ygdK6QO-Ltw" source="__18F8CJqEe-ygdK6QO-Ltw" target="_4Bvw4CJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_Q9EmAiJrEe-ygdK6QO-Ltw" source="_4Bvw4SJqEe-ygdK6QO-Ltw" target="__18F8SJqEe-ygdK6QO-Ltw"/>
+    <parameterMappings xmi:id="_Q9EmAyJrEe-ygdK6QO-Ltw" source="__18F8SJqEe-ygdK6QO-Ltw" target="_4Bvw4SJqEe-ygdK6QO-Ltw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_81lTUCJqEe-ygdK6QO-Ltw" name="getTypeById">
+    <parameters xmi:id="__18F8CJqEe-ygdK6QO-Ltw" name="id" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="__18F8SJqEe-ygdK6QO-Ltw" name="type" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_81lTVSJqEe-ygdK6QO-Ltw" name="Lhs">
+      <nodes xmi:id="_AZT4wCJrEe-ygdK6QO-Ltw">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_A8WUYCJrEe-ygdK6QO-Ltw" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_BWfSsCJrEe-ygdK6QO-Ltw" value="type">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_81lTViJqEe-ygdK6QO-Ltw" name="Rhs">
+      <nodes xmi:id="_AZT4wSJrEe-ygdK6QO-Ltw">
+        <type href="/tinycc/TinyCC/model/tinycc.ecore#//Component"/>
+        <attributes xmi:id="_A8W7cCJrEe-ygdK6QO-Ltw" value="id">
+          <type href="www.jku.at/tinycc#//Entity/name"/>
+        </attributes>
+        <attributes xmi:id="_BWfSsSJrEe-ygdK6QO-Ltw" value="type">
+          <type href="www.jku.at/tinycc#//Component/type"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_AZT4wiJrEe-ygdK6QO-Ltw" origin="_AZT4wCJrEe-ygdK6QO-Ltw" image="_AZT4wSJrEe-ygdK6QO-Ltw"/>
+  </units>
+</henshin:Module>

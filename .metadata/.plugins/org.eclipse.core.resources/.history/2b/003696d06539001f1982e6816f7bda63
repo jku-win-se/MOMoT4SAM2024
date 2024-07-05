@@ -1,0 +1,70 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Arrangeable Block</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.ArrangeableBlock#getId <em>Id</em>}</li>
+ *   <li>{@link tms.ArrangeableBlock#getTypeId <em>Type Id</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getArrangeableBlock()
+ * @model abstract="true"
+ * @generated
+ */
+public interface ArrangeableBlock extends EObject {
+   /**
+    * Returns the value of the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Id</em>' attribute.
+    * @see #setId(String)
+    * @see tms.TmsPackage#getArrangeableBlock_Id()
+    * @model id="true"
+    * @generated
+    */
+   String getId();
+
+   /**
+    * Sets the value of the '{@link tms.ArrangeableBlock#getId <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Id</em>' attribute.
+    * @see #getId()
+    * @generated
+    */
+   void setId(String value);
+
+   /**
+    * Returns the value of the '<em><b>Type Id</b></em>' attribute.
+    * The default value is <code>""</code>.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Type Id</em>' attribute.
+    * @see #setTypeId(String)
+    * @see tms.TmsPackage#getArrangeableBlock_TypeId()
+    * @model default=""
+    * @generated
+    */
+   String getTypeId();
+
+   /**
+    * Sets the value of the '{@link tms.ArrangeableBlock#getTypeId <em>Type Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Type Id</em>' attribute.
+    * @see #getTypeId()
+    * @generated
+    */
+   void setTypeId(String value);
+
+} // ArrangeableBlock

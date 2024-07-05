@@ -1,0 +1,168 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.ecore.EFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see tms.TmsPackage
+ * @generated
+ */
+public interface TmsFactory extends EFactory {
+   /**
+    * The singleton instance of the factory.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   TmsFactory eINSTANCE = tms.impl.TmsFactoryImpl.init();
+
+   /**
+    * Returns a new object of class '<em>Fan</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Fan</em>'.
+    * @generated
+    */
+   Fan createFan();
+
+   /**
+    * Returns a new object of class '<em>Valve</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Valve</em>'.
+    * @generated
+    */
+   Valve createValve();
+
+   /**
+    * Returns a new object of class '<em>Radiator</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Radiator</em>'.
+    * @generated
+    */
+   Radiator createRadiator();
+
+   /**
+    * Returns a new object of class '<em>Pump</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Pump</em>'.
+    * @generated
+    */
+   Pump createPump();
+
+   /**
+    * Returns a new object of class '<em>S1</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>S1</em>'.
+    * @generated
+    */
+   S1 createS1();
+
+   /**
+    * Returns a new object of class '<em>S2</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>S2</em>'.
+    * @generated
+    */
+   S2 createS2();
+
+   /**
+    * Returns a new object of class '<em>Battery Sensor</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Battery Sensor</em>'.
+    * @generated
+    */
+   BatterySensor createBatterySensor();
+
+   /**
+    * Returns a new object of class '<em>Battery</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Battery</em>'.
+    * @generated
+    */
+   Battery createBattery();
+
+   /**
+    * Returns a new object of class '<em>Electric Motor Drive</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Electric Motor Drive</em>'.
+    * @generated
+    */
+   ElectricMotorDrive createElectricMotorDrive();
+
+   /**
+    * Returns a new object of class '<em>DCDC</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>DCDC</em>'.
+    * @generated
+    */
+   DCDC createDCDC();
+
+   /**
+    * Returns a new object of class '<em>Coolant Heater</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Coolant Heater</em>'.
+    * @generated
+    */
+   CoolantHeater createCoolantHeater();
+
+   /**
+    * Returns a new object of class '<em>Electric Motor</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Electric Motor</em>'.
+    * @generated
+    */
+   ElectricMotor createElectricMotor();
+
+   /**
+    * Returns a new object of class '<em>Charger</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Charger</em>'.
+    * @generated
+    */
+   Charger createCharger();
+
+   /**
+    * Returns a new object of class '<em>Flow</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>Flow</em>'.
+    * @generated
+    */
+   Flow createFlow();
+
+   /**
+    * Returns a new object of class '<em>TMS Model</em>'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return a new object of class '<em>TMS Model</em>'.
+    * @generated
+    */
+   TMSModel createTMSModel();
+
+   /**
+    * Returns the package supported by this factory.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the package supported by this factory.
+    * @generated
+    */
+   TmsPackage getTmsPackage();
+
+} //TmsFactory

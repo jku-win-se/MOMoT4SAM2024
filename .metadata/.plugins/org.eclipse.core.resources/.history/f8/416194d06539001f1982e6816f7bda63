@@ -1,0 +1,45 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Battery</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.Battery#getBatterysensor <em>Batterysensor</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getBattery()
+ * @model
+ * @generated
+ */
+public interface Battery extends LoadedComponent {
+   /**
+    * Returns the value of the '<em><b>Batterysensor</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Batterysensor</em>' reference.
+    * @see #setBatterysensor(BatterySensor)
+    * @see tms.TmsPackage#getBattery_Batterysensor()
+    * @model
+    * @generated
+    */
+   BatterySensor getBatterysensor();
+
+   /**
+    * Sets the value of the '{@link tms.Battery#getBatterysensor <em>Batterysensor</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Batterysensor</em>' reference.
+    * @see #getBatterysensor()
+    * @generated
+    */
+   void setBatterysensor(BatterySensor value);
+
+} // Battery

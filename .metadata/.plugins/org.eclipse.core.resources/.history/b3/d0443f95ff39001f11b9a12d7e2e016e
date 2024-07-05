@@ -1,0 +1,11 @@
+package fmuvb.demo;
+
+import java.io.Serializable;
+
+public class SimulationResult implements Serializable {
+   private static final long serialVersionUID = 88592645602456L;
+
+   public double getOutput(final String output) {
+      return 0;
+   }
+}

@@ -1,0 +1,55 @@
+package fmuvb.demo;
+
+import at.ac.tuwien.big.momot.util.MomotUtil;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.henshin.interpreter.EGraph;
+import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+
+import fmumodel.FMU;
+import no.ntnu.ihb.fmi4j.importer.fmi2.Fmu;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.Causality;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.ModelVariables;
+import no.ntnu.ihb.fmi4j.modeldescription.variables.TypedScalarVariable;
+import tinycc.Connector;
+import tinycc.ConnectorEnd;
+import tinycc.TinyccPackage;
+
+public class FMUUtils {
+   public static void initFMUModel(final String fmuPath) {
+      final HenshinResourceSet set = new HenshinResourceSet();
+      final File fmuFile = new File(fmuPath);
+      final EGraph graph = MomotUtil.loadGraph(set, fmuFile.getAbsolutePath());
+      final FMU fmu = (FMU) graph.getRoots().get(0);
+      final Fmu f = null;
+      try {
+         f = Fmu.from(new File("fmu-lib/BEV_5in_9out.fmu"));
+      } catch(final FileNotFoundException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } catch(final IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+
+      final ModelVariables mv = f.getModelDescription().getModelVariables();
+      for(final TypedScalarVariable<?> v : mv.getVariables()) {
+         if(v.getCausality() == Causality.INPUT) {
+
+         }
+
+      }
+
+      final EClassifier cClassifier = TinyccPackage.eINSTANCE.getEClassifier("Connector");
+      final EClassifier ceClassifier = TinyccPackage.eINSTANCE.getEClassifier("ConnectorEnd");
+
+      final Connector addedConn = (Connector) EcoreUtil.create((EClass) cClassifier);
+      final ConnectorEnd e1 = (ConnectorEnd) EcoreUtil.create((EClass) ceClassifier);
+   }
+}

@@ -1,0 +1,92 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Valve</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.Valve#getRadiator <em>Radiator</em>}</li>
+ *   <li>{@link tms.Valve#getPump <em>Pump</em>}</li>
+ *   <li>{@link tms.Valve#getId <em>Id</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getValve()
+ * @model
+ * @generated
+ */
+public interface Valve extends EObject {
+   /**
+    * Returns the value of the '<em><b>Radiator</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Radiator</em>' reference.
+    * @see #setRadiator(Radiator)
+    * @see tms.TmsPackage#getValve_Radiator()
+    * @model required="true"
+    * @generated
+    */
+   Radiator getRadiator();
+
+   /**
+    * Sets the value of the '{@link tms.Valve#getRadiator <em>Radiator</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Radiator</em>' reference.
+    * @see #getRadiator()
+    * @generated
+    */
+   void setRadiator(Radiator value);
+
+   /**
+    * Returns the value of the '<em><b>Pump</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Pump</em>' reference.
+    * @see #setPump(Pump)
+    * @see tms.TmsPackage#getValve_Pump()
+    * @model required="true"
+    * @generated
+    */
+   Pump getPump();
+
+   /**
+    * Sets the value of the '{@link tms.Valve#getPump <em>Pump</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Pump</em>' reference.
+    * @see #getPump()
+    * @generated
+    */
+   void setPump(Pump value);
+
+   /**
+    * Returns the value of the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Id</em>' attribute.
+    * @see #setId(String)
+    * @see tms.TmsPackage#getValve_Id()
+    * @model id="true"
+    * @generated
+    */
+   String getId();
+
+   /**
+    * Sets the value of the '{@link tms.Valve#getId <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Id</em>' attribute.
+    * @see #getId()
+    * @generated
+    */
+   void setId(String value);
+
+} // Valve

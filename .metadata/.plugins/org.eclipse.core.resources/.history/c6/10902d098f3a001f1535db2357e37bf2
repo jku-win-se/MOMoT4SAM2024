@@ -1,0 +1,189 @@
+/**
+ */
+package fmuvb.impl;
+
+import fmuvb.FmuvbPackage;
+import fmuvb.Output;
+import fmuvb.Parameter;
+import fmuvb.VehicleBatteryFMU;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Vehicle Battery FMU</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link fmuvb.impl.VehicleBatteryFMUImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link fmuvb.impl.VehicleBatteryFMUImpl#getOutputs <em>Outputs</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class VehicleBatteryFMUImpl extends MinimalEObjectImpl.Container implements VehicleBatteryFMU {
+   /**
+    * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getInputs()
+    * @generated
+    * @ordered
+    */
+   protected EList<Parameter> inputs;
+
+   /**
+    * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getOutputs()
+    * @generated
+    * @ordered
+    */
+   protected EList<Output> outputs;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected VehicleBatteryFMUImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return FmuvbPackage.Literals.VEHICLE_BATTERY_FMU;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public EList<Parameter> getInputs() {
+      if (inputs == null) {
+         inputs = new EObjectContainmentEList<Parameter>(Parameter.class, this, FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS);
+      }
+      return inputs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public EList<Output> getOutputs() {
+      if (outputs == null) {
+         outputs = new EObjectContainmentEList<Output>(Output.class, this, FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS);
+      }
+      return outputs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS:
+            return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS:
+            return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
+      }
+      return super.eInverseRemove(otherEnd, featureID, msgs);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS:
+            return getInputs();
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS:
+            return getOutputs();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @SuppressWarnings("unchecked")
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS:
+            getInputs().clear();
+            getInputs().addAll((Collection<? extends Parameter>)newValue);
+            return;
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS:
+            getOutputs().clear();
+            getOutputs().addAll((Collection<? extends Output>)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS:
+            getInputs().clear();
+            return;
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS:
+            getOutputs().clear();
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__INPUTS:
+            return inputs != null && !inputs.isEmpty();
+         case FmuvbPackage.VEHICLE_BATTERY_FMU__OUTPUTS:
+            return outputs != null && !outputs.isEmpty();
+      }
+      return super.eIsSet(featureID);
+   }
+
+} //VehicleBatteryFMUImpl

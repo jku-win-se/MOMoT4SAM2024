@@ -1,0 +1,40 @@
+package tms.demo;
+
+public class DataObject {
+
+   private final String category;
+   private final double valueA;
+   private final double valueB;
+   private final double valueC;
+   private final double valueD;
+
+   public DataObject(final String category, final double valueA, final double valueB, final double valueC,
+         final double valueD) {
+      this.category = category;
+      this.valueA = valueA;
+      this.valueB = valueB;
+      this.valueC = valueC;
+      this.valueD = valueD;
+   }
+
+   public String getCategory() {
+      return category;
+   }
+
+   public double getValueA() {
+      return valueA;
+   }
+
+   public double getValueB() {
+      return valueB;
+   }
+
+   public double getValueC() {
+      return valueC;
+   }
+
+   public double getValueD() {
+      return valueD;
+   }
+
+}

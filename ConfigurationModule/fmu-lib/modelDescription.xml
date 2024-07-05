@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription
+  fmiVersion="2.0"
+  modelName="BEV"
+  guid="{ed1e8f13-b360-958e-b856-23d7f832800b}"
+  description=""
+  generationTool="Simulink (R2022a)"
+  version="9.25"
+  variableNamingConvention="structured"
+  generationDateAndTime="2023-09-22T11:58:00Z"
+  numberOfEventIndicators="0">
+
+<CoSimulation
+  modelIdentifier="BEV"
+  canBeInstantiatedOnlyOncePerProcess="true"
+  canNotUseMemoryManagementFunctions="true"
+  />
+<UnitDefinitions>
+  <Unit name="mph" />
+</UnitDefinitions>
+<DefaultExperiment startTime="0" stopTime="2474" stepSize="0.1"/>
+<VendorAnnotations>
+  <Tool name="Simulink">
+    <Simulink>
+      <ImportCompatibility requireRelease="all" requireMATLABOnPath="no" />
+      <SimulinkModelInterface>
+        <Inport dataType="double" portNumber="1" uniquePortName="AuxLoad" portName="AuxLoad"/>
+        <Inport dataType="double" portNumber="2" uniquePortName="BatteryVoltage" portName="BatteryVoltage"/>
+        <Inport dataType="double" portNumber="3" uniquePortName="InternalRes" portName="InternalRes"/>
+        <Inport dataType="double" portNumber="4" uniquePortName="MaxTorque" portName="MaxTorque"/>
+        <Inport dataType="double" portNumber="5" uniquePortName="MaxPower" portName="MaxPower"/>
+        <Outport dataType="double" portNumber="1" uniquePortName="TractiveForce" portName="TractiveForce"/>
+        <Outport dataType="double" portNumber="2" uniquePortName="TotalTractiveEnergy" portName="TotalTractiveEnergy"/>
+        <Outport dataType="double" portNumber="3" uniquePortName="Velocity_mph_" portName="Velocity(mph)"/>
+        <Outport dataType="double" portNumber="4" uniquePortName="Position" portName="Position"/>
+        <Outport dataType="double" portNumber="5" uniquePortName="DrivelineLosses_kWh_" portName="DrivelineLosses(kWh)"/>
+        <Outport dataType="double" portNumber="6" uniquePortName="MotorOut_W_" portName="MotorOut(W)"/>
+        <Outport dataType="double" portNumber="7" uniquePortName="MotorLosses_W_" portName="MotorLosses(W)"/>
+        <Outport dataType="double" portNumber="8" uniquePortName="BatteryLosses_W_" portName="BatteryLosses(W)"/>
+        <Outport dataType="double" portNumber="9" uniquePortName="SoC" portName="SoC"/>
+      </SimulinkModelInterface>
+    </Simulink>
+  </Tool>
+</VendorAnnotations>
+<ModelVariables>
+  <ScalarVariable name="AuxLoad" valueReference="0" description="AuxLoad" causality="input" variability="continuous" >
+    <Real start="0"  />
+  </ScalarVariable> <!-- index="1" -->
+  <ScalarVariable name="BatteryVoltage" valueReference="1" description="BatteryVoltage" causality="input" variability="continuous" >
+    <Real start="0"  />
+  </ScalarVariable> <!-- index="2" -->
+  <ScalarVariable name="InternalRes" valueReference="2" description="InternalRes" causality="input" variability="continuous" >
+    <Real start="0"  />
+  </ScalarVariable> <!-- index="3" -->
+  <ScalarVariable name="MaxTorque" valueReference="3" description="MaxTorque" causality="input" variability="continuous" >
+    <Real start="0"  />
+  </ScalarVariable> <!-- index="4" -->
+  <ScalarVariable name="MaxPower" valueReference="4" description="MaxPower" causality="input" variability="continuous" >
+    <Real start="0"  />
+  </ScalarVariable> <!-- index="5" -->
+  <ScalarVariable name="TractiveForce" valueReference="5" description="TractiveForce" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="6" -->
+  <ScalarVariable name="TotalTractiveEnergy" valueReference="6" description="TotalTractiveEnergy" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="7" -->
+  <ScalarVariable name="Velocity_mph_" valueReference="7" description="Velocity(mph)" causality="output" variability="continuous" initial="calculated">
+    <Real  unit="mph" />
+  </ScalarVariable> <!-- index="8" -->
+  <ScalarVariable name="Position" valueReference="8" description="Position" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="9" -->
+  <ScalarVariable name="DrivelineLosses_kWh_" valueReference="9" description="DrivelineLosses(kWh)" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="10" -->
+  <ScalarVariable name="MotorOut_W_" valueReference="10" description="MotorOut(W)" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="11" -->
+  <ScalarVariable name="MotorLosses_W_" valueReference="11" description="MotorLosses(W)" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="12" -->
+  <ScalarVariable name="BatteryLosses_W_" valueReference="12" description="BatteryLosses(W)" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="13" -->
+  <ScalarVariable name="SoC" valueReference="13" description="SoC" causality="output" variability="continuous" initial="calculated">
+    <Real  />
+  </ScalarVariable> <!-- index="14" -->
+  <ScalarVariable name="time" valueReference="14" description="time" causality="independent" variability="continuous" >
+    <Real  />
+  </ScalarVariable> <!-- index="15" -->
+</ModelVariables>
+<ModelStructure>
+  <Outputs>
+    <Unknown index="6" />
+    <Unknown index="7" />
+    <Unknown index="8" />
+    <Unknown index="9" />
+    <Unknown index="10" />
+    <Unknown index="11" />
+    <Unknown index="12" />
+    <Unknown index="13" />
+    <Unknown index="14" />
+  </Outputs>
+  <InitialUnknowns>
+    <Unknown index="6" />
+    <Unknown index="7" />
+    <Unknown index="8" />
+    <Unknown index="9" />
+    <Unknown index="10" />
+    <Unknown index="11" />
+    <Unknown index="12" />
+    <Unknown index="13" />
+    <Unknown index="14" />
+  </InitialUnknowns>
+</ModelStructure>
+</fmiModelDescription>
+

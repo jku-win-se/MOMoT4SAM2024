@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="showEmptyLinks" value="true"/>
+	<item key="showDerivedLinks" value="true"/>
+	<item key="showInstances" value="false"/>
+	<item key="sortLinks" value="false"/>
+	<item key="sortLinksByType" value="false"/>
+	<item key="showFullQualifiedNames" value="false"/>
+	<item key="showMultiplicity" value="false"/>
+	<item key="showOppositeLinks" value="false"/>
+	<item key="showContainer" value="true"/>
+	<item key="metaclassesSortMode" value="ByName"/>
+	<item key="showMetaclassesFullQualifiedNames" value="false"/>
+	<item key="showEmptyMetaclasses" value="false"/>
+	<item key="groupByPackage" value="false"/>
+	<item key="displayInstancesOfSubclasses" value="false"/>
+	<item key="showDerivationTree" value="false"/>
+	<item key="showAttributes" value="true"/>
+	<item key="showEmptyAttributes" value="true"/>
+	<item key="showOrdering" value="false"/>
+	<item key="fontSizeDelta" value="0"/>
+	<item key="showTypeOfLinks" value="false"/>
+	<item key="showElementIDs" value="false"/>
+	<item key="showURI" value="false"/>
+	<item key="synchronizeSourceCode" value="false"/>
+</section>

@@ -1,0 +1,70 @@
+package tms.demo;
+
+import java.awt.Dimension;
+
+import javax.swing.WindowConstants;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.CombinedDomainXYPlot;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.ApplicationFrame;
+
+public class MultiCategoryScatterPlot extends ApplicationFrame {
+
+   public static void main(final String[] args) {
+      final MultiCategoryScatterPlot example = new MultiCategoryScatterPlot("Scatter Plot Example");
+      example.setSize(800, 600);
+      example.setLocationRelativeTo(null);
+      example.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+      example.setVisible(true);
+
+   }
+
+   public MultiCategoryScatterPlot(final String title) {
+      super(title);
+
+      // Create datasets and series
+      final XYSeries series1 = new XYSeries("Series 1");
+      series1.add(1.0, 3.0);
+      series1.add(2.0, 4.0);
+      series1.add(3.0, 1.0);
+
+      final XYSeries series2 = new XYSeries("Series 2");
+      series2.add(1.0, 5.0);
+      series2.add(2.0, 2.0);
+      series2.add(3.0, 3.0);
+
+      final XYSeriesCollection dataset1 = new XYSeriesCollection(series1);
+      final XYSeriesCollection dataset2 = new XYSeriesCollection(series2);
+
+      // Create charts
+      final JFreeChart chart = ChartFactory.createScatterPlot("Scatter Plot with Multiple Axes", "X Axis", "Y Axis",
+            null // null dataset, as we'll add plots manually
+      );
+
+      // Customize the plot
+      final CombinedDomainXYPlot combinedPlot = new CombinedDomainXYPlot(new NumberAxis("X Axis"));
+
+      // Create and add the first plot
+      final XYPlot subplot1 = new XYPlot(dataset1, new NumberAxis("Y Axis 1"), new NumberAxis(),
+            new org.jfree.chart.renderer.xy.XYDotRenderer());
+      combinedPlot.add(subplot1);
+
+      // Create and add the second plot
+      final XYPlot subplot2 = new XYPlot(dataset2, new NumberAxis("Y Axis 2"), new NumberAxis(),
+            new org.jfree.chart.renderer.xy.XYDotRenderer());
+      combinedPlot.add(subplot2);
+
+      chart.getXYPlot().setDomainAxis(combinedPlot.getDomainAxis());
+
+      // Display the chart in a panel
+      final ChartPanel chartPanel = new ChartPanel(chart);
+      chartPanel.setPreferredSize(new Dimension(500, 300));
+      setContentPane(chartPanel);
+   }
+}

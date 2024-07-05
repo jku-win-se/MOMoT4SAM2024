@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_jOhRwI36Ee6hZcJJbZ9QvA" name="fmu">
+  <imports href="../metamodel/FMUModel.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_8kI2MI36Ee6hZcJJbZ9QvA" name="setInput">
+    <parameters xmi:id="_HCZk0I37Ee6hZcJJbZ9QvA" name="name">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_HCZk0Y37Ee6hZcJJbZ9QvA" name="val">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <lhs xmi:id="_8lFRYI36Ee6hZcJJbZ9QvA" name="Lhs">
+      <nodes xmi:id="_IU1dEI37Ee6hZcJJbZ9QvA">
+        <type href="http://momot.sewin.jku.at/FMUVehicleBattery#//Parameter"/>
+        <attributes xmi:id="_J_jScI37Ee6hZcJJbZ9QvA" value="name">
+          <type href="http://momot.sewin.jku.at/FMUVehicleBattery#//Parameter/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_8lF4cI36Ee6hZcJJbZ9QvA" name="Rhs">
+      <nodes xmi:id="_IU2EII37Ee6hZcJJbZ9QvA">
+        <type href="http://momot.sewin.jku.at/FMUVehicleBattery#//Parameter"/>
+        <attributes xmi:id="_J_jScY37Ee6hZcJJbZ9QvA" value="name">
+          <type href="http://momot.sewin.jku.at/FMUVehicleBattery#//Parameter/name"/>
+        </attributes>
+        <attributes xmi:id="_NBeyYI37Ee6hZcJJbZ9QvA" value="val">
+          <type href="http://momot.sewin.jku.at/FMUVehicleBattery#//Parameter/value"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_IU2rMI37Ee6hZcJJbZ9QvA" origin="_IU1dEI37Ee6hZcJJbZ9QvA" image="_IU2EII37Ee6hZcJJbZ9QvA"/>
+  </units>
+</henshin:Module>

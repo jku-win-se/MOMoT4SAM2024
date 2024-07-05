@@ -1,0 +1,110 @@
+package momot.^search
+
+import at.ac.tuwien.big.momot.^search.^fitness.dimension.TransformationLengthDimension
+import at.ac.tuwien.big.moea.^experiment.executor.listener.SeedRuntimePrintListener
+import tms.demo.TMSUtils
+import tinycc.Model
+import java.util.List
+import java.util.ArrayList
+import tms.demo.TMSProcessors
+import tinycc.TinyccPackage
+import tms.demo.TMSPlotting
+import java.nio.^file.Paths
+import org.moeaframework.util.io.FileUtils
+import java.io.File
+
+initialization = {
+	  TMSUtils.clearOutputDirs();
+      TMSUtils.rewriteToUriPath(Paths.get("text", "tiny_tms_subs_v2_onlyadd.henshin"), "/tinycc/TinyCC/model/tinycc.ecore",
+            "www.jku.at/tinycc");
+      TinyccPackage.eINSTANCE.getClass();	
+      System.out.println("Search started.");
+}
+
+search = {
+	model          = {
+		file       = "models/TinyCC_input.xmi"
+	}
+	solutionLength  = 10
+
+	transformations = {
+		modules = [ "text/tiny_tms_subs_v2_onlyadd.henshin" ]
+		ignoreUnits = [
+		"tiny_tms_subs_v2_onlyadd::tmsModule::addComponent",
+         "tiny_tms_subs_v2_onlyadd::tmsModule::getType", "tiny_tms_subs_v2_onlyadd::tmsModule::checkTypeNotSelectedYet",
+         "tiny_tms_subs_v2_onlyadd::tmsModule::getFromInfo", "tiny_tms_subs_v2_onlyadd::tmsModule::reconnectOutputs" , "tiny_tms_subs_v2_onlyadd::tmsModule::reconnectInputs" ,
+         "tiny_tms_subs_v2_onlyadd::tmsModule::changeChangeableComponent", "tiny_tms_subs_v2_onlyadd::tmsModule::reconnectInput", "tiny_tms_subs_v2_onlyadd::tmsModule::reconnectOutput"
+    	]
+	}
+	
+		fitness         = {
+		objectives = {
+			FlowCountMax: maximize {    TMSUtils.countFlows(root as Model)}
+			FlowCountMin: minimize {    TMSUtils.countFlows(root as Model)}
+			  SolutionLength : minimize new TransformationLengthDimension
+		}
+		
+		constraints = {
+			allTypesUsed : minimize {
+				val List<String> requiredInLayoutTypes = newArrayList("Battery", "DCDC", "ElectricMotor", "ElectricMotorDrive", "Charger", "Pump")
+				val changeable = (root as Model).components.findFirst[name == "changeable"]
+				val componentTypes = changeable.components.map[properties.findFirst[name == "type"]?.value]
+				val containsAllTypes = requiredInLayoutTypes.forall[type | componentTypes.contains(type)] 
+				return if (containsAllTypes) 0 else 1
+			}
+		}
+	}
+
+	algorithms      = {
+		NSGAII  : moea.createNSGAII()
+	}
+	
+
+}
+
+experiment = {
+	populationSize    = 30
+	maxEvaluations    = 300
+	nrRuns            = 1
+	progressListeners = [ new SeedRuntimePrintListener ]
+}
+
+analysis = {
+	indicators       = [ hypervolume generationalDistance ]
+	significance     = 0.01
+	show             = [ aggregateValues statisticalSignificance individualValues ]
+	outputFile       = "output/analysis/analysis.txt"
+	boxplotDirectory = "output/analysis/"
+	printOutput
+}
+
+results = {
+	  adaptModels = {	  
+	  	TMSProcessors.placeInFrontOfUniqueType(root as Model, "heater", "Battery")
+	  	TMSProcessors.placeBehindUniqueType(root as Model, "s2", "Battery")
+    	TMSProcessors.connectToUniqueType(root as Model, "bs", "Battery")
+		TMSProcessors.connectDanglingOutsToComponent(root as Model, "changeable", "s1")
+   }
+   
+ // save objectives
+   objectives = {
+      outputFile      = "output/objectives/objective_values.txt"
+      printOutput
+   }
+   
+      // save solutions, i.e., transformation orchestrations
+   solutions  = {
+      outputFile      = "output/solutions/all_solutions.txt"
+      outputDirectory = "output/solutions/"
+   }
+   
+      // save models resulting from the orchestrated transformations
+   models     = {
+      outputDirectory = "output/models/"
+   }
+}
+
+finalization = {
+	TMSPlotting.plotChangeableLayoutsAsGraph("output/models/", List.of("Radiator", "Valve"));
+	System.out.println("Search finished.");
+}

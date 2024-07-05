@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tinycc:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tinycc="www.jku.at/tinycc">
+  <components name="library">
+    <components name="m1">
+      <properties name="type" value="ElectricMotor"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="md1">
+      <properties name="type" value="ElectricMotorDrive"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="c1">
+      <properties name="type" value="Charger"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="p2">
+      <properties name="type" value="Pump"/>
+      <properties name="maxCon" value="3"/>
+      <ports name="in1"/>
+      <ports name="in2"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="b1">
+      <properties name="type" value="Battery"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="dc2">
+      <properties name="type" value="DCDC"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+  </components>
+  <components name="changeable">
+    <components name="p1">
+      <properties name="type" value="Pump"/>
+      <properties name="maxCon" value="3"/>
+      <ports name="in1"/>
+      <ports name="in2"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="c2">
+      <properties name="type" value="Charger"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="md2">
+      <properties name="type" value="ElectricMotorDrive"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="b2">
+      <properties name="type" value="Battery"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="dc1">
+      <properties name="type" value="DCDC"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="m2">
+      <properties name="type" value="ElectricMotor"/>
+      <properties name="maxCon" value="1"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="heater">
+      <properties name="type" value="Heater"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="s2">
+      <properties name="type" value="Sensor"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="bs">
+      <properties name="type" value="BatterySensor"/>
+      <ports name="in"/>
+    </components>
+  </components>
+  <components name="fixed">
+    <components name="f">
+      <properties name="type" value="Fan"/>
+    </components>
+    <components name="r">
+      <properties name="type" value="Radiator"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+    <components name="v">
+      <properties name="type" value="Valve"/>
+      <ports name="in"/>
+      <ports name="out1_v1" direction="OUT"/>
+      <ports name="out2_v1" direction="OUT"/>
+    </components>
+    <components name="s1">
+      <properties name="type" value="Sensor"/>
+      <ports name="in"/>
+      <ports name="out" direction="OUT"/>
+    </components>
+  </components>
+  <connectors name="r#to#p1">
+    <ends port="//@components.2/@components.1/@ports.1"/>
+    <ends port="//@components.1/@components.0/@ports.0"/>
+  </connectors>
+  <connectors name="v->r">
+    <ends port="//@components.2/@components.2/@ports.1"/>
+    <ends port="//@components.2/@components.1/@ports.0"/>
+  </connectors>
+  <connectors name="v#to#p1">
+    <ends port="//@components.2/@components.2/@ports.2"/>
+    <ends port="//@components.1/@components.0/@ports.1"/>
+  </connectors>
+  <connectors name="s1->v">
+    <ends port="//@components.2/@components.3/@ports.1"/>
+    <ends port="//@components.2/@components.2/@ports.0"/>
+  </connectors>
+  <connectors name="p1#to#c2">
+    <ends port="//@components.1/@components.0/@ports.2"/>
+    <ends port="//@components.1/@components.1/@ports.0"/>
+  </connectors>
+  <connectors name="p1#to#md2">
+    <ends port="//@components.1/@components.0/@ports.2"/>
+    <ends port="//@components.1/@components.2/@ports.0"/>
+  </connectors>
+  <connectors name="p1#to#heater">
+    <ends port="//@components.1/@components.0/@ports.2"/>
+    <ends port="//@components.1/@components.6/@ports.0"/>
+  </connectors>
+  <connectors name="c2#to#dc1">
+    <ends port="//@components.1/@components.1/@ports.1"/>
+    <ends port="//@components.1/@components.4/@ports.0"/>
+  </connectors>
+  <connectors name="s2#to#m2">
+    <ends port="//@components.1/@components.7/@ports.1"/>
+    <ends port="//@components.1/@components.5/@ports.0"/>
+  </connectors>
+  <connectors name="heater#to#b2">
+    <ends port="//@components.1/@components.6/@ports.1"/>
+    <ends port="//@components.1/@components.3/@ports.0"/>
+  </connectors>
+  <connectors name="b2#to#s2">
+    <ends port="//@components.1/@components.3/@ports.1"/>
+    <ends port="//@components.1/@components.7/@ports.0"/>
+  </connectors>
+  <connectors name="b2#to#bs">
+    <ends port="//@components.1/@components.3/@ports.1"/>
+    <ends port="//@components.1/@components.8/@ports.0"/>
+  </connectors>
+  <connectors name="md2#to#s1">
+    <ends port="//@components.1/@components.2/@ports.1"/>
+    <ends port="//@components.2/@components.3/@ports.0"/>
+  </connectors>
+  <connectors name="dc1#to#s1">
+    <ends port="//@components.1/@components.4/@ports.1"/>
+    <ends port="//@components.2/@components.3/@ports.0"/>
+  </connectors>
+  <connectors name="m2#to#s1">
+    <ends port="//@components.1/@components.5/@ports.1"/>
+    <ends port="//@components.2/@components.3/@ports.0"/>
+  </connectors>
+</tinycc:Model>

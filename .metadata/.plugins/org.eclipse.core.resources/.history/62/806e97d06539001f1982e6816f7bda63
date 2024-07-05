@@ -1,0 +1,1927 @@
+/**
+ */
+package tms;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see tms.TmsFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface TmsPackage extends EPackage {
+   /**
+    * The package name.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   String eNAME = "tms";
+
+   /**
+    * The package namespace URI.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   String eNS_URI = "http://momot.big.tuwien.ac.at/examples/tms/1.0";
+
+   /**
+    * The package namespace name.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   String eNS_PREFIX = "tms";
+
+   /**
+    * The singleton instance of the package.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   TmsPackage eINSTANCE = tms.impl.TmsPackageImpl.init();
+
+   /**
+    * The meta object id for the '{@link tms.impl.ArrangeableBlockImpl <em>Arrangeable Block</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.ArrangeableBlockImpl
+    * @see tms.impl.TmsPackageImpl#getArrangeableBlock()
+    * @generated
+    */
+   int ARRANGEABLE_BLOCK = 0;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ARRANGEABLE_BLOCK__ID = 0;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ARRANGEABLE_BLOCK__TYPE_ID = 1;
+
+   /**
+    * The number of structural features of the '<em>Arrangeable Block</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ARRANGEABLE_BLOCK_FEATURE_COUNT = 2;
+
+   /**
+    * The number of operations of the '<em>Arrangeable Block</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ARRANGEABLE_BLOCK_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.SensorImpl <em>Sensor</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.SensorImpl
+    * @see tms.impl.TmsPackageImpl#getSensor()
+    * @generated
+    */
+   int SENSOR = 1;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int SENSOR__ID = ARRANGEABLE_BLOCK__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int SENSOR__TYPE_ID = ARRANGEABLE_BLOCK__TYPE_ID;
+
+   /**
+    * The number of structural features of the '<em>Sensor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int SENSOR_FEATURE_COUNT = ARRANGEABLE_BLOCK_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Sensor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int SENSOR_OPERATION_COUNT = ARRANGEABLE_BLOCK_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.FanImpl <em>Fan</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.FanImpl
+    * @see tms.impl.TmsPackageImpl#getFan()
+    * @generated
+    */
+   int FAN = 2;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FAN__ID = 0;
+
+   /**
+    * The number of structural features of the '<em>Fan</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FAN_FEATURE_COUNT = 1;
+
+   /**
+    * The number of operations of the '<em>Fan</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FAN_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.ValveImpl <em>Valve</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.ValveImpl
+    * @see tms.impl.TmsPackageImpl#getValve()
+    * @generated
+    */
+   int VALVE = 3;
+
+   /**
+    * The feature id for the '<em><b>Radiator</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int VALVE__RADIATOR = 0;
+
+   /**
+    * The feature id for the '<em><b>Pump</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int VALVE__PUMP = 1;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int VALVE__ID = 2;
+
+   /**
+    * The number of structural features of the '<em>Valve</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int VALVE_FEATURE_COUNT = 3;
+
+   /**
+    * The number of operations of the '<em>Valve</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int VALVE_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.RadiatorImpl <em>Radiator</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.RadiatorImpl
+    * @see tms.impl.TmsPackageImpl#getRadiator()
+    * @generated
+    */
+   int RADIATOR = 4;
+
+   /**
+    * The feature id for the '<em><b>Pump</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int RADIATOR__PUMP = 0;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int RADIATOR__ID = 1;
+
+   /**
+    * The number of structural features of the '<em>Radiator</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int RADIATOR_FEATURE_COUNT = 2;
+
+   /**
+    * The number of operations of the '<em>Radiator</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int RADIATOR_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.PumpImpl <em>Pump</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.PumpImpl
+    * @see tms.impl.TmsPackageImpl#getPump()
+    * @generated
+    */
+   int PUMP = 5;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int PUMP__ID = 0;
+
+   /**
+    * The feature id for the '<em><b>Flow</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int PUMP__FLOW = 1;
+
+   /**
+    * The feature id for the '<em><b>Pressure</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int PUMP__PRESSURE = 2;
+
+   /**
+    * The number of structural features of the '<em>Pump</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int PUMP_FEATURE_COUNT = 3;
+
+   /**
+    * The number of operations of the '<em>Pump</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int PUMP_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.S1Impl <em>S1</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.S1Impl
+    * @see tms.impl.TmsPackageImpl#getS1()
+    * @generated
+    */
+   int S1 = 6;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S1__ID = SENSOR__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S1__TYPE_ID = SENSOR__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Valve</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S1__VALVE = SENSOR_FEATURE_COUNT + 0;
+
+   /**
+    * The number of structural features of the '<em>S1</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S1_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 1;
+
+   /**
+    * The number of operations of the '<em>S1</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S1_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.S2Impl <em>S2</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.S2Impl
+    * @see tms.impl.TmsPackageImpl#getS2()
+    * @generated
+    */
+   int S2 = 7;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S2__ID = SENSOR__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S2__TYPE_ID = SENSOR__TYPE_ID;
+
+   /**
+    * The number of structural features of the '<em>S2</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S2_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>S2</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int S2_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.BatterySensorImpl <em>Battery Sensor</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.BatterySensorImpl
+    * @see tms.impl.TmsPackageImpl#getBatterySensor()
+    * @generated
+    */
+   int BATTERY_SENSOR = 8;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_SENSOR__ID = SENSOR__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_SENSOR__TYPE_ID = SENSOR__TYPE_ID;
+
+   /**
+    * The number of structural features of the '<em>Battery Sensor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_SENSOR_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Battery Sensor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_SENSOR_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.LoadedComponentImpl <em>Loaded Component</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.LoadedComponentImpl
+    * @see tms.impl.TmsPackageImpl#getLoadedComponent()
+    * @generated
+    */
+   int LOADED_COMPONENT = 14;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT__ID = ARRANGEABLE_BLOCK__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT__TYPE_ID = ARRANGEABLE_BLOCK__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT__PRESSURE_DROPS = ARRANGEABLE_BLOCK_FEATURE_COUNT + 0;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT__FLOWS = ARRANGEABLE_BLOCK_FEATURE_COUNT + 1;
+
+   /**
+    * The number of structural features of the '<em>Loaded Component</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT_FEATURE_COUNT = ARRANGEABLE_BLOCK_FEATURE_COUNT + 2;
+
+   /**
+    * The number of operations of the '<em>Loaded Component</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int LOADED_COMPONENT_OPERATION_COUNT = ARRANGEABLE_BLOCK_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.BatteryImpl <em>Battery</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.BatteryImpl
+    * @see tms.impl.TmsPackageImpl#getBattery()
+    * @generated
+    */
+   int BATTERY = 9;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The feature id for the '<em><b>Batterysensor</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY__BATTERYSENSOR = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of structural features of the '<em>Battery</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 1;
+
+   /**
+    * The number of operations of the '<em>Battery</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int BATTERY_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.ElectricMotorDriveImpl <em>Electric Motor Drive</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.ElectricMotorDriveImpl
+    * @see tms.impl.TmsPackageImpl#getElectricMotorDrive()
+    * @generated
+    */
+   int ELECTRIC_MOTOR_DRIVE = 10;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The number of structural features of the '<em>Electric Motor Drive</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Electric Motor Drive</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_DRIVE_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.DCDCImpl <em>DCDC</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.DCDCImpl
+    * @see tms.impl.TmsPackageImpl#getDCDC()
+    * @generated
+    */
+   int DCDC = 11;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The number of structural features of the '<em>DCDC</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>DCDC</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int DCDC_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.CoolantHeaterImpl <em>Coolant Heater</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.CoolantHeaterImpl
+    * @see tms.impl.TmsPackageImpl#getCoolantHeater()
+    * @generated
+    */
+   int COOLANT_HEATER = 12;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The number of structural features of the '<em>Coolant Heater</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Coolant Heater</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int COOLANT_HEATER_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.ElectricMotorImpl <em>Electric Motor</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.ElectricMotorImpl
+    * @see tms.impl.TmsPackageImpl#getElectricMotor()
+    * @generated
+    */
+   int ELECTRIC_MOTOR = 13;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The number of structural features of the '<em>Electric Motor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Electric Motor</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int ELECTRIC_MOTOR_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.ChargerImpl <em>Charger</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.ChargerImpl
+    * @see tms.impl.TmsPackageImpl#getCharger()
+    * @generated
+    */
+   int CHARGER = 15;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER__ID = LOADED_COMPONENT__ID;
+
+   /**
+    * The feature id for the '<em><b>Type Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER__TYPE_ID = LOADED_COMPONENT__TYPE_ID;
+
+   /**
+    * The feature id for the '<em><b>Pressure Drops</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER__PRESSURE_DROPS = LOADED_COMPONENT__PRESSURE_DROPS;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' attribute list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER__FLOWS = LOADED_COMPONENT__FLOWS;
+
+   /**
+    * The number of structural features of the '<em>Charger</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER_FEATURE_COUNT = LOADED_COMPONENT_FEATURE_COUNT + 0;
+
+   /**
+    * The number of operations of the '<em>Charger</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int CHARGER_OPERATION_COUNT = LOADED_COMPONENT_OPERATION_COUNT + 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.FlowImpl <em>Flow</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.FlowImpl
+    * @see tms.impl.TmsPackageImpl#getFlow()
+    * @generated
+    */
+   int FLOW = 16;
+
+   /**
+    * The feature id for the '<em><b>Covers</b></em>' reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FLOW__COVERS = 0;
+
+   /**
+    * The feature id for the '<em><b>Id</b></em>' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FLOW__ID = 1;
+
+   /**
+    * The number of structural features of the '<em>Flow</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FLOW_FEATURE_COUNT = 2;
+
+   /**
+    * The number of operations of the '<em>Flow</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int FLOW_OPERATION_COUNT = 0;
+
+   /**
+    * The meta object id for the '{@link tms.impl.TMSModelImpl <em>TMS Model</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see tms.impl.TMSModelImpl
+    * @see tms.impl.TmsPackageImpl#getTMSModel()
+    * @generated
+    */
+   int TMS_MODEL = 17;
+
+   /**
+    * The feature id for the '<em><b>Fan</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__FAN = 0;
+
+   /**
+    * The feature id for the '<em><b>Radiator</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__RADIATOR = 1;
+
+   /**
+    * The feature id for the '<em><b>Valve</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__VALVE = 2;
+
+   /**
+    * The feature id for the '<em><b>Pumps</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__PUMPS = 3;
+
+   /**
+    * The feature id for the '<em><b>Arrangeable Blocks</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__ARRANGEABLE_BLOCKS = 4;
+
+   /**
+    * The feature id for the '<em><b>Flows</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__FLOWS = 5;
+
+   /**
+    * The feature id for the '<em><b>Selected Pump</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL__SELECTED_PUMP = 6;
+
+   /**
+    * The number of structural features of the '<em>TMS Model</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL_FEATURE_COUNT = 7;
+
+   /**
+    * The number of operations of the '<em>TMS Model</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    * @ordered
+    */
+   int TMS_MODEL_OPERATION_COUNT = 0;
+
+
+   /**
+    * Returns the meta object for class '{@link tms.ArrangeableBlock <em>Arrangeable Block</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Arrangeable Block</em>'.
+    * @see tms.ArrangeableBlock
+    * @generated
+    */
+   EClass getArrangeableBlock();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.ArrangeableBlock#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.ArrangeableBlock#getId()
+    * @see #getArrangeableBlock()
+    * @generated
+    */
+   EAttribute getArrangeableBlock_Id();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.ArrangeableBlock#getTypeId <em>Type Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Type Id</em>'.
+    * @see tms.ArrangeableBlock#getTypeId()
+    * @see #getArrangeableBlock()
+    * @generated
+    */
+   EAttribute getArrangeableBlock_TypeId();
+
+   /**
+    * Returns the meta object for class '{@link tms.Sensor <em>Sensor</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Sensor</em>'.
+    * @see tms.Sensor
+    * @generated
+    */
+   EClass getSensor();
+
+   /**
+    * Returns the meta object for class '{@link tms.Fan <em>Fan</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Fan</em>'.
+    * @see tms.Fan
+    * @generated
+    */
+   EClass getFan();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Fan#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.Fan#getId()
+    * @see #getFan()
+    * @generated
+    */
+   EAttribute getFan_Id();
+
+   /**
+    * Returns the meta object for class '{@link tms.Valve <em>Valve</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Valve</em>'.
+    * @see tms.Valve
+    * @generated
+    */
+   EClass getValve();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.Valve#getRadiator <em>Radiator</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Radiator</em>'.
+    * @see tms.Valve#getRadiator()
+    * @see #getValve()
+    * @generated
+    */
+   EReference getValve_Radiator();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.Valve#getPump <em>Pump</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Pump</em>'.
+    * @see tms.Valve#getPump()
+    * @see #getValve()
+    * @generated
+    */
+   EReference getValve_Pump();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Valve#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.Valve#getId()
+    * @see #getValve()
+    * @generated
+    */
+   EAttribute getValve_Id();
+
+   /**
+    * Returns the meta object for class '{@link tms.Radiator <em>Radiator</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Radiator</em>'.
+    * @see tms.Radiator
+    * @generated
+    */
+   EClass getRadiator();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.Radiator#getPump <em>Pump</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Pump</em>'.
+    * @see tms.Radiator#getPump()
+    * @see #getRadiator()
+    * @generated
+    */
+   EReference getRadiator_Pump();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Radiator#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.Radiator#getId()
+    * @see #getRadiator()
+    * @generated
+    */
+   EAttribute getRadiator_Id();
+
+   /**
+    * Returns the meta object for class '{@link tms.Pump <em>Pump</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Pump</em>'.
+    * @see tms.Pump
+    * @generated
+    */
+   EClass getPump();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Pump#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.Pump#getId()
+    * @see #getPump()
+    * @generated
+    */
+   EAttribute getPump_Id();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Pump#getFlow <em>Flow</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Flow</em>'.
+    * @see tms.Pump#getFlow()
+    * @see #getPump()
+    * @generated
+    */
+   EAttribute getPump_Flow();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Pump#getPressure <em>Pressure</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Pressure</em>'.
+    * @see tms.Pump#getPressure()
+    * @see #getPump()
+    * @generated
+    */
+   EAttribute getPump_Pressure();
+
+   /**
+    * Returns the meta object for class '{@link tms.S1 <em>S1</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>S1</em>'.
+    * @see tms.S1
+    * @generated
+    */
+   EClass getS1();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.S1#getValve <em>Valve</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Valve</em>'.
+    * @see tms.S1#getValve()
+    * @see #getS1()
+    * @generated
+    */
+   EReference getS1_Valve();
+
+   /**
+    * Returns the meta object for class '{@link tms.S2 <em>S2</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>S2</em>'.
+    * @see tms.S2
+    * @generated
+    */
+   EClass getS2();
+
+   /**
+    * Returns the meta object for class '{@link tms.BatterySensor <em>Battery Sensor</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Battery Sensor</em>'.
+    * @see tms.BatterySensor
+    * @generated
+    */
+   EClass getBatterySensor();
+
+   /**
+    * Returns the meta object for class '{@link tms.Battery <em>Battery</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Battery</em>'.
+    * @see tms.Battery
+    * @generated
+    */
+   EClass getBattery();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.Battery#getBatterysensor <em>Batterysensor</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Batterysensor</em>'.
+    * @see tms.Battery#getBatterysensor()
+    * @see #getBattery()
+    * @generated
+    */
+   EReference getBattery_Batterysensor();
+
+   /**
+    * Returns the meta object for class '{@link tms.ElectricMotorDrive <em>Electric Motor Drive</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Electric Motor Drive</em>'.
+    * @see tms.ElectricMotorDrive
+    * @generated
+    */
+   EClass getElectricMotorDrive();
+
+   /**
+    * Returns the meta object for class '{@link tms.DCDC <em>DCDC</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>DCDC</em>'.
+    * @see tms.DCDC
+    * @generated
+    */
+   EClass getDCDC();
+
+   /**
+    * Returns the meta object for class '{@link tms.CoolantHeater <em>Coolant Heater</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Coolant Heater</em>'.
+    * @see tms.CoolantHeater
+    * @generated
+    */
+   EClass getCoolantHeater();
+
+   /**
+    * Returns the meta object for class '{@link tms.ElectricMotor <em>Electric Motor</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Electric Motor</em>'.
+    * @see tms.ElectricMotor
+    * @generated
+    */
+   EClass getElectricMotor();
+
+   /**
+    * Returns the meta object for class '{@link tms.LoadedComponent <em>Loaded Component</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Loaded Component</em>'.
+    * @see tms.LoadedComponent
+    * @generated
+    */
+   EClass getLoadedComponent();
+
+   /**
+    * Returns the meta object for the attribute list '{@link tms.LoadedComponent#getPressureDrops <em>Pressure Drops</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute list '<em>Pressure Drops</em>'.
+    * @see tms.LoadedComponent#getPressureDrops()
+    * @see #getLoadedComponent()
+    * @generated
+    */
+   EAttribute getLoadedComponent_PressureDrops();
+
+   /**
+    * Returns the meta object for the attribute list '{@link tms.LoadedComponent#getFlows <em>Flows</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute list '<em>Flows</em>'.
+    * @see tms.LoadedComponent#getFlows()
+    * @see #getLoadedComponent()
+    * @generated
+    */
+   EAttribute getLoadedComponent_Flows();
+
+   /**
+    * Returns the meta object for class '{@link tms.Charger <em>Charger</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Charger</em>'.
+    * @see tms.Charger
+    * @generated
+    */
+   EClass getCharger();
+
+   /**
+    * Returns the meta object for class '{@link tms.Flow <em>Flow</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>Flow</em>'.
+    * @see tms.Flow
+    * @generated
+    */
+   EClass getFlow();
+
+   /**
+    * Returns the meta object for the reference list '{@link tms.Flow#getCovers <em>Covers</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference list '<em>Covers</em>'.
+    * @see tms.Flow#getCovers()
+    * @see #getFlow()
+    * @generated
+    */
+   EReference getFlow_Covers();
+
+   /**
+    * Returns the meta object for the attribute '{@link tms.Flow#getId <em>Id</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the attribute '<em>Id</em>'.
+    * @see tms.Flow#getId()
+    * @see #getFlow()
+    * @generated
+    */
+   EAttribute getFlow_Id();
+
+   /**
+    * Returns the meta object for class '{@link tms.TMSModel <em>TMS Model</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for class '<em>TMS Model</em>'.
+    * @see tms.TMSModel
+    * @generated
+    */
+   EClass getTMSModel();
+
+   /**
+    * Returns the meta object for the containment reference '{@link tms.TMSModel#getFan <em>Fan</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference '<em>Fan</em>'.
+    * @see tms.TMSModel#getFan()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_Fan();
+
+   /**
+    * Returns the meta object for the containment reference '{@link tms.TMSModel#getRadiator <em>Radiator</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference '<em>Radiator</em>'.
+    * @see tms.TMSModel#getRadiator()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_Radiator();
+
+   /**
+    * Returns the meta object for the containment reference '{@link tms.TMSModel#getValve <em>Valve</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference '<em>Valve</em>'.
+    * @see tms.TMSModel#getValve()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_Valve();
+
+   /**
+    * Returns the meta object for the containment reference list '{@link tms.TMSModel#getPumps <em>Pumps</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference list '<em>Pumps</em>'.
+    * @see tms.TMSModel#getPumps()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_Pumps();
+
+   /**
+    * Returns the meta object for the containment reference list '{@link tms.TMSModel#getArrangeableBlocks <em>Arrangeable Blocks</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference list '<em>Arrangeable Blocks</em>'.
+    * @see tms.TMSModel#getArrangeableBlocks()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_ArrangeableBlocks();
+
+   /**
+    * Returns the meta object for the containment reference list '{@link tms.TMSModel#getFlows <em>Flows</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the containment reference list '<em>Flows</em>'.
+    * @see tms.TMSModel#getFlows()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_Flows();
+
+   /**
+    * Returns the meta object for the reference '{@link tms.TMSModel#getSelectedPump <em>Selected Pump</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the meta object for the reference '<em>Selected Pump</em>'.
+    * @see tms.TMSModel#getSelectedPump()
+    * @see #getTMSModel()
+    * @generated
+    */
+   EReference getTMSModel_SelectedPump();
+
+   /**
+    * Returns the factory that creates the instances of the model.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the factory that creates the instances of the model.
+    * @generated
+    */
+   TmsFactory getTmsFactory();
+
+   /**
+    * <!-- begin-user-doc -->
+    * Defines literals for the meta objects that represent
+    * <ul>
+    *   <li>each class,</li>
+    *   <li>each feature of each class,</li>
+    *   <li>each operation of each class,</li>
+    *   <li>each enum,</li>
+    *   <li>and each data type</li>
+    * </ul>
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   interface Literals {
+      /**
+       * The meta object literal for the '{@link tms.impl.ArrangeableBlockImpl <em>Arrangeable Block</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.ArrangeableBlockImpl
+       * @see tms.impl.TmsPackageImpl#getArrangeableBlock()
+       * @generated
+       */
+      EClass ARRANGEABLE_BLOCK = eINSTANCE.getArrangeableBlock();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute ARRANGEABLE_BLOCK__ID = eINSTANCE.getArrangeableBlock_Id();
+
+      /**
+       * The meta object literal for the '<em><b>Type Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute ARRANGEABLE_BLOCK__TYPE_ID = eINSTANCE.getArrangeableBlock_TypeId();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.SensorImpl <em>Sensor</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.SensorImpl
+       * @see tms.impl.TmsPackageImpl#getSensor()
+       * @generated
+       */
+      EClass SENSOR = eINSTANCE.getSensor();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.FanImpl <em>Fan</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.FanImpl
+       * @see tms.impl.TmsPackageImpl#getFan()
+       * @generated
+       */
+      EClass FAN = eINSTANCE.getFan();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute FAN__ID = eINSTANCE.getFan_Id();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.ValveImpl <em>Valve</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.ValveImpl
+       * @see tms.impl.TmsPackageImpl#getValve()
+       * @generated
+       */
+      EClass VALVE = eINSTANCE.getValve();
+
+      /**
+       * The meta object literal for the '<em><b>Radiator</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference VALVE__RADIATOR = eINSTANCE.getValve_Radiator();
+
+      /**
+       * The meta object literal for the '<em><b>Pump</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference VALVE__PUMP = eINSTANCE.getValve_Pump();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute VALVE__ID = eINSTANCE.getValve_Id();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.RadiatorImpl <em>Radiator</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.RadiatorImpl
+       * @see tms.impl.TmsPackageImpl#getRadiator()
+       * @generated
+       */
+      EClass RADIATOR = eINSTANCE.getRadiator();
+
+      /**
+       * The meta object literal for the '<em><b>Pump</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference RADIATOR__PUMP = eINSTANCE.getRadiator_Pump();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute RADIATOR__ID = eINSTANCE.getRadiator_Id();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.PumpImpl <em>Pump</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.PumpImpl
+       * @see tms.impl.TmsPackageImpl#getPump()
+       * @generated
+       */
+      EClass PUMP = eINSTANCE.getPump();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute PUMP__ID = eINSTANCE.getPump_Id();
+
+      /**
+       * The meta object literal for the '<em><b>Flow</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute PUMP__FLOW = eINSTANCE.getPump_Flow();
+
+      /**
+       * The meta object literal for the '<em><b>Pressure</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute PUMP__PRESSURE = eINSTANCE.getPump_Pressure();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.S1Impl <em>S1</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.S1Impl
+       * @see tms.impl.TmsPackageImpl#getS1()
+       * @generated
+       */
+      EClass S1 = eINSTANCE.getS1();
+
+      /**
+       * The meta object literal for the '<em><b>Valve</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference S1__VALVE = eINSTANCE.getS1_Valve();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.S2Impl <em>S2</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.S2Impl
+       * @see tms.impl.TmsPackageImpl#getS2()
+       * @generated
+       */
+      EClass S2 = eINSTANCE.getS2();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.BatterySensorImpl <em>Battery Sensor</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.BatterySensorImpl
+       * @see tms.impl.TmsPackageImpl#getBatterySensor()
+       * @generated
+       */
+      EClass BATTERY_SENSOR = eINSTANCE.getBatterySensor();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.BatteryImpl <em>Battery</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.BatteryImpl
+       * @see tms.impl.TmsPackageImpl#getBattery()
+       * @generated
+       */
+      EClass BATTERY = eINSTANCE.getBattery();
+
+      /**
+       * The meta object literal for the '<em><b>Batterysensor</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference BATTERY__BATTERYSENSOR = eINSTANCE.getBattery_Batterysensor();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.ElectricMotorDriveImpl <em>Electric Motor Drive</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.ElectricMotorDriveImpl
+       * @see tms.impl.TmsPackageImpl#getElectricMotorDrive()
+       * @generated
+       */
+      EClass ELECTRIC_MOTOR_DRIVE = eINSTANCE.getElectricMotorDrive();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.DCDCImpl <em>DCDC</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.DCDCImpl
+       * @see tms.impl.TmsPackageImpl#getDCDC()
+       * @generated
+       */
+      EClass DCDC = eINSTANCE.getDCDC();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.CoolantHeaterImpl <em>Coolant Heater</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.CoolantHeaterImpl
+       * @see tms.impl.TmsPackageImpl#getCoolantHeater()
+       * @generated
+       */
+      EClass COOLANT_HEATER = eINSTANCE.getCoolantHeater();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.ElectricMotorImpl <em>Electric Motor</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.ElectricMotorImpl
+       * @see tms.impl.TmsPackageImpl#getElectricMotor()
+       * @generated
+       */
+      EClass ELECTRIC_MOTOR = eINSTANCE.getElectricMotor();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.LoadedComponentImpl <em>Loaded Component</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.LoadedComponentImpl
+       * @see tms.impl.TmsPackageImpl#getLoadedComponent()
+       * @generated
+       */
+      EClass LOADED_COMPONENT = eINSTANCE.getLoadedComponent();
+
+      /**
+       * The meta object literal for the '<em><b>Pressure Drops</b></em>' attribute list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute LOADED_COMPONENT__PRESSURE_DROPS = eINSTANCE.getLoadedComponent_PressureDrops();
+
+      /**
+       * The meta object literal for the '<em><b>Flows</b></em>' attribute list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute LOADED_COMPONENT__FLOWS = eINSTANCE.getLoadedComponent_Flows();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.ChargerImpl <em>Charger</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.ChargerImpl
+       * @see tms.impl.TmsPackageImpl#getCharger()
+       * @generated
+       */
+      EClass CHARGER = eINSTANCE.getCharger();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.FlowImpl <em>Flow</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.FlowImpl
+       * @see tms.impl.TmsPackageImpl#getFlow()
+       * @generated
+       */
+      EClass FLOW = eINSTANCE.getFlow();
+
+      /**
+       * The meta object literal for the '<em><b>Covers</b></em>' reference list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference FLOW__COVERS = eINSTANCE.getFlow_Covers();
+
+      /**
+       * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EAttribute FLOW__ID = eINSTANCE.getFlow_Id();
+
+      /**
+       * The meta object literal for the '{@link tms.impl.TMSModelImpl <em>TMS Model</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @see tms.impl.TMSModelImpl
+       * @see tms.impl.TmsPackageImpl#getTMSModel()
+       * @generated
+       */
+      EClass TMS_MODEL = eINSTANCE.getTMSModel();
+
+      /**
+       * The meta object literal for the '<em><b>Fan</b></em>' containment reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__FAN = eINSTANCE.getTMSModel_Fan();
+
+      /**
+       * The meta object literal for the '<em><b>Radiator</b></em>' containment reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__RADIATOR = eINSTANCE.getTMSModel_Radiator();
+
+      /**
+       * The meta object literal for the '<em><b>Valve</b></em>' containment reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__VALVE = eINSTANCE.getTMSModel_Valve();
+
+      /**
+       * The meta object literal for the '<em><b>Pumps</b></em>' containment reference list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__PUMPS = eINSTANCE.getTMSModel_Pumps();
+
+      /**
+       * The meta object literal for the '<em><b>Arrangeable Blocks</b></em>' containment reference list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__ARRANGEABLE_BLOCKS = eINSTANCE.getTMSModel_ArrangeableBlocks();
+
+      /**
+       * The meta object literal for the '<em><b>Flows</b></em>' containment reference list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__FLOWS = eINSTANCE.getTMSModel_Flows();
+
+      /**
+       * The meta object literal for the '<em><b>Selected Pump</b></em>' reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * @generated
+       */
+      EReference TMS_MODEL__SELECTED_PUMP = eINSTANCE.getTMSModel_SelectedPump();
+
+   }
+
+} //TmsPackage

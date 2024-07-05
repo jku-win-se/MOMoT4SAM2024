@@ -1,0 +1,487 @@
+/**
+ */
+package tms.util;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.util.Switch;
+
+import tms.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Switch</b> for the model's inheritance hierarchy.
+ * It supports the call {@link #doSwitch(EObject) doSwitch(object)}
+ * to invoke the <code>caseXXX</code> method for each class of the model,
+ * starting with the actual class of the object
+ * and proceeding up the inheritance hierarchy
+ * until a non-null result is returned,
+ * which is the result of the switch.
+ * <!-- end-user-doc -->
+ * @see tms.TmsPackage
+ * @generated
+ */
+public class TmsSwitch<T> extends Switch<T> {
+   /**
+    * The cached model package
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected static TmsPackage modelPackage;
+
+   /**
+    * Creates an instance of the switch.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public TmsSwitch() {
+      if (modelPackage == null) {
+         modelPackage = TmsPackage.eINSTANCE;
+      }
+   }
+
+   /**
+    * Checks whether this is a switch for the given package.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param ePackage the package in question.
+    * @return whether this is a switch for the given package.
+    * @generated
+    */
+   @Override
+   protected boolean isSwitchFor(EPackage ePackage) {
+      return ePackage == modelPackage;
+   }
+
+   /**
+    * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the first non-null result returned by a <code>caseXXX</code> call.
+    * @generated
+    */
+   @Override
+   protected T doSwitch(int classifierID, EObject theEObject) {
+      switch (classifierID) {
+         case TmsPackage.ARRANGEABLE_BLOCK: {
+            ArrangeableBlock arrangeableBlock = (ArrangeableBlock)theEObject;
+            T result = caseArrangeableBlock(arrangeableBlock);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.SENSOR: {
+            Sensor sensor = (Sensor)theEObject;
+            T result = caseSensor(sensor);
+            if (result == null) result = caseArrangeableBlock(sensor);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.FAN: {
+            Fan fan = (Fan)theEObject;
+            T result = caseFan(fan);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.VALVE: {
+            Valve valve = (Valve)theEObject;
+            T result = caseValve(valve);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.RADIATOR: {
+            Radiator radiator = (Radiator)theEObject;
+            T result = caseRadiator(radiator);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.PUMP: {
+            Pump pump = (Pump)theEObject;
+            T result = casePump(pump);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.S1: {
+            S1 s1 = (S1)theEObject;
+            T result = caseS1(s1);
+            if (result == null) result = caseSensor(s1);
+            if (result == null) result = caseArrangeableBlock(s1);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.S2: {
+            S2 s2 = (S2)theEObject;
+            T result = caseS2(s2);
+            if (result == null) result = caseSensor(s2);
+            if (result == null) result = caseArrangeableBlock(s2);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.BATTERY_SENSOR: {
+            BatterySensor batterySensor = (BatterySensor)theEObject;
+            T result = caseBatterySensor(batterySensor);
+            if (result == null) result = caseSensor(batterySensor);
+            if (result == null) result = caseArrangeableBlock(batterySensor);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.BATTERY: {
+            Battery battery = (Battery)theEObject;
+            T result = caseBattery(battery);
+            if (result == null) result = caseLoadedComponent(battery);
+            if (result == null) result = caseArrangeableBlock(battery);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.ELECTRIC_MOTOR_DRIVE: {
+            ElectricMotorDrive electricMotorDrive = (ElectricMotorDrive)theEObject;
+            T result = caseElectricMotorDrive(electricMotorDrive);
+            if (result == null) result = caseLoadedComponent(electricMotorDrive);
+            if (result == null) result = caseArrangeableBlock(electricMotorDrive);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.DCDC: {
+            DCDC dcdc = (DCDC)theEObject;
+            T result = caseDCDC(dcdc);
+            if (result == null) result = caseLoadedComponent(dcdc);
+            if (result == null) result = caseArrangeableBlock(dcdc);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.COOLANT_HEATER: {
+            CoolantHeater coolantHeater = (CoolantHeater)theEObject;
+            T result = caseCoolantHeater(coolantHeater);
+            if (result == null) result = caseLoadedComponent(coolantHeater);
+            if (result == null) result = caseArrangeableBlock(coolantHeater);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.ELECTRIC_MOTOR: {
+            ElectricMotor electricMotor = (ElectricMotor)theEObject;
+            T result = caseElectricMotor(electricMotor);
+            if (result == null) result = caseLoadedComponent(electricMotor);
+            if (result == null) result = caseArrangeableBlock(electricMotor);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.LOADED_COMPONENT: {
+            LoadedComponent loadedComponent = (LoadedComponent)theEObject;
+            T result = caseLoadedComponent(loadedComponent);
+            if (result == null) result = caseArrangeableBlock(loadedComponent);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.CHARGER: {
+            Charger charger = (Charger)theEObject;
+            T result = caseCharger(charger);
+            if (result == null) result = caseLoadedComponent(charger);
+            if (result == null) result = caseArrangeableBlock(charger);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.FLOW: {
+            Flow flow = (Flow)theEObject;
+            T result = caseFlow(flow);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         case TmsPackage.TMS_MODEL: {
+            TMSModel tmsModel = (TMSModel)theEObject;
+            T result = caseTMSModel(tmsModel);
+            if (result == null) result = defaultCase(theEObject);
+            return result;
+         }
+         default: return defaultCase(theEObject);
+      }
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Arrangeable Block</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Arrangeable Block</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseArrangeableBlock(ArrangeableBlock object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Sensor</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Sensor</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseSensor(Sensor object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Fan</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Fan</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseFan(Fan object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Valve</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Valve</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseValve(Valve object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Radiator</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Radiator</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseRadiator(Radiator object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Pump</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Pump</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T casePump(Pump object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>S1</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>S1</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseS1(S1 object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>S2</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>S2</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseS2(S2 object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Battery Sensor</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Battery Sensor</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseBatterySensor(BatterySensor object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Battery</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Battery</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseBattery(Battery object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Electric Motor Drive</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Electric Motor Drive</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseElectricMotorDrive(ElectricMotorDrive object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>DCDC</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>DCDC</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseDCDC(DCDC object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Coolant Heater</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Coolant Heater</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseCoolantHeater(CoolantHeater object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Electric Motor</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Electric Motor</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseElectricMotor(ElectricMotor object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Loaded Component</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Loaded Component</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseLoadedComponent(LoadedComponent object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Charger</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Charger</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseCharger(Charger object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>Flow</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>Flow</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseFlow(Flow object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>TMS Model</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>TMS Model</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+    * @generated
+    */
+   public T caseTMSModel(TMSModel object) {
+      return null;
+   }
+
+   /**
+    * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
+    * <!-- begin-user-doc -->
+    * This implementation returns null;
+    * returning a non-null result will terminate the switch, but this is the last case anyway.
+    * <!-- end-user-doc -->
+    * @param object the target of the switch.
+    * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
+    * @see #doSwitch(org.eclipse.emf.ecore.EObject)
+    * @generated
+    */
+   @Override
+   public T defaultCase(EObject object) {
+      return null;
+   }
+
+} //TmsSwitch

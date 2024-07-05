@@ -1,0 +1,17 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Electric Motor</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see tms.TmsPackage#getElectricMotor()
+ * @model
+ * @generated
+ */
+public interface ElectricMotor extends LoadedComponent {
+} // ElectricMotor

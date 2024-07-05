@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tinycc:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tinycc="www.jku.at/tinycc"
+    xsi:schemaLocation="www.jku.at/tinycc /tinycc/TinyCC/model/tinycc.ecore">
+  <components
+      name="f1"
+      type="Fan"/>
+  <components
+      name="r1"
+      type="Radiator">
+    <ports name="in_r1"/>
+    <ports name="out_r1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="v1"
+      type="Valve">
+    <ports name="in_v1"/>
+    <ports name="out1_v1"
+        direction="OUT"/>
+    <ports name="out2_v1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="p1"
+      type="Pump">
+    <ports name="in_p1"/>
+    <ports name="in_p2"/>
+    <ports name="out_p1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="s1"
+      type="S1">
+    <ports name="in_s1"/>
+    <ports name="out_s1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="s2"
+      type="S2">
+    <ports name="in_s2"/>
+    <ports name="out_s2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="bs1"
+      type="BatterySensor">
+    <ports name="in_bs1"/>
+    <ports name="out_bs1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="b1"
+      type="Battery">
+    <ports name="in_b1"/>
+    <ports name="out_b1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="b2"
+      type="Battery">
+    <ports name="in_b2"/>
+    <ports name="out_b2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="m1"
+      type="ElectricMotor">
+    <ports name="in_m1"/>
+    <ports name="out_m1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="m2"
+      type="ElectricMotor">
+    <ports name="in_m2"/>
+    <ports name="out_m2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="md1"
+      type="ElectricMotorDrive">
+    <ports name="in_md1"/>
+    <ports name="out_md1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="md2"
+      type="ElectricMotorDrive">
+    <ports name="in_md2"/>
+    <ports name="out_md2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="c1"
+      type="Charger">
+    <ports name="in_c1"/>
+    <ports name="out_c2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="c2"
+      type="Charger">
+    <ports name="in_c2"/>
+    <ports name="out_c2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="dc1"
+      type="DCDC">
+    <ports name="in_dc1"/>
+    <ports name="out_dc1"
+        direction="OUT"/>
+  </components>
+  <components
+      name="dc2"
+      type="DCDC">
+    <ports name="in_dc2"/>
+    <ports name="out_dc2"
+        direction="OUT"/>
+  </components>
+  <components
+      name="ch1"
+      type="CoolantHeater">
+    <ports name="in_ch1"/>
+    <ports name="out_ch1"
+        direction="OUT"/>
+  </components>
+  <connectors
+      name="r->p">
+    <ends port="//@components.1/@ports.1"/>
+    <ends port="//@components.3/@ports.0"/>
+  </connectors>
+  <connectors
+      name="v->r">
+    <ends port="//@components.2/@ports.1"/>
+    <ends port="//@components.1/@ports.0"/>
+  </connectors>
+  <connectors
+      name="v->p">
+    <ends port="//@components.2/@ports.2"/>
+    <ends port="//@components.3/@ports.1"/>
+  </connectors>
+  <connectors
+      name="s1->v">
+    <ends port="//@components.4/@ports.1"/>
+    <ends port="//@components.2/@ports.0"/>
+  </connectors>
+</tinycc:Model>

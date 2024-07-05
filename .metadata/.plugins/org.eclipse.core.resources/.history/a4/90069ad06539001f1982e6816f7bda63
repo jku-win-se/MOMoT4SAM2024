@@ -1,0 +1,45 @@
+/**
+ */
+package tms;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>S1</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.S1#getValve <em>Valve</em>}</li>
+ * </ul>
+ *
+ * @see tms.TmsPackage#getS1()
+ * @model
+ * @generated
+ */
+public interface S1 extends Sensor {
+   /**
+    * Returns the value of the '<em><b>Valve</b></em>' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @return the value of the '<em>Valve</em>' reference.
+    * @see #setValve(Valve)
+    * @see tms.TmsPackage#getS1_Valve()
+    * @model required="true"
+    * @generated
+    */
+   Valve getValve();
+
+   /**
+    * Sets the value of the '{@link tms.S1#getValve <em>Valve</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param value the new value of the '<em>Valve</em>' reference.
+    * @see #getValve()
+    * @generated
+    */
+   void setValve(Valve value);
+
+} // S1

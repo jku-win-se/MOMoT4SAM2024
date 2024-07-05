@@ -1,0 +1,292 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import tms.Pump;
+import tms.Radiator;
+import tms.TmsPackage;
+import tms.Valve;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Valve</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.ValveImpl#getRadiator <em>Radiator</em>}</li>
+ *   <li>{@link tms.impl.ValveImpl#getPump <em>Pump</em>}</li>
+ *   <li>{@link tms.impl.ValveImpl#getId <em>Id</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ValveImpl extends MinimalEObjectImpl.Container implements Valve {
+   /**
+    * The cached value of the '{@link #getRadiator() <em>Radiator</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getRadiator()
+    * @generated
+    * @ordered
+    */
+   protected Radiator radiator;
+
+   /**
+    * The cached value of the '{@link #getPump() <em>Pump</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getPump()
+    * @generated
+    * @ordered
+    */
+   protected Pump pump;
+
+   /**
+    * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getId()
+    * @generated
+    * @ordered
+    */
+   protected static final String ID_EDEFAULT = null;
+
+   /**
+    * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getId()
+    * @generated
+    * @ordered
+    */
+   protected String id = ID_EDEFAULT;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected ValveImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.VALVE;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Radiator getRadiator() {
+      if (radiator != null && radiator.eIsProxy()) {
+         InternalEObject oldRadiator = (InternalEObject)radiator;
+         radiator = (Radiator)eResolveProxy(oldRadiator);
+         if (radiator != oldRadiator) {
+            if (eNotificationRequired())
+               eNotify(new ENotificationImpl(this, Notification.RESOLVE, TmsPackage.VALVE__RADIATOR, oldRadiator, radiator));
+         }
+      }
+      return radiator;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public Radiator basicGetRadiator() {
+      return radiator;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setRadiator(Radiator newRadiator) {
+      Radiator oldRadiator = radiator;
+      radiator = newRadiator;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.VALVE__RADIATOR, oldRadiator, radiator));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Pump getPump() {
+      if (pump != null && pump.eIsProxy()) {
+         InternalEObject oldPump = (InternalEObject)pump;
+         pump = (Pump)eResolveProxy(oldPump);
+         if (pump != oldPump) {
+            if (eNotificationRequired())
+               eNotify(new ENotificationImpl(this, Notification.RESOLVE, TmsPackage.VALVE__PUMP, oldPump, pump));
+         }
+      }
+      return pump;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public Pump basicGetPump() {
+      return pump;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setPump(Pump newPump) {
+      Pump oldPump = pump;
+      pump = newPump;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.VALVE__PUMP, oldPump, pump));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public String getId() {
+      return id;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setId(String newId) {
+      String oldId = id;
+      id = newId;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.VALVE__ID, oldId, id));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.VALVE__RADIATOR:
+            if (resolve) return getRadiator();
+            return basicGetRadiator();
+         case TmsPackage.VALVE__PUMP:
+            if (resolve) return getPump();
+            return basicGetPump();
+         case TmsPackage.VALVE__ID:
+            return getId();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.VALVE__RADIATOR:
+            setRadiator((Radiator)newValue);
+            return;
+         case TmsPackage.VALVE__PUMP:
+            setPump((Pump)newValue);
+            return;
+         case TmsPackage.VALVE__ID:
+            setId((String)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.VALVE__RADIATOR:
+            setRadiator((Radiator)null);
+            return;
+         case TmsPackage.VALVE__PUMP:
+            setPump((Pump)null);
+            return;
+         case TmsPackage.VALVE__ID:
+            setId(ID_EDEFAULT);
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.VALVE__RADIATOR:
+            return radiator != null;
+         case TmsPackage.VALVE__PUMP:
+            return pump != null;
+         case TmsPackage.VALVE__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+      }
+      return super.eIsSet(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public String toString() {
+      if (eIsProxy()) return super.toString();
+
+      StringBuilder result = new StringBuilder(super.toString());
+      result.append(" (id: ");
+      result.append(id);
+      result.append(')');
+      return result.toString();
+   }
+
+} //ValveImpl

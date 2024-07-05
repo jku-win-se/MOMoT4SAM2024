@@ -1,0 +1,158 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import tms.S1;
+import tms.TmsPackage;
+import tms.Valve;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>S1</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.S1Impl#getValve <em>Valve</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class S1Impl extends SensorImpl implements S1 {
+   /**
+    * The cached value of the '{@link #getValve() <em>Valve</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getValve()
+    * @generated
+    * @ordered
+    */
+   protected Valve valve;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected S1Impl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.S1;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Valve getValve() {
+      if (valve != null && valve.eIsProxy()) {
+         InternalEObject oldValve = (InternalEObject)valve;
+         valve = (Valve)eResolveProxy(oldValve);
+         if (valve != oldValve) {
+            if (eNotificationRequired())
+               eNotify(new ENotificationImpl(this, Notification.RESOLVE, TmsPackage.S1__VALVE, oldValve, valve));
+         }
+      }
+      return valve;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public Valve basicGetValve() {
+      return valve;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setValve(Valve newValve) {
+      Valve oldValve = valve;
+      valve = newValve;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.S1__VALVE, oldValve, valve));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.S1__VALVE:
+            if (resolve) return getValve();
+            return basicGetValve();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.S1__VALVE:
+            setValve((Valve)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.S1__VALVE:
+            setValve((Valve)null);
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.S1__VALVE:
+            return valve != null;
+      }
+      return super.eIsSet(featureID);
+   }
+
+} //S1Impl

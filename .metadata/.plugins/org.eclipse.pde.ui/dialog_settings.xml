@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PluginImportWizard">
+		<item key="droplocation0" value="C:\Users\vmmor\eclipse-plain"/>
+		<item key="importFrom" value="3"/>
+		<item key="importType" value="3"/>
+		<item key="scanAll" value="true"/>
+		<item key="showLatestPluginsOnly" value="true"/>
+		<item key="addFragments" value="true"/>
+		<item key="droplocation1" value="C:\Users\vmmor\eclipse-plain"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="PDEFormActionManager">
+	</section>
+</section>

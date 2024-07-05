@@ -1,0 +1,7 @@
+package fmuvb.demo;
+
+public class ConfigurationUtils {
+   public static double getFMUInputValue(FMU fmu) {
+      
+   }
+}

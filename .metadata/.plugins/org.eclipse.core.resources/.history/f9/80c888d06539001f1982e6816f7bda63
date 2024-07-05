@@ -1,0 +1,500 @@
+/**
+ */
+package tms.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import tms.ArrangeableBlock;
+import tms.Fan;
+import tms.Flow;
+import tms.Pump;
+import tms.Radiator;
+import tms.TMSModel;
+import tms.TmsPackage;
+import tms.Valve;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>TMS Model</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.TMSModelImpl#getFan <em>Fan</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getRadiator <em>Radiator</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getValve <em>Valve</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getPumps <em>Pumps</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getArrangeableBlocks <em>Arrangeable Blocks</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getFlows <em>Flows</em>}</li>
+ *   <li>{@link tms.impl.TMSModelImpl#getSelectedPump <em>Selected Pump</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class TMSModelImpl extends MinimalEObjectImpl.Container implements TMSModel {
+   /**
+    * The cached value of the '{@link #getFan() <em>Fan</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getFan()
+    * @generated
+    * @ordered
+    */
+   protected Fan fan;
+
+   /**
+    * The cached value of the '{@link #getRadiator() <em>Radiator</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getRadiator()
+    * @generated
+    * @ordered
+    */
+   protected Radiator radiator;
+
+   /**
+    * The cached value of the '{@link #getValve() <em>Valve</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getValve()
+    * @generated
+    * @ordered
+    */
+   protected Valve valve;
+
+   /**
+    * The cached value of the '{@link #getPumps() <em>Pumps</em>}' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getPumps()
+    * @generated
+    * @ordered
+    */
+   protected EList<Pump> pumps;
+
+   /**
+    * The cached value of the '{@link #getArrangeableBlocks() <em>Arrangeable Blocks</em>}' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getArrangeableBlocks()
+    * @generated
+    * @ordered
+    */
+   protected EList<ArrangeableBlock> arrangeableBlocks;
+
+   /**
+    * The cached value of the '{@link #getFlows() <em>Flows</em>}' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getFlows()
+    * @generated
+    * @ordered
+    */
+   protected EList<Flow> flows;
+
+   /**
+    * The cached value of the '{@link #getSelectedPump() <em>Selected Pump</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getSelectedPump()
+    * @generated
+    * @ordered
+    */
+   protected Pump selectedPump;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected TMSModelImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.TMS_MODEL;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Fan getFan() {
+      return fan;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public NotificationChain basicSetFan(Fan newFan, NotificationChain msgs) {
+      Fan oldFan = fan;
+      fan = newFan;
+      if (eNotificationRequired()) {
+         ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__FAN, oldFan, newFan);
+         if (msgs == null) msgs = notification; else msgs.add(notification);
+      }
+      return msgs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setFan(Fan newFan) {
+      if (newFan != fan) {
+         NotificationChain msgs = null;
+         if (fan != null)
+            msgs = ((InternalEObject)fan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__FAN, null, msgs);
+         if (newFan != null)
+            msgs = ((InternalEObject)newFan).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__FAN, null, msgs);
+         msgs = basicSetFan(newFan, msgs);
+         if (msgs != null) msgs.dispatch();
+      }
+      else if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__FAN, newFan, newFan));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Radiator getRadiator() {
+      return radiator;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public NotificationChain basicSetRadiator(Radiator newRadiator, NotificationChain msgs) {
+      Radiator oldRadiator = radiator;
+      radiator = newRadiator;
+      if (eNotificationRequired()) {
+         ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__RADIATOR, oldRadiator, newRadiator);
+         if (msgs == null) msgs = notification; else msgs.add(notification);
+      }
+      return msgs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setRadiator(Radiator newRadiator) {
+      if (newRadiator != radiator) {
+         NotificationChain msgs = null;
+         if (radiator != null)
+            msgs = ((InternalEObject)radiator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__RADIATOR, null, msgs);
+         if (newRadiator != null)
+            msgs = ((InternalEObject)newRadiator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__RADIATOR, null, msgs);
+         msgs = basicSetRadiator(newRadiator, msgs);
+         if (msgs != null) msgs.dispatch();
+      }
+      else if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__RADIATOR, newRadiator, newRadiator));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Valve getValve() {
+      return valve;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public NotificationChain basicSetValve(Valve newValve, NotificationChain msgs) {
+      Valve oldValve = valve;
+      valve = newValve;
+      if (eNotificationRequired()) {
+         ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__VALVE, oldValve, newValve);
+         if (msgs == null) msgs = notification; else msgs.add(notification);
+      }
+      return msgs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setValve(Valve newValve) {
+      if (newValve != valve) {
+         NotificationChain msgs = null;
+         if (valve != null)
+            msgs = ((InternalEObject)valve).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__VALVE, null, msgs);
+         if (newValve != null)
+            msgs = ((InternalEObject)newValve).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TmsPackage.TMS_MODEL__VALVE, null, msgs);
+         msgs = basicSetValve(newValve, msgs);
+         if (msgs != null) msgs.dispatch();
+      }
+      else if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__VALVE, newValve, newValve));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EList<Pump> getPumps() {
+      if (pumps == null) {
+         pumps = new EObjectContainmentEList<Pump>(Pump.class, this, TmsPackage.TMS_MODEL__PUMPS);
+      }
+      return pumps;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EList<ArrangeableBlock> getArrangeableBlocks() {
+      if (arrangeableBlocks == null) {
+         arrangeableBlocks = new EObjectContainmentEList<ArrangeableBlock>(ArrangeableBlock.class, this, TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS);
+      }
+      return arrangeableBlocks;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public EList<Flow> getFlows() {
+      if (flows == null) {
+         flows = new EObjectContainmentEList<Flow>(Flow.class, this, TmsPackage.TMS_MODEL__FLOWS);
+      }
+      return flows;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Pump getSelectedPump() {
+      if (selectedPump != null && selectedPump.eIsProxy()) {
+         InternalEObject oldSelectedPump = (InternalEObject)selectedPump;
+         selectedPump = (Pump)eResolveProxy(oldSelectedPump);
+         if (selectedPump != oldSelectedPump) {
+            if (eNotificationRequired())
+               eNotify(new ENotificationImpl(this, Notification.RESOLVE, TmsPackage.TMS_MODEL__SELECTED_PUMP, oldSelectedPump, selectedPump));
+         }
+      }
+      return selectedPump;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public Pump basicGetSelectedPump() {
+      return selectedPump;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setSelectedPump(Pump newSelectedPump) {
+      Pump oldSelectedPump = selectedPump;
+      selectedPump = newSelectedPump;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.TMS_MODEL__SELECTED_PUMP, oldSelectedPump, selectedPump));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
+         case TmsPackage.TMS_MODEL__FAN:
+            return basicSetFan(null, msgs);
+         case TmsPackage.TMS_MODEL__RADIATOR:
+            return basicSetRadiator(null, msgs);
+         case TmsPackage.TMS_MODEL__VALVE:
+            return basicSetValve(null, msgs);
+         case TmsPackage.TMS_MODEL__PUMPS:
+            return ((InternalEList<?>)getPumps()).basicRemove(otherEnd, msgs);
+         case TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS:
+            return ((InternalEList<?>)getArrangeableBlocks()).basicRemove(otherEnd, msgs);
+         case TmsPackage.TMS_MODEL__FLOWS:
+            return ((InternalEList<?>)getFlows()).basicRemove(otherEnd, msgs);
+      }
+      return super.eInverseRemove(otherEnd, featureID, msgs);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.TMS_MODEL__FAN:
+            return getFan();
+         case TmsPackage.TMS_MODEL__RADIATOR:
+            return getRadiator();
+         case TmsPackage.TMS_MODEL__VALVE:
+            return getValve();
+         case TmsPackage.TMS_MODEL__PUMPS:
+            return getPumps();
+         case TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS:
+            return getArrangeableBlocks();
+         case TmsPackage.TMS_MODEL__FLOWS:
+            return getFlows();
+         case TmsPackage.TMS_MODEL__SELECTED_PUMP:
+            if (resolve) return getSelectedPump();
+            return basicGetSelectedPump();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @SuppressWarnings("unchecked")
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.TMS_MODEL__FAN:
+            setFan((Fan)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__RADIATOR:
+            setRadiator((Radiator)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__VALVE:
+            setValve((Valve)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__PUMPS:
+            getPumps().clear();
+            getPumps().addAll((Collection<? extends Pump>)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS:
+            getArrangeableBlocks().clear();
+            getArrangeableBlocks().addAll((Collection<? extends ArrangeableBlock>)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__FLOWS:
+            getFlows().clear();
+            getFlows().addAll((Collection<? extends Flow>)newValue);
+            return;
+         case TmsPackage.TMS_MODEL__SELECTED_PUMP:
+            setSelectedPump((Pump)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.TMS_MODEL__FAN:
+            setFan((Fan)null);
+            return;
+         case TmsPackage.TMS_MODEL__RADIATOR:
+            setRadiator((Radiator)null);
+            return;
+         case TmsPackage.TMS_MODEL__VALVE:
+            setValve((Valve)null);
+            return;
+         case TmsPackage.TMS_MODEL__PUMPS:
+            getPumps().clear();
+            return;
+         case TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS:
+            getArrangeableBlocks().clear();
+            return;
+         case TmsPackage.TMS_MODEL__FLOWS:
+            getFlows().clear();
+            return;
+         case TmsPackage.TMS_MODEL__SELECTED_PUMP:
+            setSelectedPump((Pump)null);
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.TMS_MODEL__FAN:
+            return fan != null;
+         case TmsPackage.TMS_MODEL__RADIATOR:
+            return radiator != null;
+         case TmsPackage.TMS_MODEL__VALVE:
+            return valve != null;
+         case TmsPackage.TMS_MODEL__PUMPS:
+            return pumps != null && !pumps.isEmpty();
+         case TmsPackage.TMS_MODEL__ARRANGEABLE_BLOCKS:
+            return arrangeableBlocks != null && !arrangeableBlocks.isEmpty();
+         case TmsPackage.TMS_MODEL__FLOWS:
+            return flows != null && !flows.isEmpty();
+         case TmsPackage.TMS_MODEL__SELECTED_PUMP:
+            return selectedPump != null;
+      }
+      return super.eIsSet(featureID);
+   }
+
+} //TMSModelImpl

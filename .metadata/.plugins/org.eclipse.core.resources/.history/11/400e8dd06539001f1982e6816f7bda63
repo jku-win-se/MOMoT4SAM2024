@@ -1,0 +1,158 @@
+/**
+ */
+package tms.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import tms.Battery;
+import tms.BatterySensor;
+import tms.TmsPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Battery</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link tms.impl.BatteryImpl#getBatterysensor <em>Batterysensor</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class BatteryImpl extends LoadedComponentImpl implements Battery {
+   /**
+    * The cached value of the '{@link #getBatterysensor() <em>Batterysensor</em>}' reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @see #getBatterysensor()
+    * @generated
+    * @ordered
+    */
+   protected BatterySensor batterysensor;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   protected BatteryImpl() {
+      super();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   protected EClass eStaticClass() {
+      return TmsPackage.Literals.BATTERY;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public BatterySensor getBatterysensor() {
+      if (batterysensor != null && batterysensor.eIsProxy()) {
+         InternalEObject oldBatterysensor = (InternalEObject)batterysensor;
+         batterysensor = (BatterySensor)eResolveProxy(oldBatterysensor);
+         if (batterysensor != oldBatterysensor) {
+            if (eNotificationRequired())
+               eNotify(new ENotificationImpl(this, Notification.RESOLVE, TmsPackage.BATTERY__BATTERYSENSOR, oldBatterysensor, batterysensor));
+         }
+      }
+      return batterysensor;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   public BatterySensor basicGetBatterysensor() {
+      return batterysensor;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void setBatterysensor(BatterySensor newBatterysensor) {
+      BatterySensor oldBatterysensor = batterysensor;
+      batterysensor = newBatterysensor;
+      if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, TmsPackage.BATTERY__BATTERYSENSOR, oldBatterysensor, batterysensor));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
+         case TmsPackage.BATTERY__BATTERYSENSOR:
+            if (resolve) return getBatterysensor();
+            return basicGetBatterysensor();
+      }
+      return super.eGet(featureID, resolve, coreType);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
+         case TmsPackage.BATTERY__BATTERYSENSOR:
+            setBatterysensor((BatterySensor)newValue);
+            return;
+      }
+      super.eSet(featureID, newValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public void eUnset(int featureID) {
+      switch (featureID) {
+         case TmsPackage.BATTERY__BATTERYSENSOR:
+            setBatterysensor((BatterySensor)null);
+            return;
+      }
+      super.eUnset(featureID);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @generated
+    */
+   @Override
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
+         case TmsPackage.BATTERY__BATTERYSENSOR:
+            return batterysensor != null;
+      }
+      return super.eIsSet(featureID);
+   }
+
+} //BatteryImpl
