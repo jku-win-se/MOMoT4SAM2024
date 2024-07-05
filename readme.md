@@ -21,14 +21,13 @@ In TinyCC, architectural models can be combined with simulation models, such as 
 A EMF Rich-Client Platform standalone tree-based editor is available [here](https://github.com/jku-win-se/TinyCC-ADL).
 
 
-<font color="red">
-To SAM 2024 Reviewers: we are continuously revising the ADL to incorporate specific modeling features. The last change is  applied to the Property metaclass. 
+> [!IMPORTANT]
+> To SAM 2024 Reviewers: we are continuously revising the ADL to incorporate specific modeling features. The last change is  applied to the Property metaclass. 
 
-types [*] -> type [0..1]
-values [*] -> value [0..1]
+> types [*] -> type [0..1]
+> values [*] -> value [0..1]
 
-The figure in the paper will be updated accordingly, if accepted for publication.
-</font>
+> The figure and description in the paper will be updated accordingly if accepted for publication.
 
 ## License
 
