@@ -15,16 +15,16 @@ This repository contains all the supporting artifacts according to the approach'
 - (Simulation) Configuration Module [Link] (todo)
 - (Architectural) Layouting Module [Link] (todo)
   
-- > [!WARNING]
+> [!WARNING]
 > Links to artifacts to be added soon.
 
 ### FMU Metamodel
 
 <img src="https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/ff0ac3ca-24b0-4dd6-83e8-3115bc5b2371" width="400" />
 
-- > [!WARNING]
+> [!WARNING]
 > Links to artifacts to be added soon.
-> 
+
 ### TinyCC ADL and RCP-based Model Editor
 TinyCC is a simple architectural description language (ADL) for system engineers. The TinyCC model consists of hierarchical sets of components and connectors. Components have input or output ports, determined by the value of the dir property (defined by the FlowDir enumeration). Connectors provide two or more connector ends, allowing the creation of a hierarchical network of components and connectors. Components, connectors, ends, and ports are all model elements that can be extended with user-defined properties. Each property can hold a type and a value.
 
