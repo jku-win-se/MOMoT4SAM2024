@@ -20,11 +20,19 @@ This repository contains all the supporting artifacts according to the approach'
 ![image](https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/44401109-f97d-4137-b2fa-511b285d0970)
 
 ### MOMoT
-- (Simulation) Configuration Module [Link] (todo)
-- (Architectural) Layouting Module [Link] (todo)
-  
-> [!WARNING]
-> Links to artifacts to be added soon.
+- (Simulation) Configuration Module [Link](ConfigurationModule/src/fmu/main/batteryFMU.momot)
+    - FMU Metamodel [Artifact](ConfigurationModule/metamodel/FMUModel.ecore)
+    - FMU Model [Artifact](ConfigurationModule/models/FMU_skeleton.xmi)
+    - Simulation Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L66-L79)
+    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L81-L93)
+
+- (Architectural) Layouting Module [Link](LayoutingModule/src/tms/demo/ThermalManagementSystem.momot)
+    - TinyCC ADL Metamodel [Artifact](https://github.com/jku-win-se/TinyCC-ADL/blob/main/TinyCC/model/tinycc.ecore)
+    - TinyCC Model [Artifact](LayoutingModule/models/TinyCC_input.xmi)
+    - Layout Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L84-L89)
+    - Layouting Rules [Artifact](LayoutingModule/transformations/tinycc.henshin)
+    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L60-L72)
+
 
 ### FMU Metamodel
 
@@ -68,12 +76,12 @@ A EMF Rich-Client Platform standalone tree-based editor is available [here](http
   - Repository site: http://martin-fleck.github.io/momot/eclipse/updates/latest/stable/
   - Select "MOMoT" -> "MOMoT Configuration Language"
 
-In order to run the modules with additional plotting utilities, python has to be installed and a conda environment set up accordingly:
+In order to run the Configuration Module with additional plotting utilities, python has to be installed and a conda environment set up accordingly:
 
 - Create new conda environment from "environment.yaml" located in "ConfigurationModule" project
   - Navigate to "scripts" folder in "ConfigurationModule" project and use the following to setup the conda environment in subdirectory "scripts/plotting": "conda env create --file environments.yaml --prefix ." (requires conda installed!)
 
-- Navigate to configuration of the module in "batteryFMU.momot" located in "fmu.main" (Configuration Module) or "ThermalManagementSystem.momot" located in "tms.demo" (Layouting Module)
+Navigate to configuration of the module in "batteryFMU.momot" located in "fmu.main" (Configuration Module) or "ThermalManagementSystem.momot" located in "tms.demo" (Layouting Module)
 
 - Run the provided sample configuration (.momot file) or adapted configuration
     - Run as "MOMoT Orchestration File" with additional VM argument "--add-opens java.base/java.util=ALL-UNNAMED"

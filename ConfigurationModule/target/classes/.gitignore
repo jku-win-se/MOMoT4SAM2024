@@ -1,3 +1,7 @@
 /.container.java._trace
+/.gitignore
+/META-INF/
 /fmu/
+/fmumodel/
+/fmuvb/
 /momot/
