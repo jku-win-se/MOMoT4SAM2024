@@ -1,3 +1,3 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\vmmor\\eclipse-plain\\tinycc\\.git;C\:\\Users\\vmmor\\eclipse-plain\\tms\\.git;
-GitRepositoriesView.GitDirectories.relative=tinycc\\.git;tms\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\vmmor\\eclipse-plain\\tinycc\\.git;C\:\\Users\\vmmor\\eclipse-plain\\.git;C\:\\Users\\vmmor\\eclipse-plain\\tms\\.git;
+GitRepositoriesView.GitDirectories.relative=tinycc\\.git;.git;tms\\.git;
 eclipse.preferences.version=1

@@ -39,12 +39,14 @@ search = {
 	
 		fitness         = {
 		objectives = {
+			// dummy objectives, could be used to do rate layout solutions quantitatively
 			FlowCountMax: maximize {    TMSUtils.countFlows(root as Model)}
 			FlowCountMin: minimize {    TMSUtils.countFlows(root as Model)}
 			  SolutionLength : minimize new TransformationLengthDimension
 		}
 		
 		constraints = {
+			// layout goal as constraint: Ensure use of certain types for valid layout
 			allTypesUsed : minimize {
 				val List<String> requiredInLayoutTypes = newArrayList("Battery", "DCDC", "ElectricMotor", "ElectricMotorDrive", "Charger", "Pump")
 				val changeable = (root as Model).components.findFirst[name == "changeable"]
@@ -63,7 +65,7 @@ search = {
 }
 
 experiment = {
-	populationSize    = 10
+	populationSize    = 30
 	maxEvaluations    = 1000
 	nrRuns            = 1
 	progressListeners = [ new SeedRuntimePrintListener ]
@@ -80,6 +82,7 @@ analysis = {
 
 results = {
 	  adaptModels = {	  
+	  	// layout goals fulfilled from preprocessing found models with layouts
 	  	TMSProcessors.placeInFrontOfUniqueType(root as Model, "heater", "Battery")
 	  	TMSProcessors.placeBehindUniqueType(root as Model, "s2", "Battery")
     	TMSProcessors.connectToUniqueType(root as Model, "bs", "Battery")

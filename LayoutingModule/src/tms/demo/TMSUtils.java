@@ -14,13 +14,20 @@ import tinycc.Port;
 
 public class TMSUtils {
 
-   public static void clearOutputDirs() {
-      final File dir = new File("output/models");
-      for(final File f : dir.listFiles()) {
-         if(!f.isDirectory()) {
-            f.delete();
+   private static void clearDir(final String... dir) {
+      for(final String d : dir) {
+         final File dirFile = new File(d);
+         for(final File f : dirFile.listFiles()) {
+            if(!f.isDirectory()) {
+               f.delete();
+            }
          }
       }
+   }
+
+   public static void clearOutputDirs() {
+      clearDir("output/models", "output/visuals", "output/solutions", "output/simulations", "output/objectives");
+
    }
 
    public static double countDistinctUsedComponents(final Model m) {
