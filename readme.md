@@ -22,16 +22,16 @@ This repository contains all the supporting artifacts according to the approach'
 ### MOMoT
 - (Simulation) Configuration Module [Link](ConfigurationModule/src/fmu/main/batteryFMU.momot)
     - FMU Metamodel [Artifact](ConfigurationModule/metamodel/FMUModel.ecore)
-    - FMU Model [Artifact](ConfigurationModule/models/FMU_skeleton.xmi)
-    - Simulation Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L66-L79)
-    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L81-L93)
+    - FMU Model (adapted to FMU description) [Artifact](ConfigurationModule/models/FMU_skeleton.xmi)
+    - Simulation Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L64-L77)
+    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/ConfigurationModule/src/fmu/main/batteryFMU.momot#L79-L91)
 
 - (Architectural) Layouting Module [Link](LayoutingModule/src/tms/demo/ThermalManagementSystem.momot)
     - TinyCC ADL Metamodel [Artifact](https://github.com/jku-win-se/TinyCC-ADL/blob/main/TinyCC/model/tinycc.ecore)
     - TinyCC Model [Artifact](LayoutingModule/models/TinyCC_input.xmi)
-    - Layout Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L84-L89)
+    - Layout Goals [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L81-L88)
     - Layouting Rules [Artifact](LayoutingModule/transformations/tinycc.henshin)
-    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L60-L72)
+    - Search Specification [Setup](https://github.com/jku-win-se/MOMoT4SAM2024/blob/main/LayoutingModule/src/tms/demo/ThermalManagementSystem.momot#L60-L70)
 
 
 ### FMU Metamodel

@@ -118,3 +118,171 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:06:31.810
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@7bde241 (cardinality: null, predicated: false, firstSetPredicated: false) (value: =) at offset: 1347, length: 0
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:06:41.937
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@1bfb7a80 (cardinality: null, predicated: false, firstSetPredicated: false) (value: constraints) at offset: 1651, length: 11
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:06:59.739
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@7b28490 (cardinality: null, predicated: false, firstSetPredicated: false) (value: solutions) at offset: 3334, length: 9
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:07:10.728
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@7bde241 (cardinality: null, predicated: false, firstSetPredicated: false) (value: =) at offset: 3011, length: 0
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:07:17.590
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@7bde241 (cardinality: null, predicated: false, firstSetPredicated: false) (value: =) at offset: 1752, length: 0
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:07:31.108
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@7bde241 (cardinality: null, predicated: false, firstSetPredicated: false) (value: =) at offset: 1406, length: 0
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.apache.log4j 4 0 2024-07-06 21:07:32.311
+!MESSAGE org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider  - Error on computation of hover information. No hover information available for org.eclipse.xtext.impl.KeywordImpl@6ea12919 (cardinality: null, predicated: false, firstSetPredicated: false) (value: {) at offset: 1390, length: 0
+
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.toString()" because "result" is null
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTKeywordHovers.hoverText(MOMoTKeywordHovers.java:58)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfoAsHtml(MOMoTHoverProvider.java:36)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTHoverProvider.getHoverInfo(MOMoTHoverProvider.java:22)
+	at org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider$2.getInfo(DefaultEObjectHoverProvider.java:542)
+	at at.ac.tuwien.big.momot.lang.ui.hover.MOMoTDispatchingTextHover.getHoverInfo(MOMoTDispatchingTextHover.java:34)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:95)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover$2.exec(AbstractEObjectHover.java:1)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.lambda$0(IReadAccess.java:57)
+	at org.eclipse.xtext.resource.OutdatedStateManager.exec(OutdatedStateManager.java:70)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.internalReadOnly(XtextDocument.java:525)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.readOnly(XtextDocument.java:497)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:136)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:53)
+	at org.eclipse.xtext.util.concurrent.IReadAccess.tryReadOnly(IReadAccess.java:71)
+	at org.eclipse.xtext.ui.editor.hover.AbstractEObjectHover.getHoverInfo2(AbstractEObjectHover.java:90)
+	at org.eclipse.xtext.xbase.ui.hover.XbaseDispatchingEObjectTextHover.getHoverInfo2(XbaseDispatchingEObjectTextHover.java:68)
+	at org.eclipse.xtext.ui.editor.hover.AbstractCompositeHover.getHoverInfo2(AbstractCompositeHover.java:95)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

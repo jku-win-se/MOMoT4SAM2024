@@ -36,21 +36,19 @@ initialization = {
 }
 
 search = {
-	model          = {
-		file       = "models/FMU.xmi"	
+	model = {
+		file = "models/FMU.xmi"	
 	}
 	solutionLength  = 3
-
 	transformations = {
 		modules = [ "transformations/fmu.henshin" ]
-		
 		parameterValues = {
          "fmu::fmu::setInput::val"  : new RandomDoubleValueFMU()
          "fmu::fmu::setInput::name"  : new RandomListValue(List.of("BatteryVoltage", "InternalRes", "MaxTorque"))
       	}
 	}
 
-	fitness         = {
+	fitness = {
 		preprocess = {
 			val root = MomotUtil.getRoot(solution.execute, typeof(FMU))
 			val inputs = newImmutableMap(root.input.map[name -> value])
@@ -91,8 +89,6 @@ experiment = {
 	nrRuns            = 1
 	progressListeners = [ new SeedRuntimePrintListener ]
 }
-
-
 
 results = {
 	objectives = {

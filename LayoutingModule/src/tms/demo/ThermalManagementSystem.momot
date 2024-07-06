@@ -37,7 +37,7 @@ search = {
     	]
 	}
 	
-		fitness         = {
+	fitness  = {
 		objectives = {
 			// dummy objectives, could be used to do rate layout solutions quantitatively
 			FlowCountMax: maximize {    TMSUtils.countFlows(root as Model)}
@@ -60,8 +60,6 @@ search = {
 	algorithms      = {
 		NSGAII  : moea.createNSGAII()
 	}
-	
-
 }
 
 experiment = {
@@ -95,13 +93,13 @@ results = {
       printOutput
    }
    
-      // save solutions, i.e., transformation orchestrations
+   // save solutions, i.e., transformation orchestrations
    solutions  = {
       outputFile      = "output/solutions/all_solutions.txt"
       outputDirectory = "output/solutions/"
    }
    
-      // save models resulting from the orchestrated transformations
+   // save models resulting from the orchestrated transformations
    models     = {
       outputDirectory = "output/models/"
    }
