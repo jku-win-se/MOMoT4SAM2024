@@ -37,18 +37,16 @@ This repository contains all the supporting artifacts according to the approach'
 ### FMU Metamodel
 
 <img src="https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/ff0ac3ca-24b0-4dd6-83e8-3115bc5b2371" width="400" />
-
-> [!WARNING]
-> Links to artifacts to be added soon.
+The [FMU Metamodel](ConfigurationModule/metamodel/FMUModel.ecore) is used internally by the (Simulation) Configuration Module to represent the FMU model descriptions in an EMF-based artifact. For this reason, no editor are provided (still, it can be generated from the metamodel).
 
 ### TinyCC ADL and RCP-based Model Editor
 TinyCC is a simple architectural description language (ADL) for system engineers. The TinyCC model consists of hierarchical sets of components and connectors. Components have input or output ports, determined by the value of the dir property (defined by the FlowDir enumeration). Connectors provide two or more connector ends, allowing the creation of a hierarchical network of components and connectors. Components, connectors, ends, and ports are all model elements that can be extended with user-defined properties. Each property can hold a type and a value.
 
 <img src="https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/a24effd1-fd11-4f93-bec2-5a8d3a1f464e" width="600" />
 
-In TinyCC, architectural models can be combined with simulation models, such as functional mock-up units (FMUs). To facilitate this combination, an abstract metaclass called SimElement is introduced. It provides a file-based mapping mechanism for components and connectors through the simModelPath property.
+In TinyCC, architectural models can be combined with simulation models, such as functional mock-up units (FMUs). To facilitate this combination, an abstract metaclass called SimElement is introduced. Through the simModelPath property, it provides a file-based mapping mechanism for components and connectors.
 
-A EMF Rich-Client Platform standalone tree-based editor is available [here](https://github.com/jku-win-se/TinyCC-ADL).
+An EMF Rich-Client Platform standalone tree-based editor is available [here](https://github.com/jku-win-se/TinyCC-ADL).
 
 
 > [!IMPORTANT]
