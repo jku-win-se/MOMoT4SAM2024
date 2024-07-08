@@ -37,6 +37,7 @@ This repository contains all the supporting artifacts according to the approach'
 ### FMU Metamodel
 
 <img src="https://github.com/jku-win-se/MOMoT4SAM2024/assets/925612/ff0ac3ca-24b0-4dd6-83e8-3115bc5b2371" width="400" />
+
 The [FMU Metamodel](ConfigurationModule/metamodel/FMUModel.ecore) is used internally by the (Simulation) Configuration Module to represent the FMU model descriptions in an EMF-based artifact. For this reason, no editor are provided (still, it can be generated from the metamodel).
 
 ### TinyCC ADL and RCP-based Model Editor
