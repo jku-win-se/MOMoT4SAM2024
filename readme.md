@@ -86,7 +86,7 @@ Navigate to configuration of the module in "batteryFMU.momot" located in "fmu.ma
     - Run as "MOMoT Orchestration File" with additional VM argument "--add-opens java.base/java.util=ALL-UNNAMED"
 
 <details>
-  <summary>Configuration Module Example Output</summary>
+  <summary>Configuration Module Example Output (click on the arrow to see details)</summary>
   
   ```
 Search started.
@@ -134,7 +134,7 @@ Search finished.
 
   
 <details>
-  <summary>Layouting Module Example Output</summary>
+  <summary>Layouting Module Example Output (click on the arrow to see details)</summary>
   
   ```
 
